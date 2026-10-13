@@ -1,0 +1,248 @@
+
+    :root {
+	      --dark-color: #0B2545;
+      --light-color: oklch(47% 0.14 155);
+      --bg-light-gray: #fff;
+      --accent-color: #F4B942;
+      --text-blue: #0F7C92;
+      --nav-height: 68px;
+      --muted: #6b7a80;
+    }
+
+    /* Trigger (username) styling */
+    .account-navbar-actions {
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+      margin-left:auto;
+      color:#fff;
+    }
+
+    .account-navbar-actions .account-trigger {
+      color:#fff;
+    }
+
+    .account-area {
+      display:flex;
+      align-items:center;
+      justify-content: flex-end;
+      gap:16px;
+      padding-right: 0 !important;
+    }
+    .account-trigger {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.6rem;
+      padding:.3rem .6rem;
+      border-radius:0px;
+      cursor:pointer;
+      transition: background .12s ease, transform .08s ease;
+      border:1px solid transparent;
+      background-color: transparent;
+      min-height:44px;
+    }
+    .account-trigger:hover, .account-trigger:focus {
+      background: rgba(29,191,115,0.06);
+      transform: translateY(-1px);
+      outline:none;
+      box-shadow: 0 0 0 0.18rem rgba(29, 191, 115, 0.22);
+    }
+
+    .account-trigger .nav-toggle-icon {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:1.8rem;
+      height:1.8rem;
+      font-size:1.8rem;
+      line-height:1;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .account-toggle-label {
+      color:#fff;
+      font-weight:700;
+      line-height:1;
+    }
+
+    .account-trigger.is-open .nav-toggle-icon {
+      transform: rotate(90deg);
+    }
+    .account-trigger .avatar {
+      width:42px; height:42px; border-radius:999px; object-fit:cover; border:1px solid rgba(20,42,59,0.04);
+      display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.16); color:#fff; font-weight:800;
+    }
+    .account-trigger .name { font-weight:700; color:#fff; }
+    .account-trigger .muted-sm {
+      color: #fff;
+    }
+
+    /* Offcanvas panel customisations */
+    .offcanvas-end.custom-panel {
+      width: 360px; /* adjust width */
+      --bs-offcanvas-width: 360px;
+      box-shadow: -30px 40px 80px rgba(20,42,59,0.08);
+    }
+
+    .panel-header {
+      padding: 22px;
+      border-bottom: 1px solid rgba(20,42,59,0.04);
+    }
+
+    .panel-close {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.45rem;
+      min-height:44px;
+      padding:.55rem .75rem;
+      border:1px solid rgba(20,42,59,0.12);
+      background:#fff;
+      color:var(--dark-color);
+      font-weight:700;
+      margin-left:auto;
+      white-space:nowrap;
+    }
+
+    .panel-close:hover,
+    .panel-close:focus {
+      background:rgba(29,191,115,0.1);
+      color:var(--dark-color);
+      box-shadow:0 0 0 .18rem rgba(29,191,115,0.22);
+      outline:none;
+    }
+
+    .panel-avatar {
+      width:84px; height:84px; border-radius:999px; object-fit:cover; border:1px solid rgba(20,42,59,0.06);
+      filter: hue-rotate(-80deg) saturate(1.2);
+      display:inline-flex; align-items:center; justify-content:center; background:rgba(20,42,59,0.08); color:var(--dark-color); font-weight:800;
+    }
+
+    .account-menu .list-group-item {
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      transition: background .12s ease, transform .08s ease;
+    }
+.account-menu .list-group-item:hover, .account-menu .list-group-item:focus {
+      background: rgba(29,191,115,0.04);
+      transform: none;
+      cursor: pointer;
+    }
+    .account-menu .list-group-item .bi { font-size:1.1rem; margin-right:12px; color:var(--muted); }
+    .account-menu .list-group-item.is-locked {
+      background: rgba(20,42,59,0.025);
+      color: rgba(11,37,69,0.72);
+    }
+    .account-menu .list-group-item.is-locked .bi {
+      color: var(--accent-color);
+    }
+    .account-menu .list-group-item.is-locked .muted-sm {
+      color: #7b6a35;
+    }
+
+    .account-trigger:hover,
+    .account-trigger:focus {
+      transform: none;
+    }
+
+    .account-trigger:focus-visible,
+    .panel-close:focus-visible {
+      outline: 3px solid var(--color-primary) !important;
+      outline-offset: 2px;
+      box-shadow: none !important;
+    }
+
+    /* Highlight CTA */
+    .list-business-cta {
+      background: var(--light-color);
+      color: #fff;
+      font-weight:700;
+      border-radius: 10px;
+      padding: .6rem .8rem;
+      text-align:center;
+    }
+
+    /* small text */
+    .muted-sm { color:var(--muted); font-size:.95rem; }
+
+    @media (min-width: 992px) {
+      .account-navbar-actions {
+        order:3;
+      }
+
+      #navbarContent {
+        order:2;
+      }
+    }
+
+    @media (max-width: 990px) {
+      .offcanvas-end.custom-panel {
+        width: min(380px, 92vw);
+        --bs-offcanvas-width: min(380px, 92vw);
+      }
+
+      .account-navbar-actions {
+        flex:0 0 auto;
+      }
+
+      .account-navbar-actions .account-trigger {
+        min-width:44px;
+        padding:.35rem .55rem;
+      }
+
+      .account-area {
+        align-items:center;
+        justify-content:flex-end;
+        flex:0 0 auto;
+        margin-left:auto;
+        padding:0;
+      }
+
+      .account-area .account-trigger {
+        margin:0;
+        max-width:min(72vw, 18rem);
+      }
+
+      .account-area .account-trigger .name,
+      .account-area .account-trigger .muted-sm {
+        max-width:9.5rem;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+
+      .navbar-toggler.account-trigger {
+        min-width:44px;
+        padding:.35rem .55rem;
+      }
+
+      .panel-header {
+        padding:16px;
+      }
+
+      .panel-avatar {
+        width:58px;
+        height:58px;
+      }
+
+      .panel-close span {
+        display:inline;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .offcanvas-end.custom-panel {
+        width: 100%;
+        --bs-offcanvas-width: 100%;
+      }
+
+      .account-toggle-label {
+        display:none;
+      }
+
+      .panel-close span {
+        display:none;
+      }
+    }

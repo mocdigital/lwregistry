@@ -1,0 +1,37 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img "LW Registry" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: Join the Network
+      - heading "Find trusted Spirit-led businesses" [level=2] [ref=e12]
+      - paragraph [ref=e13]: Showcase your business, find bids and RFPs, connect with strategic partners and participate in initiatives influencing commerce, trade and innovation worldwide.
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: Verified Credibility Badge
+            - generic [ref=e20]: Pass our compliant screening to showcase your trusted business credentials.
+        - listitem [ref=e21]:
+          - generic [ref=e24]:
+            - generic [ref=e25]: Global B2B Marketplace
+            - generic [ref=e26]: Expose your offerings directly to high-intent global buyers and supply chain partners.
+        - listitem [ref=e27]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: Protected Transactions
+            - generic [ref=e32]: Gain access to smart business escrows and secure network-only trade benefits.
+    - generic [ref=e33]:
+      - paragraph [ref=e35]: 3,500+
+      - paragraph [ref=e36]: Verified active businesses
+  - generic [ref=e38]:
+    - heading "Forgot password" [level=1] [ref=e39]
+    - paragraph [ref=e40]: Enter your email to receive a password reset link
+    - generic [ref=e41]:
+      - generic [ref=e42]: Email Address
+      - textbox "Email Address" [ref=e45]:
+        - /placeholder: email@example.com
+        - text: viapainc@gmail.com
+    - button "Sending…" [disabled] [ref=e49]
+    - paragraph [ref=e47]:
+      - link "Back to Sign In" [ref=e48] [cursor=pointer]:
+        - /url: /lwregistry/public/login

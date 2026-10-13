@@ -1,0 +1,251 @@
+- generic [active] [ref=f1e1]:
+  - navigation "Admin sidebar menu" [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - img "Logo" [ref=f1e5]
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: Loveworld Registry
+        - generic [ref=f1e8]: Super Admin
+      - text: 
+    - generic [ref=f1e9]:
+      - generic [ref=f1e10]: Overview
+      - link " Dashboard" [ref=f1e11] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin
+        - generic [ref=f1e12]: 
+        - generic [ref=f1e13]: Dashboard
+      - generic [ref=f1e14]: Directory
+      - link " Users" [ref=f1e15] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/users
+        - generic [ref=f1e16]: 
+        - generic [ref=f1e17]: Users
+      - link " SBOs" [ref=f1e18] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/businesses
+        - generic [ref=f1e19]: 
+        - generic [ref=f1e20]: SBOs
+      - generic [ref=f1e21]: Approvals
+      - link " Application approvals" [ref=f1e22] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/organizations
+        - generic [ref=f1e23]: 
+        - generic [ref=f1e24]: Application approvals
+      - link " Validation approvals" [ref=f1e25] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/approvals
+        - generic [ref=f1e26]: 
+        - generic [ref=f1e27]: Validation approvals
+      - link " Info requests" [ref=f1e28] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/approvals/info-requests
+        - generic [ref=f1e29]: 
+        - generic [ref=f1e30]: Info requests
+      - link " Rejected history" [ref=f1e31] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/approvals/rejected-history
+        - generic [ref=f1e32]: 
+        - generic [ref=f1e33]: Rejected history
+      - generic [ref=f1e34]: SBO Workflow
+      - link " Required Documents" [ref=f1e35] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/compliance/documents
+        - generic [ref=f1e36]: 
+        - generic [ref=f1e37]: Required Documents
+      - link " Registration Fees" [ref=f1e38] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/fees
+        - generic [ref=f1e39]: 
+        - generic [ref=f1e40]: Registration Fees
+      - link " Espees Configuration" [ref=f1e41] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/fees#espees-checkout
+        - generic [ref=f1e42]: 
+        - generic [ref=f1e43]: Espees Configuration
+      - link " Reports" [ref=f1e44] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/reports
+        - generic [ref=f1e45]: 
+        - generic [ref=f1e46]: Reports
+      - generic [ref=f1e47]: Growth
+      - link " Zone Referrals" [ref=f1e48] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/zones/referrals
+        - generic [ref=f1e49]: 
+        - generic [ref=f1e50]: Zone Referrals
+      - link " Zone Momentum" [ref=f1e51] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/zones/momentum
+        - generic [ref=f1e52]: 
+        - generic [ref=f1e53]: Zone Momentum
+      - generic [ref=f1e54]: Procurement
+      - link " Procurement Requests" [ref=f1e55] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/purchase-orders
+        - generic [ref=f1e56]: 
+        - generic [ref=f1e57]: Procurement Requests
+      - generic [ref=f1e58]: Configuration
+      - link " Categories & Locations" [ref=f1e59] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/categories-locations
+        - generic [ref=f1e60]: 
+        - generic [ref=f1e61]: Categories & Locations
+      - link " Ad Placements" [ref=f1e62] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/ads
+        - generic [ref=f1e63]: 
+        - generic [ref=f1e64]: Ad Placements
+      - link " Administrators" [ref=f1e65] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/admins
+        - generic [ref=f1e66]: 
+        - generic [ref=f1e67]: Administrators
+      - generic [ref=f1e68]: Oversight
+      - link " Activity Log" [ref=f1e69] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/activity
+        - generic [ref=f1e70]: 
+        - generic [ref=f1e71]: Activity Log
+      - generic [ref=f1e72]: Support
+      - link " Support Enquiries" [ref=f1e73] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/support
+        - generic [ref=f1e74]: 
+        - generic [ref=f1e75]: Support Enquiries
+      - link " Feedback" [ref=f1e76] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/support/feedback
+        - generic [ref=f1e77]: 
+        - generic [ref=f1e78]: Feedback
+      - link " Network Reports" [ref=f1e79] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/admin/support/network-reports
+        - generic [ref=f1e80]: 
+        - generic [ref=f1e81]: Network Reports
+      - generic [ref=f1e83]:
+        - generic [ref=f1e84]: SBO Approval Queue
+        - generic [ref=f1e85]:
+          - generic [ref=f1e86]: "Pending: 0"
+          - link "Review" [ref=f1e87] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/admin/organizations
+  - generic [ref=f1e88]:
+    - banner [ref=f1e89]:
+      - generic [ref=f1e90]:
+        - text: 
+        - heading "Admin Dashboard" [level=1] [ref=f1e91]
+      - generic [ref=f1e92]:
+        - generic [ref=f1e93]:
+          - button "Notifications" [ref=f1e94] [cursor=pointer]:
+            - generic [ref=f1e95]: 
+          - text: 
+        - button "PO Platform " [ref=f1e97] [cursor=pointer]:
+          - generic [ref=f1e98]: PO
+          - generic [ref=f1e99]: Platform
+          - generic [ref=f1e100]: 
+    - main [ref=f1e101]:
+      - generic [ref=f1e102]:
+        - generic [ref=f1e103]:
+          - generic [ref=f1e104]:
+            - generic [ref=f1e105]: Registry operations
+            - heading "Admin overview" [level=1] [ref=f1e108]
+            - paragraph [ref=f1e109]: A focused view of the applications, payments, and applicant updates that need the team’s attention.
+            - generic [ref=f1e110]:
+              - generic [ref=f1e111]:
+                - strong [ref=f1e112]: "2"
+                - text: registered SBOs
+              - generic [ref=f1e113]: 100% approved
+          - link "Review applications" [ref=f1e115] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/admin/organizations
+            - generic [ref=f1e116]: 
+            - text: Review applications
+        - region [ref=f1e117]:
+          - generic [ref=f1e118]:
+            - generic [ref=f1e119]:
+              - generic [ref=f1e120]: Today’s work
+              - heading "Needs attention" [level=2] [ref=f1e121]
+              - paragraph [ref=f1e122]: Start with the work that is waiting on the Registry team.
+            - generic [ref=f1e123]:
+              - generic [ref=f1e124]: 
+              - text: Work queue
+          - generic [ref=f1e125]:
+            - link "Application approvals Review newly submitted SBO applications. 0" [ref=f1e126] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/admin/organizations
+              - generic [ref=f1e127]: 
+              - generic [ref=f1e129]:
+                - generic [ref=f1e130]: Application approvals
+                - generic [ref=f1e131]: Review newly submitted SBO applications.
+              - generic [ref=f1e132]: "0"
+            - link "Payment reviews Confirm submitted registration payments. 0" [ref=f1e133] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/admin/fees
+              - generic [ref=f1e134]: 
+              - generic [ref=f1e136]:
+                - generic [ref=f1e137]: Payment reviews
+                - generic [ref=f1e138]: Confirm submitted registration payments.
+              - generic [ref=f1e139]: "0"
+            - link "Information requests Track applications waiting for applicant updates. 0" [ref=f1e140] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/admin/approvals/info-requests
+              - generic [ref=f1e141]: 
+              - generic [ref=f1e143]:
+                - generic [ref=f1e144]: Information requests
+                - generic [ref=f1e145]: Track applications waiting for applicant updates.
+              - generic [ref=f1e146]: "0"
+        - region "Registry totals" [ref=f1e147]:
+          - article [ref=f1e148]:
+            - generic [ref=f1e149]: 
+            - generic [ref=f1e151]: Total users
+            - generic [ref=f1e152]: "4"
+            - generic [ref=f1e153]: Registered accounts
+          - article [ref=f1e154]:
+            - generic [ref=f1e155]: 
+            - generic [ref=f1e157]: Total SBOs
+            - generic [ref=f1e158]: "2"
+            - generic [ref=f1e159]: Strategic Business Organizations
+          - article [ref=f1e160]:
+            - generic [ref=f1e161]: 
+            - generic [ref=f1e163]: Approved SBOs
+            - generic [ref=f1e164]: "2"
+            - generic [ref=f1e165]: 100% approved
+            - progressbar "SBO approval rate" [ref=f1e166]
+          - article [ref=f1e168]:
+            - generic [ref=f1e169]: 
+            - generic [ref=f1e171]: Pending SBOs
+            - generic [ref=f1e172]: "0"
+            - generic [ref=f1e173]: Awaiting review
+        - generic [ref=f1e174]:
+          - region [ref=f1e175]:
+            - generic [ref=f1e176]:
+              - generic [ref=f1e177]:
+                - generic [ref=f1e178]: Audit trail
+                - heading "Recent activity" [level=2] [ref=f1e179]
+              - link "View all" [ref=f1e180] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/admin/activity
+            - list [ref=f1e181]:
+              - listitem [ref=f1e182]:
+                - generic [ref=f1e183]: TE
+                - generic [ref=f1e184]:
+                  - generic [ref=f1e185]: Test Business
+                  - generic [ref=f1e186]:
+                    - strong [ref=f1e187]: Test Business
+                    - text: is now fully verified (approved, documents compliant, fees paid).
+                  - generic [ref=f1e188]: 29 minutes ago
+                - generic [ref=f1e189]: Approved
+              - listitem [ref=f1e190]:
+                - generic [ref=f1e191]: TE
+                - generic [ref=f1e192]:
+                  - generic [ref=f1e193]: Test Business
+                  - generic [ref=f1e194]:
+                    - text: Document compliance manually confirmed for
+                    - strong [ref=f1e195]: Test Business
+                    - text: by
+                    - strong [ref=f1e196]: Owner Platform
+                    - text: .
+                  - generic [ref=f1e197]: 29 minutes ago
+                - generic [ref=f1e198]: Approved
+              - listitem [ref=f1e199]:
+                - generic [ref=f1e200]: TE
+                - generic [ref=f1e201]:
+                  - generic [ref=f1e202]: Test Business
+                  - generic [ref=f1e203]:
+                    - text: Registration fees manually confirmed for
+                    - strong [ref=f1e204]: Test Business
+                    - text: by
+                    - strong [ref=f1e205]: Owner Platform
+                    - text: .
+                  - generic [ref=f1e206]: 30 minutes ago
+                - generic [ref=f1e207]: Approved
+              - listitem [ref=f1e208]:
+                - generic [ref=f1e209]: TO
+                - generic [ref=f1e210]:
+                  - generic [ref=f1e211]: Tophunmi Steph
+                  - generic [ref=f1e212]:
+                    - text: New user registered with email
+                    - strong [ref=f1e213]: tofunmi015@gmail.com
+                    - text: .
+                  - generic [ref=f1e214]: 43 minutes ago
+                - generic [ref=f1e215]: Registered
+          - region [ref=f1e216]:
+            - generic [ref=f1e218]:
+              - generic [ref=f1e219]: Directory mix
+              - heading "Top SBO categories" [level=2] [ref=f1e220]
+            - list [ref=f1e221]:
+              - listitem [ref=f1e222]:
+                - generic [ref=f1e223]: Beauty & Personal Care
+                - generic [ref=f1e224]: "1"

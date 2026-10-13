@@ -1,0 +1,6 @@
+[    1858ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://localhost:8888/lw_registry/public/_boost/browser-logs @ http://localhost:8888/lw_registry/public/:29
+[    2892ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8888/lw_registry/public/:0
+[    2892ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8888/lw_registry/public/:0
+[   79869ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://localhost:8888/lw_registry/public/_boost/browser-logs @ http://localhost:8888/lw_registry/public/sbo/dashboard:29
+[   79972ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8888/lw_registry/public/sbo/dashboard:0
+[   79972ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8888/lw_registry/public/sbo/dashboard:0

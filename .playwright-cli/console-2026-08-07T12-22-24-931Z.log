@@ -1,0 +1,8 @@
+[    1161ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://127.0.0.1:8010/_boost/browser-logs @ http://127.0.0.1:8010/login:32
+[    1232ms] TypeError: Cannot read properties of null (reading 'component')
+    at createInertiaApp (http://localhost:5174/node_modules/.vite/deps/@inertiajs_vue3.js?v=f3f603ab:19072:34)
+    at http://localhost:5174/resources/js/inertia.ts:10:1
+[  132191ms] [LOG] 🔍 Browser logger active (MCP server detected). Posting to: http://127.0.0.1:8010/_boost/browser-logs @ http://127.0.0.1:8010/login:32
+[  132213ms] TypeError: Cannot read properties of null (reading 'component')
+    at createInertiaApp (http://localhost:5174/node_modules/.vite/deps/@inertiajs_vue3.js?v=f3f603ab:19072:34)
+    at http://localhost:5174/resources/js/inertia.ts:10:1

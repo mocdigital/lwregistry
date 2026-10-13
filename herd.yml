@@ -1,0 +1,8 @@
+name: startwire
+php: '8.4'
+secured: true
+aliases:
+    - 'Laravel 12 Stater Pack with Livewire'
+services: {  }
+integrations:
+    forge: {  }

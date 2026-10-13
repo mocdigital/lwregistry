@@ -1,0 +1,41 @@
+{
+  /*
+   * Typechecking only — `noEmit` is set and Vite still does the compiling.
+   * `npm run typecheck` runs vue-tsc over this, which is what CI gates on.
+   *
+   * Scope is `resources/js` alone: `vendor/` and `node_modules` carry their own
+   * (often broken) declarations and are not ours to fix.
+   */
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /*
+     * Mirrors the `@` alias in vite.config.js. Without it every
+     * `@/components/...` import fails to resolve under vue-tsc even though the
+     * bundle builds.
+     */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["resources/js/spa/*"]
+    }
+  },
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.d.ts",
+    "resources/js/**/*.vue"
+  ],
+  "exclude": ["node_modules", "vendor", "public"]
+}

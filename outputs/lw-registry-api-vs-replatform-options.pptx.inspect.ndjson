@@ -1,0 +1,256 @@
+{"kind":"deck","id":"pr/zkocy7","name":"Deck"}
+{"kind":"layout","layoutId":"8b7fe350-b462-4fdc-ae58-6510abfe7e1a","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"de4cdad2-d76f-40e9-b7d1-eec52d88bb7e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6xn16p","slide":1,"title":"Decision deck","textShapes":14}
+{"kind":"shape","id":"sh/1gvy90je","slide":1,"bbox":[72,68,184,30]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":1,"text":"Decision deck","textPreview":"Decision deck","textChars":13,"textLines":1,"bbox":[84,75,160,16]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":1,"text":"LW Registry:\nAPI route vs alternate route","textPreview":"LW Registry: | API route vs alternate route","textChars":41,"textLines":2,"bbox":[72,122,620,164]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":1,"text":"A simple view of what the platform already does, how the system flows today, and the two realistic paths forward.","textPreview":"A simple view of what the platform already does, how the system flows today, and the two realistic paths forward.","textChars":113,"textLines":1,"bbox":[72,306,600,102]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":1,"text":"Approach A: keep Laravel as the core and expose APIs in phases.\nApproach B: rebuild the backend in CI4 or another stack and migrate across.","textPreview":"Approach A: keep Laravel as the core and expose APIs in phases. | Approach B: rebuild the backend in CI4 or another stack and migrate acr...","textChars":139,"textLines":2,"bbox":[72,486,590,92]}
+{"kind":"shape","id":"sh/q1orytsv","slide":1,"bbox":[764,74,444,566]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":1,"text":"Live system today","textPreview":"Live system today","textChars":17,"textLines":1,"bbox":[792,100,220,24]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":1,"text":"Three role journeys already share one platform, one database, and one operating workflow.","textPreview":"Three role journeys already share one platform, one database, and one operating workflow.","textChars":89,"textLines":1,"bbox":[792,128,360,52]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":1,"bbox":[792,194,388,112]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":1,"bbox":[810,210,126,28]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":1,"text":"Public","textPreview":"Public","textChars":6,"textLines":1,"bbox":[822,217,102,14]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":1,"text":"Search directory\nVerify SBO number\nView profiles and adverts","textPreview":"Search directory | Verify SBO number | View profiles and adverts","textChars":60,"textLines":3,"bbox":[810,250,352,64]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":1,"bbox":[792,322,388,124]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":1,"bbox":[810,338,126,28]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":1,"text":"SBO manager","textPreview":"SBO manager","textChars":11,"textLines":1,"bbox":[822,345,102,14]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":1,"text":"Join and register\nUpload documents and pay\nPost RFQs and track progress","textPreview":"Join and register | Upload documents and pay | Post RFQs and track progress","textChars":71,"textLines":3,"bbox":[810,378,352,64]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":1,"bbox":[792,462,388,118]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":1,"bbox":[810,478,126,28]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":1,"text":"Admin","textPreview":"Admin","textChars":5,"textLines":1,"bbox":[822,485,102,14]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":1,"text":"Review and approve\nManage procurement and support\nControl ads, reports, and users","textPreview":"Review and approve | Manage procurement and support | Control ads, reports, and users","textChars":81,"textLines":3,"bbox":[810,518,352,64]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":1,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":1,"text":"Sources: PRODUCT.md, DESIGN.md, docs/platform-architecture.md","textPreview":"Sources: PRODUCT.md, DESIGN.md, docs/platform-architecture.md","textChars":61,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/6xn16p","slide":1,"text":"Deck setup. Establish that the current product is already substantial and the decision is about delivery route, not whether a platform exists."}
+{"kind":"slide","id":"sl/wzhv9x","slide":2,"title":"One web app already runs the whole registry flow","textShapes":25}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":2,"text":"One web app already runs the whole registry flow","textPreview":"One web app already runs the whole registry flow","textChars":48,"textLines":1,"bbox":[72,58,930,48]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":2,"text":"Public discovery, SBO onboarding, payments, procurement, support, and admin operations are already connected.","textPreview":"Public discovery, SBO onboarding, payments, procurement, support, and admin operations are already connected.","textChars":109,"textLines":1,"bbox":[72,100,930,38]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":2,"bbox":[72,146,118,28]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":2,"text":"Public","textPreview":"Public","textChars":6,"textLines":1,"bbox":[84,153,94,14]}
+{"kind":"shape","id":"sh/crmhk3q5","slide":2,"bbox":[198,146,154,28]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":2,"text":"SBO manager","textPreview":"SBO manager","textChars":11,"textLines":1,"bbox":[210,153,130,14]}
+{"kind":"shape","id":"sh/ulwval87","slide":2,"bbox":[360,146,114,28]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":2,"text":"Admin","textPreview":"Admin","textChars":5,"textLines":1,"bbox":[372,153,90,14]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":2,"text":"Shared system flow: web app -> database -> media storage -> queue and mail","textPreview":"Shared system flow: web app -> database -> media storage -> queue and mail","textChars":74,"textLines":1,"bbox":[490,149,420,24]}
+{"kind":"shape","id":"sh/al87ed8b","slide":2,"bbox":[72,190,706,434]}
+{"kind":"textbox","id":"sh/z61032ls","slide":2,"text":"Core modules","textPreview":"Core modules","textChars":12,"textLines":1,"bbox":[98,212,300,24]}
+{"kind":"shape","id":"sh/orytsvu9","slide":2,"bbox":[98,246,320,146]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":2,"text":"Public registry","textPreview":"Public registry","textChars":15,"textLines":1,"bbox":[116,262,284,24]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":2,"text":"Home and search\nBusiness directory\nBusiness profile\nSBO verification\nAds and click tracking","textPreview":"Home and search | Business directory | Business profile | SBO verification | Ads and click tracking","textChars":91,"textLines":5,"bbox":[116,294,284,86]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":2,"bbox":[432,246,320,146]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":2,"text":"SBO workflow","textPreview":"SBO workflow","textChars":12,"textLines":1,"bbox":[450,262,284,24]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":2,"text":"Join form and auth modal\nApplication progress\nCompliance documents\nFees and proof of payment\nFinal verification and seal","textPreview":"Join form and auth modal | Application progress | Compliance documents | Fees and proof of payment | Final verification and seal","textChars":120,"textLines":5,"bbox":[450,294,284,86]}
+{"kind":"shape","id":"sh/65wjudg7","slide":2,"bbox":[98,408,320,170]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":2,"text":"Marketplace and support","textPreview":"Marketplace and support","textChars":23,"textLines":1,"bbox":[116,424,284,24]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":2,"text":"RFQs and bids\nVendor discovery\nAward and completion\nSupport enquiries\nFeedback submission","textPreview":"RFQs and bids | Vendor discovery | Award and completion | Support enquiries | Feedback submission","textChars":89,"textLines":5,"bbox":[116,456,284,110]}
+{"kind":"shape","id":"sh/idonyd0z","slide":2,"bbox":[432,408,320,170]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":2,"text":"Admin backend","textPreview":"Admin backend","textChars":13,"textLines":1,"bbox":[450,424,284,24]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":2,"text":"Users and admins\nSBO approvals\nFees and compliance docs\nReports and activity logs\nAds and categories","textPreview":"Users and admins | SBO approvals | Fees and compliance docs | Reports and activity logs | Ads and categories","textChars":100,"textLines":5,"bbox":[450,456,284,110]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":2,"bbox":[804,190,404,434]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":2,"text":"Stack and connection points","textPreview":"Stack and connection points","textChars":27,"textLines":1,"bbox":[830,214,220,24]}
+{"kind":"shape","id":"sh/tcj6tova","slide":2,"bbox":[830,254,352,76]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":2,"bbox":[846,268,110,24]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":2,"text":"Backend","textPreview":"Backend","textChars":7,"textLines":1,"bbox":[858,275,86,10]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":2,"text":"PHP 8.4 + Laravel 12\nLivewire + Volt + Flux","textPreview":"PHP 8.4 + Laravel 12 | Livewire + Volt + Flux","textChars":43,"textLines":2,"bbox":[968,266,198,52]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":2,"bbox":[830,348,352,76]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":2,"bbox":[846,362,110,24]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":2,"text":"Frontend","textPreview":"Frontend","textChars":8,"textLines":1,"bbox":[858,369,86,10]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":2,"text":"Blade views\nTailwind CSS 4\nDaisyUI + Vite","textPreview":"Blade views | Tailwind CSS 4 | DaisyUI + Vite","textChars":41,"textLines":3,"bbox":[968,360,198,52]}
+{"kind":"shape","id":"sh/svu9knih","slide":2,"bbox":[830,442,352,76]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":2,"bbox":[846,456,110,24]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":2,"text":"Platform services","textPreview":"Platform services","textChars":17,"textLines":1,"bbox":[858,463,86,10]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":2,"text":"Reverb and Echo\nSpatie Media Library\nQueue + SMTP / Mailgun / Resend","textPreview":"Reverb and Echo | Spatie Media Library | Queue + SMTP / Mailgun / Resend","textChars":68,"textLines":3,"bbox":[968,454,198,52]}
+{"kind":"textbox","id":"sh/sji5snel","slide":2,"text":"Meaning: the platform is not just pages. It already contains reusable domain rules, stored data, uploaded files, and staff operating workflows.","textPreview":"Meaning: the platform is not just pages. It already contains reusable domain rules, stored data, uploaded files, and staff operating work...","textChars":143,"textLines":1,"bbox":[830,542,352,58]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":2,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/d0z61032","slide":2,"text":"Sources: docs/platform-architecture.md, composer.json, package.json, routes/web.php","textPreview":"Sources: docs/platform-architecture.md, composer.json, package.json, routes/web.php","textChars":83,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/wzhv9x","slide":2,"text":"Current-state slide. Show that the major business capability areas are already integrated in one codebase and that the stack is modern Laravel, not a blank slate."}
+{"kind":"slide","id":"sl/3e4mjd","slide":3,"title":"Approach A: add versioned APIs around the current Laravel core","textShapes":28}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":3,"text":"Approach A: add versioned APIs around the current Laravel core","textPreview":"Approach A: add versioned APIs around the current Laravel core","textChars":62,"textLines":1,"bbox":[72,58,930,48]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":3,"text":"This keeps the existing web product in place and exposes module-by-module endpoints for mobile apps, partner systems, or new frontends.","textPreview":"This keeps the existing web product in place and exposes module-by-module endpoints for mobile apps, partner systems, or new frontends.","textChars":135,"textLines":1,"bbox":[72,100,930,38]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":3,"bbox":[72,158,250,114]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":3,"text":"Clients","textPreview":"Clients","textChars":7,"textLines":1,"bbox":[90,174,214,24]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":3,"text":"Current web UI\nFuture mobile app\nPartner systems\nInternal admin tools","textPreview":"Current web UI | Future mobile app | Partner systems | Internal admin tools","textChars":69,"textLines":4,"bbox":[90,206,214,56]}
+{"kind":"shape","id":"sh/ahoza1gv","slide":3,"bbox":[338,158,288,114]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":3,"text":"API layer","textPreview":"API layer","textChars":9,"textLines":1,"bbox":[356,174,252,24]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":3,"text":"/api/v1/public\n/auth and /me\n/sbos and /payments\n/rfqs, /network, /admin","textPreview":"/api/v1/public | /auth and /me | /sbos and /payments | /rfqs, /network, /admin","textChars":72,"textLines":4,"bbox":[356,206,252,56]}
+{"kind":"shape","id":"sh/lwval87e","slide":3,"bbox":[642,158,566,114]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":3,"text":"Current domain core","textPreview":"Current domain core","textChars":19,"textLines":1,"bbox":[660,174,530,24]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":3,"text":"Controllers, models, services, policies, queues, media, and the existing database remain the source of truth.","textPreview":"Controllers, models, services, policies, queues, media, and the existing database remain the source of truth.","textChars":109,"textLines":1,"bbox":[660,206,530,56]}
+{"kind":"shape","id":"sh/zidonyd0","slide":3,"bbox":[72,304,306,78]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":3,"bbox":[88,320,34,34]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":3,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[88,321,34,30]}
+{"kind":"textbox","id":"sh/svu9knih","slide":3,"text":"Start with public read APIs","textPreview":"Start with public read APIs","textChars":27,"textLines":1,"bbox":[132,318,230,28]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":3,"text":"Directory, categories, business profile, advert slots, and public SBO verification.","textPreview":"Directory, categories, business profile, advert slots, and public SBO verification.","textChars":83,"textLines":1,"bbox":[132,346,230,24]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":3,"bbox":[72,398,306,78]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":3,"bbox":[88,414,34,34]}
+{"kind":"textbox","id":"sh/sji5snel","slide":3,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[88,415,34,30]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":3,"text":"Add account and self-service","textPreview":"Add account and self-service","textChars":28,"textLines":1,"bbox":[132,412,230,28]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":3,"text":"Login, me, notifications, dashboard summaries, and user-owned assets.","textPreview":"Login, me, notifications, dashboard summaries, and user-owned assets.","textChars":69,"textLines":1,"bbox":[132,440,230,24]}
+{"kind":"shape","id":"sh/q1orytsv","slide":3,"bbox":[72,492,306,78]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":3,"bbox":[88,508,34,34]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[88,509,34,30]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":3,"text":"Expose SBO application flow","textPreview":"Expose SBO application flow","textChars":27,"textLines":1,"bbox":[132,506,230,28]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":3,"text":"Progress, fee quote, Espees start, payment proofs, compliance requirements, and seal download.","textPreview":"Progress, fee quote, Espees start, payment proofs, compliance requirements, and seal download.","textChars":94,"textLines":1,"bbox":[132,534,230,24]}
+{"kind":"shape","id":"sh/je9cvixc","slide":3,"bbox":[406,304,306,78]}
+{"kind":"shape","id":"sh/8v6psfil","slide":3,"bbox":[422,320,34,34]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":3,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[422,321,34,30]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":3,"text":"Move procurement and approvals","textPreview":"Move procurement and approvals","textChars":30,"textLines":1,"bbox":[466,318,230,28]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":3,"text":"RFQs, bids, awards, support inboxes, payment approvals, and admin workflow actions.","textPreview":"RFQs, bids, awards, support inboxes, payment approvals, and admin workflow actions.","textChars":83,"textLines":1,"bbox":[466,346,230,24]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":3,"bbox":[406,398,306,78]}
+{"kind":"shape","id":"sh/czed8v6p","slide":3,"bbox":[422,414,34,34]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":3,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[422,415,34,30]}
+{"kind":"textbox","id":"sh/u54zidon","slide":3,"text":"Finish with growth modules","textPreview":"Finish with growth modules","textChars":26,"textLines":1,"bbox":[466,412,230,28]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":3,"text":"Ad campaigns, SBO network messaging, reports, and real-time notification surfaces.","textPreview":"Ad campaigns, SBO network messaging, reports, and real-time notification surfaces.","textChars":82,"textLines":1,"bbox":[466,440,230,24]}
+{"kind":"shape","id":"sh/cbulwval","slide":3,"bbox":[740,304,468,278]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":3,"text":"Direct reuse from existing code","textPreview":"Direct reuse from existing code","textChars":31,"textLines":1,"bbox":[766,328,220,24]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":3,"text":"Public directory and verification: BusinessController, SboVerificationController\nSBO rules: SboApplicationProgress, SboComplianceRequirements, SboFeeCalculator\nPayments and procurement: SboEspeesPaymentController, AdCampaignPaymentController, PurchaseOrder, PurchaseOrderBid\nAuth and admin policies: AdminCapabilities, existing route middleware, notifications, queues","textPreview":"Public directory and verification: BusinessController, SboVerificationController | SBO rules: SboApplicationProgress, SboComplianceRequir...","textChars":367,"textLines":4,"bbox":[766,360,414,122]}
+{"kind":"shape","id":"sh/udg7adsj","slide":3,"bbox":[766,500,414,58]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":3,"text":"Important gate: fix the current approval, auth, and XSS issues before broad API exposure.","textPreview":"Important gate: fix the current approval, auth, and XSS issues before broad API exposure.","textChars":89,"textLines":1,"bbox":[784,514,376,28]}
+{"kind":"shape","id":"sh/cj6tovah","slide":3,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/54zidony","slide":3,"text":"Sources: routes/web.php, docs/platform-architecture.md, app domain scan, security review notes","textPreview":"Sources: routes/web.php, docs/platform-architecture.md, app domain scan, security review notes","textChars":94,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/3e4mjd","slide":3,"text":"Approach A is the incremental path. Stress reuse, phased rollout, and the need to harden security before turning current workflows into public or partner-facing APIs."}
+{"kind":"slide","id":"sl/x1isk7","slide":4,"title":"Approach B: rebuild in CI4 or another backend in parallel","textShapes":21}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":4,"text":"Approach B: rebuild in CI4 or another backend in parallel","textPreview":"Approach B: rebuild in CI4 or another backend in parallel","textChars":57,"textLines":1,"bbox":[72,58,930,48]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":4,"text":"This route creates a new backend while the current Laravel app keeps running, then migrates data and workflow ownership over time.","textPreview":"This route creates a new backend while the current Laravel app keeps running, then migrates data and workflow ownership over time.","textChars":130,"textLines":1,"bbox":[72,100,930,38]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":4,"bbox":[72,170,304,138]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":4,"text":"Current platform","textPreview":"Current platform","textChars":16,"textLines":1,"bbox":[90,188,268,24]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"Existing UI, Livewire flows, current database, uploaded files, notifications, and admin operations.","textPreview":"Existing UI, Livewire flows, current database, uploaded files, notifications, and admin operations.","textChars":99,"textLines":1,"bbox":[90,220,268,70]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":4,"bbox":[438,170,304,138]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":4,"text":"Migration bridge","textPreview":"Migration bridge","textChars":16,"textLines":1,"bbox":[456,188,268,24]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":4,"text":"Schema mapping, file migration, authentication alignment, dual-run checks, and cutover planning.","textPreview":"Schema mapping, file migration, authentication alignment, dual-run checks, and cutover planning.","textChars":96,"textLines":1,"bbox":[456,220,268,70]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":4,"bbox":[804,170,304,138]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":4,"text":"New backend","textPreview":"New backend","textChars":11,"textLines":1,"bbox":[822,188,268,24]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":4,"text":"CI4 or another stack with rewritten controllers, models, validation, auth, jobs, and API contracts.","textPreview":"CI4 or another stack with rewritten controllers, models, validation, auth, jobs, and API contracts.","textChars":99,"textLines":1,"bbox":[822,220,268,70]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":4,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[386,222,38,26]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":4,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[752,222,38,26]}
+{"kind":"shape","id":"sh/dsji5sne","slide":4,"bbox":[72,352,272,182]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":4,"text":"What you gain","textPreview":"What you gain","textChars":13,"textLines":1,"bbox":[88,368,240,24]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":4,"text":"A clean separation point, fresh architectural choices, and a backend shaped for APIs from day one.","textPreview":"A clean separation point, fresh architectural choices, and a backend shaped for APIs from day one.","textChars":98,"textLines":1,"bbox":[88,400,240,120]}
+{"kind":"shape","id":"sh/61032lsz","slide":4,"bbox":[360,352,272,182]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":4,"text":"What must be rebuilt","textPreview":"What must be rebuilt","textChars":20,"textLines":1,"bbox":[376,368,240,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":4,"text":"Auth, forms, approval rules, uploads, payment logic, notifications, procurement rules, and admin tools all need new implementations.","textPreview":"Auth, forms, approval rules, uploads, payment logic, notifications, procurement rules, and admin tools all need new implementations.","textChars":132,"textLines":1,"bbox":[376,400,240,120]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":4,"bbox":[648,352,272,182]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":4,"text":"Migration pressure","textPreview":"Migration pressure","textChars":18,"textLines":1,"bbox":[664,368,240,24]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":4,"text":"You need field-by-field schema mapping, media transfer, parity testing, and a controlled cutover to avoid operational breakage.","textPreview":"You need field-by-field schema mapping, media transfer, parity testing, and a controlled cutover to avoid operational breakage.","textChars":127,"textLines":1,"bbox":[664,400,240,120]}
+{"kind":"shape","id":"sh/vixczed8","slide":4,"bbox":[936,352,272,182]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":4,"text":"When it makes sense","textPreview":"When it makes sense","textChars":19,"textLines":1,"bbox":[952,368,240,24]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":4,"text":"Only when a framework change is already a strategic mandate and the team accepts a longer, higher-risk parallel rewrite.","textPreview":"Only when a framework change is already a strategic mandate and the team accepts a longer, higher-risk parallel rewrite.","textChars":120,"textLines":1,"bbox":[952,400,240,120]}
+{"kind":"shape","id":"sh/6psfil0r","slide":4,"bbox":[72,558,1136,64]}
+{"kind":"textbox","id":"sh/val87ed8","slide":4,"text":"Key caution: the UI can be recreated, but the current Livewire behavior, business rules, and operational edge cases do not convert automatically. They must be rewritten and re-tested.","textPreview":"Key caution: the UI can be recreated, but the current Livewire behavior, business rules, and operational edge cases do not convert automa...","textChars":183,"textLines":1,"bbox":[96,576,1090,24]}
+{"kind":"shape","id":"sh/knih4byh","slide":4,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":4,"text":"Sources: docs/platform-architecture.md, routes/web.php, app domain scan, security review notes","textPreview":"Sources: docs/platform-architecture.md, routes/web.php, app domain scan, security review notes","textChars":94,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/x1isk7","slide":4,"text":"Approach B is possible but disruptive. Use this slide to make the rewrite cost concrete: rules, workflows, files, auth, and admin operations all have to be rebuilt and migrated."}
+{"kind":"slide","id":"sl/xkqmff","slide":5,"title":"Direct comparison","textShapes":31}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":5,"text":"Direct comparison","textPreview":"Direct comparison","textChars":17,"textLines":1,"bbox":[72,58,930,48]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":5,"text":"The choice is mostly between incremental reuse now and strategic framework freedom later.","textPreview":"The choice is mostly between incremental reuse now and strategic framework freedom later.","textChars":89,"textLines":1,"bbox":[72,100,930,38]}
+{"kind":"shape","id":"sh/9knih4by","slide":5,"bbox":[72,176,320,56]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":5,"text":"Decision area","textPreview":"Decision area","textChars":13,"textLines":1,"bbox":[86,186,292,36]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":5,"bbox":[404,176,388,56]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":5,"text":"Approach A: API-enable Laravel","textPreview":"Approach A: API-enable Laravel","textChars":30,"textLines":1,"bbox":[418,186,360,36]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":5,"bbox":[804,176,404,56]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":5,"text":"Approach B: parallel rebuild","textPreview":"Approach B: parallel rebuild","textChars":28,"textLines":1,"bbox":[818,186,376,36]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":5,"bbox":[72,244,320,50]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":5,"text":"Existing UI and assets","textPreview":"Existing UI and assets","textChars":22,"textLines":1,"bbox":[86,254,292,30]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":5,"bbox":[404,244,388,50]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":5,"text":"Keep the current web product and expose new interfaces around it.","textPreview":"Keep the current web product and expose new interfaces around it.","textChars":65,"textLines":1,"bbox":[418,254,360,30]}
+{"kind":"shape","id":"sh/0z61032l","slide":5,"bbox":[804,244,404,50]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":5,"text":"UI and assets can be referenced, but screens and interactions still need recreation.","textPreview":"UI and assets can be referenced, but screens and interactions still need recreation.","textChars":84,"textLines":1,"bbox":[818,254,376,30]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":5,"bbox":[72,296,320,50]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":5,"text":"Business rule reuse","textPreview":"Business rule reuse","textChars":19,"textLines":1,"bbox":[86,306,292,30]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":5,"bbox":[404,296,388,50]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":5,"text":"High reuse from existing models, services, middleware, and controllers.","textPreview":"High reuse from existing models, services, middleware, and controllers.","textChars":71,"textLines":1,"bbox":[418,306,360,30]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":5,"bbox":[804,296,404,50]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":5,"text":"Low direct reuse. Most logic must be rewritten in the new framework.","textPreview":"Low direct reuse. Most logic must be rewritten in the new framework.","textChars":68,"textLines":1,"bbox":[818,306,376,30]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":5,"bbox":[72,348,320,50]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":5,"text":"Delivery risk","textPreview":"Delivery risk","textChars":13,"textLines":1,"bbox":[86,358,292,30]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":5,"bbox":[404,348,388,50]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":5,"text":"Lower. Changes can ship by module without pausing the live platform.","textPreview":"Lower. Changes can ship by module without pausing the live platform.","textChars":68,"textLines":1,"bbox":[418,358,360,30]}
+{"kind":"shape","id":"sh/fepkzupw","slide":5,"bbox":[804,348,404,50]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":5,"text":"Higher. Two systems must stay aligned until cutover.","textPreview":"Higher. Two systems must stay aligned until cutover.","textChars":52,"textLines":1,"bbox":[818,358,376,30]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":5,"bbox":[72,400,320,50]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":5,"text":"Data migration load","textPreview":"Data migration load","textChars":19,"textLines":1,"bbox":[86,410,292,30]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":5,"bbox":[404,400,388,50]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":5,"text":"Low to medium. Same database can remain authoritative at first.","textPreview":"Low to medium. Same database can remain authoritative at first.","textChars":63,"textLines":1,"bbox":[418,410,360,30]}
+{"kind":"shape","id":"sh/c7u54zid","slide":5,"bbox":[804,400,404,50]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":5,"text":"High. Schema mapping, sync, and file migration become part of the project.","textPreview":"High. Schema mapping, sync, and file migration become part of the project.","textChars":74,"textLines":1,"bbox":[818,410,376,30]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":5,"bbox":[72,452,320,50]}
+{"kind":"textbox","id":"sh/1032lszq","slide":5,"text":"Security cleanup path","textPreview":"Security cleanup path","textChars":21,"textLines":1,"bbox":[86,462,292,30]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":5,"bbox":[404,452,388,50]}
+{"kind":"textbox","id":"sh/judg7ads","slide":5,"text":"Fix the current weaknesses once, then expose the safer core by API.","textPreview":"Fix the current weaknesses once, then expose the safer core by API.","textChars":67,"textLines":1,"bbox":[418,462,360,30]}
+{"kind":"shape","id":"sh/u9knih4b","slide":5,"bbox":[804,452,404,50]}
+{"kind":"textbox","id":"sh/54zidony","slide":5,"text":"Still required. A rewrite does not remove the need to correct the underlying rules.","textPreview":"Still required. A rewrite does not remove the need to correct the underlying rules.","textChars":83,"textLines":1,"bbox":[818,462,376,30]}
+{"kind":"shape","id":"sh/cj6tovah","slide":5,"bbox":[72,504,320,50]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":5,"text":"Mobile or partner readiness","textPreview":"Mobile or partner readiness","textChars":27,"textLines":1,"bbox":[86,514,292,30]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":5,"bbox":[404,504,388,50]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":5,"text":"Strong once /api/v1 is phased in.","textPreview":"Strong once /api/v1 is phased in.","textChars":33,"textLines":1,"bbox":[418,514,360,30]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":5,"bbox":[804,504,404,50]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":5,"text":"Strong eventually, but only after the new backend reaches feature parity.","textPreview":"Strong eventually, but only after the new backend reaches feature parity.","textChars":73,"textLines":1,"bbox":[818,514,376,30]}
+{"kind":"shape","id":"sh/94fu18jq","slide":5,"bbox":[72,556,320,50]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":5,"text":"Operational continuity","textPreview":"Operational continuity","textChars":22,"textLines":1,"bbox":[86,566,292,30]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":5,"bbox":[404,556,388,50]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":5,"text":"Admin teams keep using the same system during rollout.","textPreview":"Admin teams keep using the same system during rollout.","textChars":54,"textLines":1,"bbox":[418,566,360,30]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":5,"bbox":[804,556,404,50]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":5,"text":"Ops teams may need to straddle old and new tooling during transition.","textPreview":"Ops teams may need to straddle old and new tooling during transition.","textChars":69,"textLines":1,"bbox":[818,566,376,30]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":5,"bbox":[72,608,320,50]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":5,"text":"Long-term framework freedom","textPreview":"Long-term framework freedom","textChars":27,"textLines":1,"bbox":[86,618,292,30]}
+{"kind":"shape","id":"sh/s72x4nap","slide":5,"bbox":[404,608,388,50]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":5,"text":"Moderate. You still live with Laravel as the main core.","textPreview":"Moderate. You still live with Laravel as the main core.","textChars":55,"textLines":1,"bbox":[418,618,360,30]}
+{"kind":"shape","id":"sh/adsji5sn","slide":5,"bbox":[804,608,404,50]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":5,"text":"High. You can standardize on CI4 or another chosen stack.","textPreview":"High. You can standardize on CI4 or another chosen stack.","textChars":57,"textLines":1,"bbox":[818,618,376,30]}
+{"kind":"shape","id":"sh/sji5snel","slide":5,"bbox":[72,650,1136,18]}
+{"kind":"shape","id":"sh/za1gvy90","slide":5,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":5,"text":"Sources: routes/web.php, app domain scan, docs/platform-architecture.md, security review notes","textPreview":"Sources: routes/web.php, app domain scan, docs/platform-architecture.md, security review notes","textChars":94,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/xkqmff","slide":5,"text":"Comparison slide. The recommendation direction should be obvious by the end: API-enable now unless a framework change is already a mandated business decision."}
+{"kind":"slide","id":"sl/ei9dxy","slide":6,"title":"Recommended route","textShapes":23}
+{"kind":"shape","id":"sh/25kb6xkf","slide":6,"bbox":[72,68,206,30]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":6,"text":"Recommended route","textPreview":"Recommended route","textChars":17,"textLines":1,"bbox":[84,75,182,16]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":6,"text":"Choose Approach A now.\nStabilize the Laravel core, then expose APIs in phases.","textPreview":"Choose Approach A now. | Stabilize the Laravel core, then expose APIs in phases.","textChars":78,"textLines":2,"bbox":[72,122,630,120]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":6,"text":"A rebuild should come later only if the organization decides that framework standardization matters more than short-term reuse, continuity, and risk control.","textPreview":"A rebuild should come later only if the organization decides that framework standardization matters more than short-term reuse, continuit...","textChars":157,"textLines":1,"bbox":[72,258,610,94]}
+{"kind":"shape","id":"sh/2t83itgf","slide":6,"bbox":[72,382,620,234]}
+{"kind":"textbox","id":"sh/9knih4by","slide":6,"text":"Next moves","textPreview":"Next moves","textChars":10,"textLines":1,"bbox":[98,404,210,24]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":6,"bbox":[98,438,566,28]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":6,"bbox":[108,442,20,20]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[108,442,20,20]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":6,"text":"Fix the current approval, auth, and XSS vulnerabilities first.","textPreview":"Fix the current approval, auth, and XSS vulnerabilities first.","textChars":62,"textLines":1,"bbox":[138,443,510,18]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":6,"bbox":[98,472,566,28]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":6,"bbox":[108,476,20,20]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[108,476,20,20]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":6,"text":"Introduce API auth and a versioned /api/v1 structure.","textPreview":"Introduce API auth and a versioned /api/v1 structure.","textChars":53,"textLines":1,"bbox":[138,477,510,18]}
+{"kind":"shape","id":"sh/94fu18jq","slide":6,"bbox":[98,506,566,28]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":6,"bbox":[108,510,20,20]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[108,510,20,20]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":6,"text":"Expose public read modules before write-heavy workflows.","textPreview":"Expose public read modules before write-heavy workflows.","textChars":56,"textLines":1,"bbox":[138,511,510,18]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":6,"bbox":[98,540,566,28]}
+{"kind":"shape","id":"sh/dg7adsji","slide":6,"bbox":[108,544,20,20]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[108,544,20,20]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"Move SBO, payments, procurement, and admin actions in controlled phases.","textPreview":"Move SBO, payments, procurement, and admin actions in controlled phases.","textChars":72,"textLines":1,"bbox":[138,545,510,18]}
+{"kind":"shape","id":"sh/6tovahoz","slide":6,"bbox":[98,574,566,28]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":6,"bbox":[108,578,20,20]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[108,578,20,20]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":6,"text":"Reassess CI4 or another replatform only after the domain layer is stable.","textPreview":"Reassess CI4 or another replatform only after the domain layer is stable.","textChars":73,"textLines":1,"bbox":[138,579,510,18]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":6,"bbox":[726,94,482,522]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":6,"text":"Suggested API rollout order","textPreview":"Suggested API rollout order","textChars":27,"textLines":1,"bbox":[752,120,230,24]}
+{"kind":"shape","id":"sh/oj2t83it","slide":6,"bbox":[752,160,430,56]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":6,"text":"1. Public directory and verification","textPreview":"1. Public directory and verification","textChars":36,"textLines":1,"bbox":[770,176,392,24]}
+{"kind":"shape","id":"sh/rytsvu9k","slide":6,"bbox":[752,232,430,56]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":6,"text":"2. Auth, /me, and notifications","textPreview":"2. Auth, /me, and notifications","textChars":31,"textLines":1,"bbox":[770,248,392,24]}
+{"kind":"shape","id":"sh/90je9cvi","slide":6,"bbox":[752,304,430,56]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":6,"text":"3. SBO applications, fees, and compliance documents","textPreview":"3. SBO applications, fees, and compliance documents","textChars":51,"textLines":1,"bbox":[770,320,392,24]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":6,"bbox":[752,376,430,56]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":6,"text":"4. RFQs, bids, support, and admin approvals","textPreview":"4. RFQs, bids, support, and admin approvals","textChars":43,"textLines":1,"bbox":[770,392,392,24]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":6,"bbox":[752,448,430,56]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"text":"5. Ads, network messaging, and real-time events","textPreview":"5. Ads, network messaging, and real-time events","textChars":47,"textLines":1,"bbox":[770,464,392,24]}
+{"kind":"shape","id":"sh/nih4byhg","slide":6,"bbox":[752,532,430,58]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":6,"text":"Decision guardrail: do not publish broad write APIs until the current security issues are closed.","textPreview":"Decision guardrail: do not publish broad write APIs until the current security issues are closed.","textChars":97,"textLines":1,"bbox":[770,547,392,28]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":6,"bbox":[72,668,1136,1]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":6,"text":"Sources: app domain scan, security review notes, routes/web.php, docs/platform-architecture.md","textPreview":"Sources: app domain scan, security review notes, routes/web.php, docs/platform-architecture.md","textChars":94,"textLines":1,"bbox":[72,676,930,22]}
+{"kind":"textbox","id":"sh/0z61032l","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1085,672,123,26]}
+{"kind":"notes","id":"nt/ei9dxy","slide":6,"text":"Recommendation slide. Lead with the decision, then make the next actions and guardrails explicit so the audience understands what happens immediately after approval."}

@@ -1,0 +1,480 @@
+[
+  {
+    "key": "home",
+    "label": "Home",
+    "route": "/",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "01-home-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/",
+    "finalUrl": "http://localhost:8888/lw_registry/public/",
+    "title": "Loveworld Business Registry - Global Visibility Starts Here",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 3765,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "about",
+    "label": "About",
+    "route": "/about",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "02-about-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/about",
+    "finalUrl": "http://localhost:8888/lw_registry/public/about",
+    "title": "About Loveworld Registry – Trusted Business Ecosystem",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 5251,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "advertise",
+    "label": "Advertise",
+    "route": "/advertise",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "03-advertise-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/advertise",
+    "finalUrl": "http://localhost:8888/lw_registry/public/advertise",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 3444,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "feedback",
+    "label": "Feedback",
+    "route": "/feedback",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "04-feedback-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/feedback",
+    "finalUrl": "http://localhost:8888/lw_registry/public/feedback",
+    "title": "Give Feedback - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 2620,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "businesses-index",
+    "label": "Businesses Index",
+    "route": "/businesses",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "05-businesses-index-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/businesses",
+    "finalUrl": "http://localhost:8888/lw_registry/public/businesses",
+    "title": "Browse SBOs - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 2074,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "businesses-category",
+    "label": "Businesses Category",
+    "route": "/businesses/categories/beauty-personal-care",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "06-businesses-category-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/businesses/categories/beauty-personal-care",
+    "finalUrl": "http://localhost:8888/lw_registry/public/businesses/categories/beauty-personal-care",
+    "title": "Beauty & Personal Care Businesses - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1760,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "businesses-show",
+    "label": "Business Detail",
+    "route": "/business/test-business",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "07-businesses-show-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/business/test-business",
+    "finalUrl": "http://localhost:8888/lw_registry/public/business/test-business",
+    "title": "Test Business - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 2306,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-verify",
+    "label": "SBO Verify",
+    "route": "/verify/sbo/MOC-2026-9002",
+    "access": "Public",
+    "account": "guest",
+    "fileName": "08-sbo-verify-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/verify/sbo/MOC-2026-9002",
+    "finalUrl": "http://localhost:8888/lw_registry/public/verify/sbo/MOC-2026-9002",
+    "title": "Verify SBO Registration - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1882,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "dashboard",
+    "label": "Dashboard",
+    "route": "/dashboard",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "09-dashboard-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/dashboard",
+    "finalUrl": "http://localhost:8888/lw_registry/public/dashboard",
+    "title": "My Account - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "profile",
+    "label": "Profile",
+    "route": "/profile",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "10-profile-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/profile",
+    "finalUrl": "http://localhost:8888/lw_registry/public/profile",
+    "title": "Profile - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "notifications",
+    "label": "Notifications",
+    "route": "/notifications",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "11-notifications-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/notifications",
+    "finalUrl": "http://localhost:8888/lw_registry/public/notifications?filter=all",
+    "title": "Notifications - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "support",
+    "label": "Support",
+    "route": "/support",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "12-support-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/support",
+    "finalUrl": "http://localhost:8888/lw_registry/public/support",
+    "title": "Support - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1259,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "settings-profile",
+    "label": "Settings Profile",
+    "route": "/settings/profile",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "13-settings-profile-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/settings/profile",
+    "finalUrl": "http://localhost:8888/lw_registry/public/settings/profile",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "settings-password",
+    "label": "Settings Password",
+    "route": "/settings/password",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "14-settings-password-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/settings/password",
+    "finalUrl": "http://localhost:8888/lw_registry/public/settings/password",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "settings-appearance",
+    "label": "Settings Appearance",
+    "route": "/settings/appearance",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "15-settings-appearance-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/settings/appearance",
+    "finalUrl": "http://localhost:8888/lw_registry/public/settings/appearance",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "forgot-password",
+    "label": "Forgot Password",
+    "route": "/forgot-password",
+    "access": "Guest",
+    "account": "guest",
+    "fileName": "16-forgot-password-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/forgot-password",
+    "finalUrl": "http://localhost:8888/lw_registry/public/forgot-password",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "reset-password",
+    "label": "Reset Password",
+    "route": "/reset-password/demo-token",
+    "access": "Guest",
+    "account": "guest",
+    "fileName": "17-reset-password-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/reset-password/demo-token",
+    "finalUrl": "http://localhost:8888/lw_registry/public/reset-password/demo-token",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "verify-email",
+    "label": "Verify Email",
+    "route": "/verify-email",
+    "access": "Authenticated",
+    "account": "unverified_sbo",
+    "fileName": "18-verify-email-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/verify-email",
+    "finalUrl": "http://localhost:8888/lw_registry/public/verify-email",
+    "title": "Verify Email | L oveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "confirm-password",
+    "label": "Confirm Password",
+    "route": "/confirm-password",
+    "access": "Authenticated",
+    "account": "user",
+    "fileName": "19-confirm-password-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/confirm-password",
+    "finalUrl": "http://localhost:8888/lw_registry/public/confirm-password",
+    "title": "Loveworld Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "login-redirect",
+    "label": "Login Redirect",
+    "route": "/login",
+    "access": "Guest Redirect",
+    "account": "guest",
+    "note": "Redirects to home",
+    "fileName": "20-login-redirect-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/login",
+    "finalUrl": "http://localhost:8888/lw_registry/public/",
+    "title": "Loveworld Business Registry - Global Visibility Starts Here",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 3765,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "register-redirect",
+    "label": "Register Redirect",
+    "route": "/register",
+    "access": "Guest Redirect",
+    "account": "guest",
+    "note": "Redirects to home",
+    "fileName": "21-register-redirect-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/register",
+    "finalUrl": "http://localhost:8888/lw_registry/public/",
+    "title": "Loveworld Business Registry - Global Visibility Starts Here",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 3765,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-dashboard",
+    "label": "SBO Dashboard",
+    "route": "/sbo/dashboard",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "22-sbo-dashboard-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/dashboard",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/dashboard",
+    "title": "SBO Dashboard - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1304,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-applications",
+    "label": "SBO Applications",
+    "route": "/sbo/applications",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "23-sbo-applications-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/applications",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/applications",
+    "title": "SBO Applications - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-progress",
+    "label": "SBO Progress",
+    "route": "/sbo/applications/2/progress",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "24-sbo-progress-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/applications/2/progress",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/applications/2/progress?step=verified",
+    "title": "Application Progress - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1286,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "payment-required",
+    "label": "Payment Required",
+    "route": "/sbo/complete-payment-required",
+    "access": "SBO Manager",
+    "account": "pending_sbo",
+    "fileName": "25-payment-required-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/complete-payment-required",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/complete-payment-required",
+    "title": "Complete Payment - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1420,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "my-rfqs",
+    "label": "My RFQs",
+    "route": "/my-rfqs",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "26-my-rfqs-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/my-rfqs",
+    "finalUrl": "http://localhost:8888/lw_registry/public/my-rfqs",
+    "title": "My Procurement Requests - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1180,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-network",
+    "label": "SBO Network",
+    "route": "/sbo/network",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "27-sbo-network-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/network",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/network?sbo=2&q=",
+    "title": "SBO Network - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1311,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  },
+  {
+    "key": "sbo-categories",
+    "label": "SBO Categories",
+    "route": "/sbo/categories",
+    "access": "SBO Manager",
+    "account": "paid_sbo",
+    "fileName": "28-sbo-categories-full-page.png",
+    "targetUrl": "http://localhost:8888/lw_registry/public/sbo/categories",
+    "finalUrl": "http://localhost:8888/lw_registry/public/sbo/categories?sbo=2&q=&category=all&country=all&zone=all&business_type=all&verification=all&connection=all&sort=name",
+    "title": "SBO Categories - Loveworld Business Registry",
+    "dimensions": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1494,
+      "viewportWidth": 1440,
+      "viewportHeight": 1180
+    }
+  }
+]

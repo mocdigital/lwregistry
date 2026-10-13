@@ -1,0 +1,2735 @@
+{
+  "name": "LWCommerce Natural AI Chatbot Knowledge Base",
+  "version": "1.0",
+  "format": "JSON",
+  "language": "en",
+  "minimum_pairs": 500,
+  "total_pairs": 543,
+  "sources": [
+    "https://registry.lwcommerce.org/",
+    "https://lwcommerce.org/"
+  ],
+  "instructions": {
+    "persona": "Friendly, natural, helpful LWCommerce assistant.",
+    "style": "Conversational, concise, factual, and never invent information not supported by the source material.",
+    "freshness": "Counts, category totals, programs, contacts, and other changing information should be checked against the live websites before being presented as current.",
+    "fallback": "If a question is not covered, explain that the available information does not confirm the answer and direct the user to the appropriate LWCommerce or Registry page."
+  },
+  "training_pairs": [
+    {
+      "id": 1,
+      "call": "What is LWCommerce?",
+      "response": "LWCommerce is the Ministry of Commerce of the LW Nation. It exists to bring structure, oversight, and practical opportunities to Strategic Business Organizations and business-related activities."
+    },
+    {
+      "id": 2,
+      "call": "What is the Ministry of Commerce?",
+      "response": "The Ministry of Commerce, LW Nation is a commerce system built for businesses. It works with entrepreneurs, startups, business owners, service providers, partners, and investors who are focused on sustainable growth."
+    },
+    {
+      "id": 3,
+      "call": "What is the Loveworld Business Registry?",
+      "response": "The Loveworld Business Registry is a business discovery and visibility platform where Strategic Business Organizations can create profiles, be discovered, connect with other businesses, and participate in opportunities."
+    },
+    {
+      "id": 4,
+      "call": "What does the registry do?",
+      "response": "The registry helps people discover businesses, view business profiles, search by category or location, and make business relationships easier to start."
+    },
+    {
+      "id": 5,
+      "call": "Who is the registry for?",
+      "response": "It is designed for Strategic Business Organizations, business owners, founders, and organizations that want business visibility and connections within the Loveworld economy."
+    },
+    {
+      "id": 6,
+      "call": "Who can join the registry?",
+      "response": "An SBO manager or business owner can create an account and set up a business workspace and profile."
+    },
+    {
+      "id": 7,
+      "call": "How do I join the registry?",
+      "response": "Start by creating an account, then set up your workspace and build your business profile."
+    },
+    {
+      "id": 8,
+      "call": "How does the registry work?",
+      "response": "The registry follows three simple stages: create an account, build your profile, and connect with business opportunities."
+    },
+    {
+      "id": 9,
+      "call": "Why should I list my business?",
+      "response": "A registry profile can improve your visibility within the Loveworld business ecosystem and make it easier for customers and potential partners to understand and reach your business."
+    },
+    {
+      "id": 10,
+      "call": "Can I search for a business?",
+      "response": "Yes. The registry lets you search for what you need and specify a location, or browse businesses by category and location."
+    },
+    {
+      "id": 11,
+      "call": "Can I search by location?",
+      "response": "Yes. The registry supports discovery by location so users can look for businesses operating in a particular area."
+    },
+    {
+      "id": 12,
+      "call": "Can I search by category?",
+      "response": "Yes. You can browse businesses by category and explore the available business sectors."
+    },
+    {
+      "id": 13,
+      "call": "How many SBOs have applied?",
+      "response": "The registry currently states that 122 Strategic Business Organizations have applied. This number may change as new organizations apply."
+    },
+    {
+      "id": 14,
+      "call": "What is the purpose of business profiles?",
+      "response": "Business profiles provide the details people need to understand a business and know how to reach it."
+    },
+    {
+      "id": 15,
+      "call": "Can businesses collaborate through the registry?",
+      "response": "The registry is designed to help businesses discover one another, collaborate, and take part in procurement opportunities."
+    },
+    {
+      "id": 16,
+      "call": "Does the registry support procurement opportunities?",
+      "response": "Yes. The registry describes procurement opportunities as one of the ways businesses can connect within the ecosystem."
+    },
+    {
+      "id": 17,
+      "call": "What does global visibility starts here mean?",
+      "response": "It reflects the registry's purpose: helping businesses become easier to discover and connect with within a wider business ecosystem."
+    },
+    {
+      "id": 18,
+      "call": "Is the registry only for one type of business?",
+      "response": "No. The registry includes many categories spanning technology, commerce, professional services, hospitality, health, manufacturing, media, education, and other sectors."
+    },
+    {
+      "id": 19,
+      "call": "What is the goal of LWCommerce?",
+      "response": "The Ministry's stated focus is bringing structure, oversight, and real opportunity to business-related activities while supporting sustainable business growth."
+    },
+    {
+      "id": 20,
+      "call": "What is the foundation of LWCommerce?",
+      "response": "The Ministry describes its foundation as faith based while emphasizing practical business development and sustainable growth."
+    },
+    {
+      "id": 21,
+      "call": "Are there Agriculture & Agro Trade businesses on the registry?",
+      "response": "Yes. Agriculture & Agro Trade is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 22,
+      "call": "Can I find a Agriculture & Agro Trade business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Agriculture & Agro Trade."
+    },
+    {
+      "id": 23,
+      "call": "How do I search for Agriculture & Agro Trade?",
+      "response": "Open the registry directory and browse the Agriculture & Agro Trade category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 24,
+      "call": "I need a Agriculture & Agro Trade provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Agriculture & Agro Trade category and review their profiles."
+    },
+    {
+      "id": 25,
+      "call": "Does LWCommerce cover Agriculture & Agro Trade?",
+      "response": "Yes. Agriculture & Agro Trade is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 26,
+      "call": "Can my company be listed under Agriculture & Agro Trade?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 27,
+      "call": "Where can I browse Agriculture & Agro Trade businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Agriculture & Agro Trade category."
+    },
+    {
+      "id": 28,
+      "call": "I want to discover Agriculture & Agro Trade companies.",
+      "response": "The registry is designed for business discovery. Start with the Agriculture & Agro Trade category and then review the available business profiles."
+    },
+    {
+      "id": 29,
+      "call": "Are there Arts businesses on the registry?",
+      "response": "Yes. Arts is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 30,
+      "call": "Can I find a Arts business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Arts."
+    },
+    {
+      "id": 31,
+      "call": "How do I search for Arts?",
+      "response": "Open the registry directory and browse the Arts category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 32,
+      "call": "I need a Arts provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Arts category and review their profiles."
+    },
+    {
+      "id": 33,
+      "call": "Does LWCommerce cover Arts?",
+      "response": "Yes. Arts is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 34,
+      "call": "Can my company be listed under Arts?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 35,
+      "call": "Where can I browse Arts businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Arts category."
+    },
+    {
+      "id": 36,
+      "call": "I want to discover Arts companies.",
+      "response": "The registry is designed for business discovery. Start with the Arts category and then review the available business profiles."
+    },
+    {
+      "id": 37,
+      "call": "Are there Aviation businesses on the registry?",
+      "response": "Yes. Aviation is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 38,
+      "call": "Can I find a Aviation business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Aviation."
+    },
+    {
+      "id": 39,
+      "call": "How do I search for Aviation?",
+      "response": "Open the registry directory and browse the Aviation category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 40,
+      "call": "I need a Aviation provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Aviation category and review their profiles."
+    },
+    {
+      "id": 41,
+      "call": "Does LWCommerce cover Aviation?",
+      "response": "Yes. Aviation is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 42,
+      "call": "Can my company be listed under Aviation?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 43,
+      "call": "Where can I browse Aviation businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Aviation category."
+    },
+    {
+      "id": 44,
+      "call": "I want to discover Aviation companies.",
+      "response": "The registry is designed for business discovery. Start with the Aviation category and then review the available business profiles."
+    },
+    {
+      "id": 45,
+      "call": "Are there Beauty & Personal Care businesses on the registry?",
+      "response": "Yes. Beauty & Personal Care is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 46,
+      "call": "Can I find a Beauty & Personal Care business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Beauty & Personal Care."
+    },
+    {
+      "id": 47,
+      "call": "How do I search for Beauty & Personal Care?",
+      "response": "Open the registry directory and browse the Beauty & Personal Care category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 48,
+      "call": "I need a Beauty & Personal Care provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Beauty & Personal Care category and review their profiles."
+    },
+    {
+      "id": 49,
+      "call": "Does LWCommerce cover Beauty & Personal Care?",
+      "response": "Yes. Beauty & Personal Care is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 50,
+      "call": "Can my company be listed under Beauty & Personal Care?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 51,
+      "call": "Where can I browse Beauty & Personal Care businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Beauty & Personal Care category."
+    },
+    {
+      "id": 52,
+      "call": "I want to discover Beauty & Personal Care companies.",
+      "response": "The registry is designed for business discovery. Start with the Beauty & Personal Care category and then review the available business profiles."
+    },
+    {
+      "id": 53,
+      "call": "Are there Bookstores & Publishers businesses on the registry?",
+      "response": "Yes. Bookstores & Publishers is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 54,
+      "call": "Can I find a Bookstores & Publishers business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Bookstores & Publishers."
+    },
+    {
+      "id": 55,
+      "call": "How do I search for Bookstores & Publishers?",
+      "response": "Open the registry directory and browse the Bookstores & Publishers category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 56,
+      "call": "I need a Bookstores & Publishers provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Bookstores & Publishers category and review their profiles."
+    },
+    {
+      "id": 57,
+      "call": "Does LWCommerce cover Bookstores & Publishers?",
+      "response": "Yes. Bookstores & Publishers is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 58,
+      "call": "Can my company be listed under Bookstores & Publishers?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 59,
+      "call": "Where can I browse Bookstores & Publishers businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Bookstores & Publishers category."
+    },
+    {
+      "id": 60,
+      "call": "I want to discover Bookstores & Publishers companies.",
+      "response": "The registry is designed for business discovery. Start with the Bookstores & Publishers category and then review the available business profiles."
+    },
+    {
+      "id": 61,
+      "call": "Are there Childcare & Family Services businesses on the registry?",
+      "response": "Yes. Childcare & Family Services is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 62,
+      "call": "Can I find a Childcare & Family Services business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Childcare & Family Services."
+    },
+    {
+      "id": 63,
+      "call": "How do I search for Childcare & Family Services?",
+      "response": "Open the registry directory and browse the Childcare & Family Services category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 64,
+      "call": "I need a Childcare & Family Services provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Childcare & Family Services category and review their profiles."
+    },
+    {
+      "id": 65,
+      "call": "Does LWCommerce cover Childcare & Family Services?",
+      "response": "Yes. Childcare & Family Services is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 66,
+      "call": "Can my company be listed under Childcare & Family Services?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 67,
+      "call": "Where can I browse Childcare & Family Services businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Childcare & Family Services category."
+    },
+    {
+      "id": 68,
+      "call": "I want to discover Childcare & Family Services companies.",
+      "response": "The registry is designed for business discovery. Start with the Childcare & Family Services category and then review the available business profiles."
+    },
+    {
+      "id": 69,
+      "call": "Are there Churches & Ministries businesses on the registry?",
+      "response": "Yes. Churches & Ministries is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 70,
+      "call": "Can I find a Churches & Ministries business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Churches & Ministries."
+    },
+    {
+      "id": 71,
+      "call": "How do I search for Churches & Ministries?",
+      "response": "Open the registry directory and browse the Churches & Ministries category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 72,
+      "call": "I need a Churches & Ministries provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Churches & Ministries category and review their profiles."
+    },
+    {
+      "id": 73,
+      "call": "Does LWCommerce cover Churches & Ministries?",
+      "response": "Yes. Churches & Ministries is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 74,
+      "call": "Can my company be listed under Churches & Ministries?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 75,
+      "call": "Where can I browse Churches & Ministries businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Churches & Ministries category."
+    },
+    {
+      "id": 76,
+      "call": "I want to discover Churches & Ministries companies.",
+      "response": "The registry is designed for business discovery. Start with the Churches & Ministries category and then review the available business profiles."
+    },
+    {
+      "id": 77,
+      "call": "Are there Cleaning & Maintenance businesses on the registry?",
+      "response": "Yes. Cleaning & Maintenance is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 78,
+      "call": "Can I find a Cleaning & Maintenance business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Cleaning & Maintenance."
+    },
+    {
+      "id": 79,
+      "call": "How do I search for Cleaning & Maintenance?",
+      "response": "Open the registry directory and browse the Cleaning & Maintenance category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 80,
+      "call": "I need a Cleaning & Maintenance provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Cleaning & Maintenance category and review their profiles."
+    },
+    {
+      "id": 81,
+      "call": "Does LWCommerce cover Cleaning & Maintenance?",
+      "response": "Yes. Cleaning & Maintenance is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 82,
+      "call": "Can my company be listed under Cleaning & Maintenance?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 83,
+      "call": "Where can I browse Cleaning & Maintenance businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Cleaning & Maintenance category."
+    },
+    {
+      "id": 84,
+      "call": "I want to discover Cleaning & Maintenance companies.",
+      "response": "The registry is designed for business discovery. Start with the Cleaning & Maintenance category and then review the available business profiles."
+    },
+    {
+      "id": 85,
+      "call": "Are there Construction & Real Estate businesses on the registry?",
+      "response": "Yes. Construction & Real Estate is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 86,
+      "call": "Can I find a Construction & Real Estate business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Construction & Real Estate."
+    },
+    {
+      "id": 87,
+      "call": "How do I search for Construction & Real Estate?",
+      "response": "Open the registry directory and browse the Construction & Real Estate category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 88,
+      "call": "I need a Construction & Real Estate provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Construction & Real Estate category and review their profiles."
+    },
+    {
+      "id": 89,
+      "call": "Does LWCommerce cover Construction & Real Estate?",
+      "response": "Yes. Construction & Real Estate is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 90,
+      "call": "Can my company be listed under Construction & Real Estate?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 91,
+      "call": "Where can I browse Construction & Real Estate businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Construction & Real Estate category."
+    },
+    {
+      "id": 92,
+      "call": "I want to discover Construction & Real Estate companies.",
+      "response": "The registry is designed for business discovery. Start with the Construction & Real Estate category and then review the available business profiles."
+    },
+    {
+      "id": 93,
+      "call": "Are there Consulting & Advisory businesses on the registry?",
+      "response": "Yes. Consulting & Advisory is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 94,
+      "call": "Can I find a Consulting & Advisory business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Consulting & Advisory."
+    },
+    {
+      "id": 95,
+      "call": "How do I search for Consulting & Advisory?",
+      "response": "Open the registry directory and browse the Consulting & Advisory category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 96,
+      "call": "I need a Consulting & Advisory provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Consulting & Advisory category and review their profiles."
+    },
+    {
+      "id": 97,
+      "call": "Does LWCommerce cover Consulting & Advisory?",
+      "response": "Yes. Consulting & Advisory is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 98,
+      "call": "Can my company be listed under Consulting & Advisory?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 99,
+      "call": "Where can I browse Consulting & Advisory businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Consulting & Advisory category."
+    },
+    {
+      "id": 100,
+      "call": "I want to discover Consulting & Advisory companies.",
+      "response": "The registry is designed for business discovery. Start with the Consulting & Advisory category and then review the available business profiles."
+    },
+    {
+      "id": 101,
+      "call": "Are there Education businesses on the registry?",
+      "response": "Yes. Education is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 102,
+      "call": "Can I find a Education business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Education."
+    },
+    {
+      "id": 103,
+      "call": "How do I search for Education?",
+      "response": "Open the registry directory and browse the Education category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 104,
+      "call": "I need a Education provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Education category and review their profiles."
+    },
+    {
+      "id": 105,
+      "call": "Does LWCommerce cover Education?",
+      "response": "Yes. Education is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 106,
+      "call": "Can my company be listed under Education?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 107,
+      "call": "Where can I browse Education businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Education category."
+    },
+    {
+      "id": 108,
+      "call": "I want to discover Education companies.",
+      "response": "The registry is designed for business discovery. Start with the Education category and then review the available business profiles."
+    },
+    {
+      "id": 109,
+      "call": "Are there Education & Training businesses on the registry?",
+      "response": "Yes. Education & Training is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 110,
+      "call": "Can I find a Education & Training business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Education & Training."
+    },
+    {
+      "id": 111,
+      "call": "How do I search for Education & Training?",
+      "response": "Open the registry directory and browse the Education & Training category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 112,
+      "call": "I need a Education & Training provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Education & Training category and review their profiles."
+    },
+    {
+      "id": 113,
+      "call": "Does LWCommerce cover Education & Training?",
+      "response": "Yes. Education & Training is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 114,
+      "call": "Can my company be listed under Education & Training?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 115,
+      "call": "Where can I browse Education & Training businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Education & Training category."
+    },
+    {
+      "id": 116,
+      "call": "I want to discover Education & Training companies.",
+      "response": "The registry is designed for business discovery. Start with the Education & Training category and then review the available business profiles."
+    },
+    {
+      "id": 117,
+      "call": "Are there Engineering & Manufacturing businesses on the registry?",
+      "response": "Yes. Engineering & Manufacturing is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 118,
+      "call": "Can I find a Engineering & Manufacturing business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Engineering & Manufacturing."
+    },
+    {
+      "id": 119,
+      "call": "How do I search for Engineering & Manufacturing?",
+      "response": "Open the registry directory and browse the Engineering & Manufacturing category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 120,
+      "call": "I need a Engineering & Manufacturing provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Engineering & Manufacturing category and review their profiles."
+    },
+    {
+      "id": 121,
+      "call": "Does LWCommerce cover Engineering & Manufacturing?",
+      "response": "Yes. Engineering & Manufacturing is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 122,
+      "call": "Can my company be listed under Engineering & Manufacturing?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 123,
+      "call": "Where can I browse Engineering & Manufacturing businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Engineering & Manufacturing category."
+    },
+    {
+      "id": 124,
+      "call": "I want to discover Engineering & Manufacturing companies.",
+      "response": "The registry is designed for business discovery. Start with the Engineering & Manufacturing category and then review the available business profiles."
+    },
+    {
+      "id": 125,
+      "call": "Are there Entertainment businesses on the registry?",
+      "response": "Yes. Entertainment is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 126,
+      "call": "Can I find a Entertainment business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Entertainment."
+    },
+    {
+      "id": 127,
+      "call": "How do I search for Entertainment?",
+      "response": "Open the registry directory and browse the Entertainment category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 128,
+      "call": "I need a Entertainment provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Entertainment category and review their profiles."
+    },
+    {
+      "id": 129,
+      "call": "Does LWCommerce cover Entertainment?",
+      "response": "Yes. Entertainment is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 130,
+      "call": "Can my company be listed under Entertainment?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 131,
+      "call": "Where can I browse Entertainment businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Entertainment category."
+    },
+    {
+      "id": 132,
+      "call": "I want to discover Entertainment companies.",
+      "response": "The registry is designed for business discovery. Start with the Entertainment category and then review the available business profiles."
+    },
+    {
+      "id": 133,
+      "call": "Are there Events & Conferences businesses on the registry?",
+      "response": "Yes. Events & Conferences is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 134,
+      "call": "Can I find a Events & Conferences business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Events & Conferences."
+    },
+    {
+      "id": 135,
+      "call": "How do I search for Events & Conferences?",
+      "response": "Open the registry directory and browse the Events & Conferences category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 136,
+      "call": "I need a Events & Conferences provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Events & Conferences category and review their profiles."
+    },
+    {
+      "id": 137,
+      "call": "Does LWCommerce cover Events & Conferences?",
+      "response": "Yes. Events & Conferences is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 138,
+      "call": "Can my company be listed under Events & Conferences?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 139,
+      "call": "Where can I browse Events & Conferences businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Events & Conferences category."
+    },
+    {
+      "id": 140,
+      "call": "I want to discover Events & Conferences companies.",
+      "response": "The registry is designed for business discovery. Start with the Events & Conferences category and then review the available business profiles."
+    },
+    {
+      "id": 141,
+      "call": "Are there Faith-Based NGOs businesses on the registry?",
+      "response": "Yes. Faith-Based NGOs is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 142,
+      "call": "Can I find a Faith-Based NGOs business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Faith-Based NGOs."
+    },
+    {
+      "id": 143,
+      "call": "How do I search for Faith-Based NGOs?",
+      "response": "Open the registry directory and browse the Faith-Based NGOs category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 144,
+      "call": "I need a Faith-Based NGOs provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Faith-Based NGOs category and review their profiles."
+    },
+    {
+      "id": 145,
+      "call": "Does LWCommerce cover Faith-Based NGOs?",
+      "response": "Yes. Faith-Based NGOs is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 146,
+      "call": "Can my company be listed under Faith-Based NGOs?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 147,
+      "call": "Where can I browse Faith-Based NGOs businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Faith-Based NGOs category."
+    },
+    {
+      "id": 148,
+      "call": "I want to discover Faith-Based NGOs companies.",
+      "response": "The registry is designed for business discovery. Start with the Faith-Based NGOs category and then review the available business profiles."
+    },
+    {
+      "id": 149,
+      "call": "Are there Faith-Based Schools businesses on the registry?",
+      "response": "Yes. Faith-Based Schools is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 150,
+      "call": "Can I find a Faith-Based Schools business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Faith-Based Schools."
+    },
+    {
+      "id": 151,
+      "call": "How do I search for Faith-Based Schools?",
+      "response": "Open the registry directory and browse the Faith-Based Schools category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 152,
+      "call": "I need a Faith-Based Schools provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Faith-Based Schools category and review their profiles."
+    },
+    {
+      "id": 153,
+      "call": "Does LWCommerce cover Faith-Based Schools?",
+      "response": "Yes. Faith-Based Schools is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 154,
+      "call": "Can my company be listed under Faith-Based Schools?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 155,
+      "call": "Where can I browse Faith-Based Schools businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Faith-Based Schools category."
+    },
+    {
+      "id": 156,
+      "call": "I want to discover Faith-Based Schools companies.",
+      "response": "The registry is designed for business discovery. Start with the Faith-Based Schools category and then review the available business profiles."
+    },
+    {
+      "id": 157,
+      "call": "Are there Fashion & Apparel businesses on the registry?",
+      "response": "Yes. Fashion & Apparel is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 158,
+      "call": "Can I find a Fashion & Apparel business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Fashion & Apparel."
+    },
+    {
+      "id": 159,
+      "call": "How do I search for Fashion & Apparel?",
+      "response": "Open the registry directory and browse the Fashion & Apparel category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 160,
+      "call": "I need a Fashion & Apparel provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Fashion & Apparel category and review their profiles."
+    },
+    {
+      "id": 161,
+      "call": "Does LWCommerce cover Fashion & Apparel?",
+      "response": "Yes. Fashion & Apparel is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 162,
+      "call": "Can my company be listed under Fashion & Apparel?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 163,
+      "call": "Where can I browse Fashion & Apparel businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Fashion & Apparel category."
+    },
+    {
+      "id": 164,
+      "call": "I want to discover Fashion & Apparel companies.",
+      "response": "The registry is designed for business discovery. Start with the Fashion & Apparel category and then review the available business profiles."
+    },
+    {
+      "id": 165,
+      "call": "Are there Finance & Banking businesses on the registry?",
+      "response": "Yes. Finance & Banking is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 166,
+      "call": "Can I find a Finance & Banking business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Finance & Banking."
+    },
+    {
+      "id": 167,
+      "call": "How do I search for Finance & Banking?",
+      "response": "Open the registry directory and browse the Finance & Banking category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 168,
+      "call": "I need a Finance & Banking provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Finance & Banking category and review their profiles."
+    },
+    {
+      "id": 169,
+      "call": "Does LWCommerce cover Finance & Banking?",
+      "response": "Yes. Finance & Banking is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 170,
+      "call": "Can my company be listed under Finance & Banking?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 171,
+      "call": "Where can I browse Finance & Banking businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Finance & Banking category."
+    },
+    {
+      "id": 172,
+      "call": "I want to discover Finance & Banking companies.",
+      "response": "The registry is designed for business discovery. Start with the Finance & Banking category and then review the available business profiles."
+    },
+    {
+      "id": 173,
+      "call": "Are there FMCG businesses on the registry?",
+      "response": "Yes. FMCG is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 174,
+      "call": "Can I find a FMCG business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under FMCG."
+    },
+    {
+      "id": 175,
+      "call": "How do I search for FMCG?",
+      "response": "Open the registry directory and browse the FMCG category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 176,
+      "call": "I need a FMCG provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the FMCG category and review their profiles."
+    },
+    {
+      "id": 177,
+      "call": "Does LWCommerce cover FMCG?",
+      "response": "Yes. FMCG is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 178,
+      "call": "Can my company be listed under FMCG?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 179,
+      "call": "Where can I browse FMCG businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the FMCG category."
+    },
+    {
+      "id": 180,
+      "call": "I want to discover FMCG companies.",
+      "response": "The registry is designed for business discovery. Start with the FMCG category and then review the available business profiles."
+    },
+    {
+      "id": 181,
+      "call": "Are there Graphics & Printing businesses on the registry?",
+      "response": "Yes. Graphics & Printing is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 182,
+      "call": "Can I find a Graphics & Printing business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Graphics & Printing."
+    },
+    {
+      "id": 183,
+      "call": "How do I search for Graphics & Printing?",
+      "response": "Open the registry directory and browse the Graphics & Printing category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 184,
+      "call": "I need a Graphics & Printing provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Graphics & Printing category and review their profiles."
+    },
+    {
+      "id": 185,
+      "call": "Does LWCommerce cover Graphics & Printing?",
+      "response": "Yes. Graphics & Printing is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 186,
+      "call": "Can my company be listed under Graphics & Printing?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 187,
+      "call": "Where can I browse Graphics & Printing businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Graphics & Printing category."
+    },
+    {
+      "id": 188,
+      "call": "I want to discover Graphics & Printing companies.",
+      "response": "The registry is designed for business discovery. Start with the Graphics & Printing category and then review the available business profiles."
+    },
+    {
+      "id": 189,
+      "call": "Are there Health & Medical Services businesses on the registry?",
+      "response": "Yes. Health & Medical Services is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 190,
+      "call": "Can I find a Health & Medical Services business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Health & Medical Services."
+    },
+    {
+      "id": 191,
+      "call": "How do I search for Health & Medical Services?",
+      "response": "Open the registry directory and browse the Health & Medical Services category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 192,
+      "call": "I need a Health & Medical Services provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Health & Medical Services category and review their profiles."
+    },
+    {
+      "id": 193,
+      "call": "Does LWCommerce cover Health & Medical Services?",
+      "response": "Yes. Health & Medical Services is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 194,
+      "call": "Can my company be listed under Health & Medical Services?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 195,
+      "call": "Where can I browse Health & Medical Services businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Health & Medical Services category."
+    },
+    {
+      "id": 196,
+      "call": "I want to discover Health & Medical Services companies.",
+      "response": "The registry is designed for business discovery. Start with the Health & Medical Services category and then review the available business profiles."
+    },
+    {
+      "id": 197,
+      "call": "Are there Hotels & Hospitality businesses on the registry?",
+      "response": "Yes. Hotels & Hospitality is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 198,
+      "call": "Can I find a Hotels & Hospitality business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Hotels & Hospitality."
+    },
+    {
+      "id": 199,
+      "call": "How do I search for Hotels & Hospitality?",
+      "response": "Open the registry directory and browse the Hotels & Hospitality category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 200,
+      "call": "I need a Hotels & Hospitality provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Hotels & Hospitality category and review their profiles."
+    },
+    {
+      "id": 201,
+      "call": "Does LWCommerce cover Hotels & Hospitality?",
+      "response": "Yes. Hotels & Hospitality is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 202,
+      "call": "Can my company be listed under Hotels & Hospitality?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 203,
+      "call": "Where can I browse Hotels & Hospitality businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Hotels & Hospitality category."
+    },
+    {
+      "id": 204,
+      "call": "I want to discover Hotels & Hospitality companies.",
+      "response": "The registry is designed for business discovery. Start with the Hotels & Hospitality category and then review the available business profiles."
+    },
+    {
+      "id": 205,
+      "call": "Are there Interior Design businesses on the registry?",
+      "response": "Yes. Interior Design is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 206,
+      "call": "Can I find a Interior Design business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Interior Design."
+    },
+    {
+      "id": 207,
+      "call": "How do I search for Interior Design?",
+      "response": "Open the registry directory and browse the Interior Design category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 208,
+      "call": "I need a Interior Design provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Interior Design category and review their profiles."
+    },
+    {
+      "id": 209,
+      "call": "Does LWCommerce cover Interior Design?",
+      "response": "Yes. Interior Design is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 210,
+      "call": "Can my company be listed under Interior Design?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 211,
+      "call": "Where can I browse Interior Design businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Interior Design category."
+    },
+    {
+      "id": 212,
+      "call": "I want to discover Interior Design companies.",
+      "response": "The registry is designed for business discovery. Start with the Interior Design category and then review the available business profiles."
+    },
+    {
+      "id": 213,
+      "call": "Are there Legal Consultants businesses on the registry?",
+      "response": "Yes. Legal Consultants is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 214,
+      "call": "Can I find a Legal Consultants business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Legal Consultants."
+    },
+    {
+      "id": 215,
+      "call": "How do I search for Legal Consultants?",
+      "response": "Open the registry directory and browse the Legal Consultants category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 216,
+      "call": "I need a Legal Consultants provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Legal Consultants category and review their profiles."
+    },
+    {
+      "id": 217,
+      "call": "Does LWCommerce cover Legal Consultants?",
+      "response": "Yes. Legal Consultants is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 218,
+      "call": "Can my company be listed under Legal Consultants?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 219,
+      "call": "Where can I browse Legal Consultants businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Legal Consultants category."
+    },
+    {
+      "id": 220,
+      "call": "I want to discover Legal Consultants companies.",
+      "response": "The registry is designed for business discovery. Start with the Legal Consultants category and then review the available business profiles."
+    },
+    {
+      "id": 221,
+      "call": "Are there Manufacturing businesses on the registry?",
+      "response": "Yes. Manufacturing is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 222,
+      "call": "Can I find a Manufacturing business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Manufacturing."
+    },
+    {
+      "id": 223,
+      "call": "How do I search for Manufacturing?",
+      "response": "Open the registry directory and browse the Manufacturing category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 224,
+      "call": "I need a Manufacturing provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Manufacturing category and review their profiles."
+    },
+    {
+      "id": 225,
+      "call": "Does LWCommerce cover Manufacturing?",
+      "response": "Yes. Manufacturing is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 226,
+      "call": "Can my company be listed under Manufacturing?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 227,
+      "call": "Where can I browse Manufacturing businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Manufacturing category."
+    },
+    {
+      "id": 228,
+      "call": "I want to discover Manufacturing companies.",
+      "response": "The registry is designed for business discovery. Start with the Manufacturing category and then review the available business profiles."
+    },
+    {
+      "id": 229,
+      "call": "Are there Marketing & Advertising businesses on the registry?",
+      "response": "Yes. Marketing & Advertising is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 230,
+      "call": "Can I find a Marketing & Advertising business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Marketing & Advertising."
+    },
+    {
+      "id": 231,
+      "call": "How do I search for Marketing & Advertising?",
+      "response": "Open the registry directory and browse the Marketing & Advertising category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 232,
+      "call": "I need a Marketing & Advertising provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Marketing & Advertising category and review their profiles."
+    },
+    {
+      "id": 233,
+      "call": "Does LWCommerce cover Marketing & Advertising?",
+      "response": "Yes. Marketing & Advertising is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 234,
+      "call": "Can my company be listed under Marketing & Advertising?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 235,
+      "call": "Where can I browse Marketing & Advertising businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Marketing & Advertising category."
+    },
+    {
+      "id": 236,
+      "call": "I want to discover Marketing & Advertising companies.",
+      "response": "The registry is designed for business discovery. Start with the Marketing & Advertising category and then review the available business profiles."
+    },
+    {
+      "id": 237,
+      "call": "Are there Media businesses on the registry?",
+      "response": "Yes. Media is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 238,
+      "call": "Can I find a Media business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Media."
+    },
+    {
+      "id": 239,
+      "call": "How do I search for Media?",
+      "response": "Open the registry directory and browse the Media category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 240,
+      "call": "I need a Media provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Media category and review their profiles."
+    },
+    {
+      "id": 241,
+      "call": "Does LWCommerce cover Media?",
+      "response": "Yes. Media is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 242,
+      "call": "Can my company be listed under Media?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 243,
+      "call": "Where can I browse Media businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Media category."
+    },
+    {
+      "id": 244,
+      "call": "I want to discover Media companies.",
+      "response": "The registry is designed for business discovery. Start with the Media category and then review the available business profiles."
+    },
+    {
+      "id": 245,
+      "call": "Are there Media & Communications businesses on the registry?",
+      "response": "Yes. Media & Communications is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 246,
+      "call": "Can I find a Media & Communications business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Media & Communications."
+    },
+    {
+      "id": 247,
+      "call": "How do I search for Media & Communications?",
+      "response": "Open the registry directory and browse the Media & Communications category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 248,
+      "call": "I need a Media & Communications provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Media & Communications category and review their profiles."
+    },
+    {
+      "id": 249,
+      "call": "Does LWCommerce cover Media & Communications?",
+      "response": "Yes. Media & Communications is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 250,
+      "call": "Can my company be listed under Media & Communications?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 251,
+      "call": "Where can I browse Media & Communications businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Media & Communications category."
+    },
+    {
+      "id": 252,
+      "call": "I want to discover Media & Communications companies.",
+      "response": "The registry is designed for business discovery. Start with the Media & Communications category and then review the available business profiles."
+    },
+    {
+      "id": 253,
+      "call": "Are there Music & Entertainment businesses on the registry?",
+      "response": "Yes. Music & Entertainment is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 254,
+      "call": "Can I find a Music & Entertainment business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Music & Entertainment."
+    },
+    {
+      "id": 255,
+      "call": "How do I search for Music & Entertainment?",
+      "response": "Open the registry directory and browse the Music & Entertainment category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 256,
+      "call": "I need a Music & Entertainment provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Music & Entertainment category and review their profiles."
+    },
+    {
+      "id": 257,
+      "call": "Does LWCommerce cover Music & Entertainment?",
+      "response": "Yes. Music & Entertainment is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 258,
+      "call": "Can my company be listed under Music & Entertainment?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 259,
+      "call": "Where can I browse Music & Entertainment businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Music & Entertainment category."
+    },
+    {
+      "id": 260,
+      "call": "I want to discover Music & Entertainment companies.",
+      "response": "The registry is designed for business discovery. Start with the Music & Entertainment category and then review the available business profiles."
+    },
+    {
+      "id": 261,
+      "call": "Are there Non-Profits & NGOs businesses on the registry?",
+      "response": "Yes. Non-Profits & NGOs is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 262,
+      "call": "Can I find a Non-Profits & NGOs business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Non-Profits & NGOs."
+    },
+    {
+      "id": 263,
+      "call": "How do I search for Non-Profits & NGOs?",
+      "response": "Open the registry directory and browse the Non-Profits & NGOs category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 264,
+      "call": "I need a Non-Profits & NGOs provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Non-Profits & NGOs category and review their profiles."
+    },
+    {
+      "id": 265,
+      "call": "Does LWCommerce cover Non-Profits & NGOs?",
+      "response": "Yes. Non-Profits & NGOs is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 266,
+      "call": "Can my company be listed under Non-Profits & NGOs?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 267,
+      "call": "Where can I browse Non-Profits & NGOs businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Non-Profits & NGOs category."
+    },
+    {
+      "id": 268,
+      "call": "I want to discover Non-Profits & NGOs companies.",
+      "response": "The registry is designed for business discovery. Start with the Non-Profits & NGOs category and then review the available business profiles."
+    },
+    {
+      "id": 269,
+      "call": "Are there Oil & Gas businesses on the registry?",
+      "response": "Yes. Oil & Gas is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 270,
+      "call": "Can I find a Oil & Gas business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Oil & Gas."
+    },
+    {
+      "id": 271,
+      "call": "How do I search for Oil & Gas?",
+      "response": "Open the registry directory and browse the Oil & Gas category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 272,
+      "call": "I need a Oil & Gas provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Oil & Gas category and review their profiles."
+    },
+    {
+      "id": 273,
+      "call": "Does LWCommerce cover Oil & Gas?",
+      "response": "Yes. Oil & Gas is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 274,
+      "call": "Can my company be listed under Oil & Gas?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 275,
+      "call": "Where can I browse Oil & Gas businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Oil & Gas category."
+    },
+    {
+      "id": 276,
+      "call": "I want to discover Oil & Gas companies.",
+      "response": "The registry is designed for business discovery. Start with the Oil & Gas category and then review the available business profiles."
+    },
+    {
+      "id": 277,
+      "call": "Are there Photography & Media businesses on the registry?",
+      "response": "Yes. Photography & Media is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 278,
+      "call": "Can I find a Photography & Media business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Photography & Media."
+    },
+    {
+      "id": 279,
+      "call": "How do I search for Photography & Media?",
+      "response": "Open the registry directory and browse the Photography & Media category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 280,
+      "call": "I need a Photography & Media provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Photography & Media category and review their profiles."
+    },
+    {
+      "id": 281,
+      "call": "Does LWCommerce cover Photography & Media?",
+      "response": "Yes. Photography & Media is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 282,
+      "call": "Can my company be listed under Photography & Media?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 283,
+      "call": "Where can I browse Photography & Media businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Photography & Media category."
+    },
+    {
+      "id": 284,
+      "call": "I want to discover Photography & Media companies.",
+      "response": "The registry is designed for business discovery. Start with the Photography & Media category and then review the available business profiles."
+    },
+    {
+      "id": 285,
+      "call": "Are there Restaurants & Cafés businesses on the registry?",
+      "response": "Yes. Restaurants & Cafés is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 286,
+      "call": "Can I find a Restaurants & Cafés business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Restaurants & Cafés."
+    },
+    {
+      "id": 287,
+      "call": "How do I search for Restaurants & Cafés?",
+      "response": "Open the registry directory and browse the Restaurants & Cafés category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 288,
+      "call": "I need a Restaurants & Cafés provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Restaurants & Cafés category and review their profiles."
+    },
+    {
+      "id": 289,
+      "call": "Does LWCommerce cover Restaurants & Cafés?",
+      "response": "Yes. Restaurants & Cafés is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 290,
+      "call": "Can my company be listed under Restaurants & Cafés?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 291,
+      "call": "Where can I browse Restaurants & Cafés businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Restaurants & Cafés category."
+    },
+    {
+      "id": 292,
+      "call": "I want to discover Restaurants & Cafés companies.",
+      "response": "The registry is designed for business discovery. Start with the Restaurants & Cafés category and then review the available business profiles."
+    },
+    {
+      "id": 293,
+      "call": "Are there Retail & Wholesale businesses on the registry?",
+      "response": "Yes. Retail & Wholesale is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 294,
+      "call": "Can I find a Retail & Wholesale business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Retail & Wholesale."
+    },
+    {
+      "id": 295,
+      "call": "How do I search for Retail & Wholesale?",
+      "response": "Open the registry directory and browse the Retail & Wholesale category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 296,
+      "call": "I need a Retail & Wholesale provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Retail & Wholesale category and review their profiles."
+    },
+    {
+      "id": 297,
+      "call": "Does LWCommerce cover Retail & Wholesale?",
+      "response": "Yes. Retail & Wholesale is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 298,
+      "call": "Can my company be listed under Retail & Wholesale?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 299,
+      "call": "Where can I browse Retail & Wholesale businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Retail & Wholesale category."
+    },
+    {
+      "id": 300,
+      "call": "I want to discover Retail & Wholesale companies.",
+      "response": "The registry is designed for business discovery. Start with the Retail & Wholesale category and then review the available business profiles."
+    },
+    {
+      "id": 301,
+      "call": "Are there Software Development businesses on the registry?",
+      "response": "Yes. Software Development is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 302,
+      "call": "Can I find a Software Development business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Software Development."
+    },
+    {
+      "id": 303,
+      "call": "How do I search for Software Development?",
+      "response": "Open the registry directory and browse the Software Development category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 304,
+      "call": "I need a Software Development provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Software Development category and review their profiles."
+    },
+    {
+      "id": 305,
+      "call": "Does LWCommerce cover Software Development?",
+      "response": "Yes. Software Development is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 306,
+      "call": "Can my company be listed under Software Development?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 307,
+      "call": "Where can I browse Software Development businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Software Development category."
+    },
+    {
+      "id": 308,
+      "call": "I want to discover Software Development companies.",
+      "response": "The registry is designed for business discovery. Start with the Software Development category and then review the available business profiles."
+    },
+    {
+      "id": 309,
+      "call": "Are there Sports & Recreation businesses on the registry?",
+      "response": "Yes. Sports & Recreation is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 310,
+      "call": "Can I find a Sports & Recreation business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Sports & Recreation."
+    },
+    {
+      "id": 311,
+      "call": "How do I search for Sports & Recreation?",
+      "response": "Open the registry directory and browse the Sports & Recreation category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 312,
+      "call": "I need a Sports & Recreation provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Sports & Recreation category and review their profiles."
+    },
+    {
+      "id": 313,
+      "call": "Does LWCommerce cover Sports & Recreation?",
+      "response": "Yes. Sports & Recreation is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 314,
+      "call": "Can my company be listed under Sports & Recreation?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 315,
+      "call": "Where can I browse Sports & Recreation businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Sports & Recreation category."
+    },
+    {
+      "id": 316,
+      "call": "I want to discover Sports & Recreation companies.",
+      "response": "The registry is designed for business discovery. Start with the Sports & Recreation category and then review the available business profiles."
+    },
+    {
+      "id": 317,
+      "call": "Are there Technology Services businesses on the registry?",
+      "response": "Yes. Technology Services is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 318,
+      "call": "Can I find a Technology Services business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Technology Services."
+    },
+    {
+      "id": 319,
+      "call": "How do I search for Technology Services?",
+      "response": "Open the registry directory and browse the Technology Services category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 320,
+      "call": "I need a Technology Services provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Technology Services category and review their profiles."
+    },
+    {
+      "id": 321,
+      "call": "Does LWCommerce cover Technology Services?",
+      "response": "Yes. Technology Services is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 322,
+      "call": "Can my company be listed under Technology Services?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 323,
+      "call": "Where can I browse Technology Services businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Technology Services category."
+    },
+    {
+      "id": 324,
+      "call": "I want to discover Technology Services companies.",
+      "response": "The registry is designed for business discovery. Start with the Technology Services category and then review the available business profiles."
+    },
+    {
+      "id": 325,
+      "call": "Are there Transportation & Logistics businesses on the registry?",
+      "response": "Yes. Transportation & Logistics is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 326,
+      "call": "Can I find a Transportation & Logistics business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Transportation & Logistics."
+    },
+    {
+      "id": 327,
+      "call": "How do I search for Transportation & Logistics?",
+      "response": "Open the registry directory and browse the Transportation & Logistics category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 328,
+      "call": "I need a Transportation & Logistics provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Transportation & Logistics category and review their profiles."
+    },
+    {
+      "id": 329,
+      "call": "Does LWCommerce cover Transportation & Logistics?",
+      "response": "Yes. Transportation & Logistics is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 330,
+      "call": "Can my company be listed under Transportation & Logistics?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 331,
+      "call": "Where can I browse Transportation & Logistics businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Transportation & Logistics category."
+    },
+    {
+      "id": 332,
+      "call": "I want to discover Transportation & Logistics companies.",
+      "response": "The registry is designed for business discovery. Start with the Transportation & Logistics category and then review the available business profiles."
+    },
+    {
+      "id": 333,
+      "call": "Are there Travel & Tourism businesses on the registry?",
+      "response": "Yes. Travel & Tourism is listed as a business category in the Loveworld Business Registry."
+    },
+    {
+      "id": 334,
+      "call": "Can I find a Travel & Tourism business?",
+      "response": "Yes. You can browse the registry by category and look for businesses listed under Travel & Tourism."
+    },
+    {
+      "id": 335,
+      "call": "How do I search for Travel & Tourism?",
+      "response": "Open the registry directory and browse the Travel & Tourism category. You can also use the search and location fields to narrow your discovery."
+    },
+    {
+      "id": 336,
+      "call": "I need a Travel & Tourism provider.",
+      "response": "You can use the Loveworld Business Registry to discover businesses in the Travel & Tourism category and review their profiles."
+    },
+    {
+      "id": 337,
+      "call": "Does LWCommerce cover Travel & Tourism?",
+      "response": "Yes. Travel & Tourism is among the categories shown in the Loveworld Business Registry."
+    },
+    {
+      "id": 338,
+      "call": "Can my company be listed under Travel & Tourism?",
+      "response": "If your business fits the category, you can create a registry profile and provide the business details needed for discovery."
+    },
+    {
+      "id": 339,
+      "call": "Where can I browse Travel & Tourism businesses?",
+      "response": "You can browse the Loveworld Business Registry directory and select the Travel & Tourism category."
+    },
+    {
+      "id": 340,
+      "call": "I want to discover Travel & Tourism companies.",
+      "response": "The registry is designed for business discovery. Start with the Travel & Tourism category and then review the available business profiles."
+    },
+    {
+      "id": 341,
+      "call": "What is Commerce Distribution Network (CDN)?",
+      "response": "Commerce Distribution Network (CDN) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 342,
+      "call": "Does LWCommerce have CDN?",
+      "response": "Yes. Commerce Distribution Network (CDN) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 343,
+      "call": "Why is CDN important?",
+      "response": "The Ministry includes Commerce Distribution Network (CDN) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 344,
+      "call": "Where can I learn about CDN?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Commerce Distribution Network (CDN)."
+    },
+    {
+      "id": 345,
+      "call": "Is CDN a department?",
+      "response": "Commerce Distribution Network (CDN) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 346,
+      "call": "Can businesses benefit from CDN?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 347,
+      "call": "What is Business Expansion & Growth Initiative (BEGIN)?",
+      "response": "Business Expansion & Growth Initiative (BEGIN) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 348,
+      "call": "Does LWCommerce have BEGIN?",
+      "response": "Yes. Business Expansion & Growth Initiative (BEGIN) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 349,
+      "call": "Why is BEGIN important?",
+      "response": "The Ministry includes Business Expansion & Growth Initiative (BEGIN) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 350,
+      "call": "Where can I learn about BEGIN?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Business Expansion & Growth Initiative (BEGIN)."
+    },
+    {
+      "id": 351,
+      "call": "Is BEGIN a department?",
+      "response": "Business Expansion & Growth Initiative (BEGIN) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 352,
+      "call": "Can businesses benefit from BEGIN?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 353,
+      "call": "What is Export Readiness Program (ERP)?",
+      "response": "Export Readiness Program (ERP) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 354,
+      "call": "Does LWCommerce have ERP?",
+      "response": "Yes. Export Readiness Program (ERP) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 355,
+      "call": "Why is ERP important?",
+      "response": "The Ministry includes Export Readiness Program (ERP) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 356,
+      "call": "Where can I learn about ERP?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Export Readiness Program (ERP)."
+    },
+    {
+      "id": 357,
+      "call": "Is ERP a department?",
+      "response": "Export Readiness Program (ERP) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 358,
+      "call": "Can businesses benefit from ERP?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 359,
+      "call": "What is Loveworld Economic Summit (LES)?",
+      "response": "Loveworld Economic Summit (LES) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 360,
+      "call": "Does LWCommerce have LES?",
+      "response": "Yes. Loveworld Economic Summit (LES) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 361,
+      "call": "Why is LES important?",
+      "response": "The Ministry includes Loveworld Economic Summit (LES) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 362,
+      "call": "Where can I learn about LES?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Loveworld Economic Summit (LES)."
+    },
+    {
+      "id": 363,
+      "call": "Is LES a department?",
+      "response": "Loveworld Economic Summit (LES) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 364,
+      "call": "Can businesses benefit from LES?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 365,
+      "call": "What is Tech Startup Growth Initiative (TSGI)?",
+      "response": "Tech Startup Growth Initiative (TSGI) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 366,
+      "call": "Does LWCommerce have TSGI?",
+      "response": "Yes. Tech Startup Growth Initiative (TSGI) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 367,
+      "call": "Why is TSGI important?",
+      "response": "The Ministry includes Tech Startup Growth Initiative (TSGI) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 368,
+      "call": "Where can I learn about TSGI?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Tech Startup Growth Initiative (TSGI)."
+    },
+    {
+      "id": 369,
+      "call": "Is TSGI a department?",
+      "response": "Tech Startup Growth Initiative (TSGI) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 370,
+      "call": "Can businesses benefit from TSGI?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 371,
+      "call": "What is Loveworld Capital (LC)?",
+      "response": "Loveworld Capital (LC) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 372,
+      "call": "Does LWCommerce have LC?",
+      "response": "Yes. Loveworld Capital (LC) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 373,
+      "call": "Why is LC important?",
+      "response": "The Ministry includes Loveworld Capital (LC) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 374,
+      "call": "Where can I learn about LC?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Loveworld Capital (LC)."
+    },
+    {
+      "id": 375,
+      "call": "Is LC a department?",
+      "response": "Loveworld Capital (LC) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 376,
+      "call": "Can businesses benefit from LC?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 377,
+      "call": "What is Loveworld Trade & Investment Forum (LTIF)?",
+      "response": "Loveworld Trade & Investment Forum (LTIF) is one of the platforms or initiatives listed by the Ministry of Commerce, LW Nation. The ministry presents it as part of its broader commerce and business-development ecosystem."
+    },
+    {
+      "id": 378,
+      "call": "Does LWCommerce have LTIF?",
+      "response": "Yes. Loveworld Trade & Investment Forum (LTIF) is listed among the Ministry of Commerce's commerce programs and platforms."
+    },
+    {
+      "id": 379,
+      "call": "Why is LTIF important?",
+      "response": "The Ministry includes Loveworld Trade & Investment Forum (LTIF) in its ecosystem for supporting business growth, trade, technology, investment, or related commerce activities."
+    },
+    {
+      "id": 380,
+      "call": "Where can I learn about LTIF?",
+      "response": "You can explore the Ministry of Commerce website and its listed programs for the latest information about Loveworld Trade & Investment Forum (LTIF)."
+    },
+    {
+      "id": 381,
+      "call": "Is LTIF a department?",
+      "response": "Loveworld Trade & Investment Forum (LTIF) is presented as a program or platform rather than one of the ministry's main departments."
+    },
+    {
+      "id": 382,
+      "call": "Can businesses benefit from LTIF?",
+      "response": "The ministry presents its programs as part of an ecosystem intended to create structure, growth, opportunity, partnerships, trade, technology, or investment pathways."
+    },
+    {
+      "id": 383,
+      "call": "What is the Human Capital Development department?",
+      "response": "Human Capital Development is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 384,
+      "call": "Does LWCommerce have a Human Capital Development department?",
+      "response": "Yes. Human Capital Development appears among the ministry's listed departments."
+    },
+    {
+      "id": 385,
+      "call": "Which department handles Human Capital Development?",
+      "response": "The Ministry lists Human Capital Development as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 386,
+      "call": "Where can I see the Human Capital Development department?",
+      "response": "You can find Human Capital Development in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 387,
+      "call": "What is the Finance & Treasury department?",
+      "response": "Finance & Treasury is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 388,
+      "call": "Does LWCommerce have a Finance & Treasury department?",
+      "response": "Yes. Finance & Treasury appears among the ministry's listed departments."
+    },
+    {
+      "id": 389,
+      "call": "Which department handles Finance & Treasury?",
+      "response": "The Ministry lists Finance & Treasury as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 390,
+      "call": "Where can I see the Finance & Treasury department?",
+      "response": "You can find Finance & Treasury in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 391,
+      "call": "What is the Media, Communications & Public Relations department?",
+      "response": "Media, Communications & Public Relations is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 392,
+      "call": "Does LWCommerce have a Media, Communications & Public Relations department?",
+      "response": "Yes. Media, Communications & Public Relations appears among the ministry's listed departments."
+    },
+    {
+      "id": 393,
+      "call": "Which department handles Media, Communications & Public Relations?",
+      "response": "The Ministry lists Media, Communications & Public Relations as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 394,
+      "call": "Where can I see the Media, Communications & Public Relations department?",
+      "response": "You can find Media, Communications & Public Relations in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 395,
+      "call": "What is the Enterprise Growth & Development department?",
+      "response": "Enterprise Growth & Development is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 396,
+      "call": "Does LWCommerce have a Enterprise Growth & Development department?",
+      "response": "Yes. Enterprise Growth & Development appears among the ministry's listed departments."
+    },
+    {
+      "id": 397,
+      "call": "Which department handles Enterprise Growth & Development?",
+      "response": "The Ministry lists Enterprise Growth & Development as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 398,
+      "call": "Where can I see the Enterprise Growth & Development department?",
+      "response": "You can find Enterprise Growth & Development in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 399,
+      "call": "What is the E-Commerce & Digital Trade department?",
+      "response": "E-Commerce & Digital Trade is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 400,
+      "call": "Does LWCommerce have a E-Commerce & Digital Trade department?",
+      "response": "Yes. E-Commerce & Digital Trade appears among the ministry's listed departments."
+    },
+    {
+      "id": 401,
+      "call": "Which department handles E-Commerce & Digital Trade?",
+      "response": "The Ministry lists E-Commerce & Digital Trade as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 402,
+      "call": "Where can I see the E-Commerce & Digital Trade department?",
+      "response": "You can find E-Commerce & Digital Trade in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 403,
+      "call": "What is the Digital Infrastructure & Innovation department?",
+      "response": "Digital Infrastructure & Innovation is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 404,
+      "call": "Does LWCommerce have a Digital Infrastructure & Innovation department?",
+      "response": "Yes. Digital Infrastructure & Innovation appears among the ministry's listed departments."
+    },
+    {
+      "id": 405,
+      "call": "Which department handles Digital Infrastructure & Innovation?",
+      "response": "The Ministry lists Digital Infrastructure & Innovation as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 406,
+      "call": "Where can I see the Digital Infrastructure & Innovation department?",
+      "response": "You can find Digital Infrastructure & Innovation in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 407,
+      "call": "What is the Legal & Policy Regulations department?",
+      "response": "Legal & Policy Regulations is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 408,
+      "call": "Does LWCommerce have a Legal & Policy Regulations department?",
+      "response": "Yes. Legal & Policy Regulations appears among the ministry's listed departments."
+    },
+    {
+      "id": 409,
+      "call": "Which department handles Legal & Policy Regulations?",
+      "response": "The Ministry lists Legal & Policy Regulations as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 410,
+      "call": "Where can I see the Legal & Policy Regulations department?",
+      "response": "You can find Legal & Policy Regulations in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 411,
+      "call": "What is the Economic Research & Statistics department?",
+      "response": "Economic Research & Statistics is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 412,
+      "call": "Does LWCommerce have a Economic Research & Statistics department?",
+      "response": "Yes. Economic Research & Statistics appears among the ministry's listed departments."
+    },
+    {
+      "id": 413,
+      "call": "Which department handles Economic Research & Statistics?",
+      "response": "The Ministry lists Economic Research & Statistics as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 414,
+      "call": "Where can I see the Economic Research & Statistics department?",
+      "response": "You can find Economic Research & Statistics in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 415,
+      "call": "What is the Commerce Programs & Events department?",
+      "response": "Commerce Programs & Events is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 416,
+      "call": "Does LWCommerce have a Commerce Programs & Events department?",
+      "response": "Yes. Commerce Programs & Events appears among the ministry's listed departments."
+    },
+    {
+      "id": 417,
+      "call": "Which department handles Commerce Programs & Events?",
+      "response": "The Ministry lists Commerce Programs & Events as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 418,
+      "call": "Where can I see the Commerce Programs & Events department?",
+      "response": "You can find Commerce Programs & Events in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 419,
+      "call": "What is the Investments & Partnerships department?",
+      "response": "Investments & Partnerships is one of the departments listed by the Ministry of Commerce, LW Nation."
+    },
+    {
+      "id": 420,
+      "call": "Does LWCommerce have a Investments & Partnerships department?",
+      "response": "Yes. Investments & Partnerships appears among the ministry's listed departments."
+    },
+    {
+      "id": 421,
+      "call": "Which department handles Investments & Partnerships?",
+      "response": "The Ministry lists Investments & Partnerships as a department, so questions specifically related to that area should be directed through the ministry's relevant channels."
+    },
+    {
+      "id": 422,
+      "call": "Where can I see the Investments & Partnerships department?",
+      "response": "You can find Investments & Partnerships in the Departments section of the Ministry of Commerce website."
+    },
+    {
+      "id": 423,
+      "call": "Is Business Expansion & Growth Initiative (BEGIN) connected to LWCommerce?",
+      "response": "Yes. Business Expansion & Growth Initiative (BEGIN) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 424,
+      "call": "Where is Business Expansion & Growth Initiative (BEGIN) listed?",
+      "response": "You can find Business Expansion & Growth Initiative (BEGIN) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 425,
+      "call": "Is Tech Startup Growth Initiative (TSGI) connected to LWCommerce?",
+      "response": "Yes. Tech Startup Growth Initiative (TSGI) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 426,
+      "call": "Where is Tech Startup Growth Initiative (TSGI) listed?",
+      "response": "You can find Tech Startup Growth Initiative (TSGI) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 427,
+      "call": "What is Loveworld School of Commerce (LWSOC)?",
+      "response": "Loveworld School of Commerce (LWSOC) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 428,
+      "call": "Is Loveworld School of Commerce (LWSOC) connected to LWCommerce?",
+      "response": "Yes. Loveworld School of Commerce (LWSOC) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 429,
+      "call": "Where is Loveworld School of Commerce (LWSOC) listed?",
+      "response": "You can find Loveworld School of Commerce (LWSOC) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 430,
+      "call": "Is Loveworld Trade & Investment Forum (LTIF) connected to LWCommerce?",
+      "response": "Yes. Loveworld Trade & Investment Forum (LTIF) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 431,
+      "call": "Where is Loveworld Trade & Investment Forum (LTIF) listed?",
+      "response": "You can find Loveworld Trade & Investment Forum (LTIF) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 432,
+      "call": "What is Consumer Protection Agency (CPA)?",
+      "response": "Consumer Protection Agency (CPA) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 433,
+      "call": "Is Consumer Protection Agency (CPA) connected to LWCommerce?",
+      "response": "Yes. Consumer Protection Agency (CPA) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 434,
+      "call": "Where is Consumer Protection Agency (CPA) listed?",
+      "response": "You can find Consumer Protection Agency (CPA) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 435,
+      "call": "What is Finance Reporting Agency (FRA)?",
+      "response": "Finance Reporting Agency (FRA) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 436,
+      "call": "Is Finance Reporting Agency (FRA) connected to LWCommerce?",
+      "response": "Yes. Finance Reporting Agency (FRA) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 437,
+      "call": "Where is Finance Reporting Agency (FRA) listed?",
+      "response": "You can find Finance Reporting Agency (FRA) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 438,
+      "call": "What is Loveworld Enterprise Development Agency (LEDA)?",
+      "response": "Loveworld Enterprise Development Agency (LEDA) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 439,
+      "call": "Is Loveworld Enterprise Development Agency (LEDA) connected to LWCommerce?",
+      "response": "Yes. Loveworld Enterprise Development Agency (LEDA) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 440,
+      "call": "Where is Loveworld Enterprise Development Agency (LEDA) listed?",
+      "response": "You can find Loveworld Enterprise Development Agency (LEDA) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 441,
+      "call": "What is Loveworld Trade & Export Promotion Agency?",
+      "response": "Loveworld Trade & Export Promotion Agency is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 442,
+      "call": "Is Loveworld Trade & Export Promotion Agency connected to LWCommerce?",
+      "response": "Yes. Loveworld Trade & Export Promotion Agency is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 443,
+      "call": "Where is Loveworld Trade & Export Promotion Agency listed?",
+      "response": "You can find Loveworld Trade & Export Promotion Agency referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 444,
+      "call": "Is Export Readiness Program (ERP) connected to LWCommerce?",
+      "response": "Yes. Export Readiness Program (ERP) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 445,
+      "call": "Where is Export Readiness Program (ERP) listed?",
+      "response": "You can find Export Readiness Program (ERP) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 446,
+      "call": "What is Investment Promotion Agency?",
+      "response": "Investment Promotion Agency is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 447,
+      "call": "Is Investment Promotion Agency connected to LWCommerce?",
+      "response": "Yes. Investment Promotion Agency is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 448,
+      "call": "Where is Investment Promotion Agency listed?",
+      "response": "You can find Investment Promotion Agency referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 449,
+      "call": "What is Loveworld Inspectorate Administration (LIA)?",
+      "response": "Loveworld Inspectorate Administration (LIA) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 450,
+      "call": "Is Loveworld Inspectorate Administration (LIA) connected to LWCommerce?",
+      "response": "Yes. Loveworld Inspectorate Administration (LIA) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 451,
+      "call": "Where is Loveworld Inspectorate Administration (LIA) listed?",
+      "response": "You can find Loveworld Inspectorate Administration (LIA) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 452,
+      "call": "What is Loveworld Business House (LBH)?",
+      "response": "Loveworld Business House (LBH) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 453,
+      "call": "Is Loveworld Business House (LBH) connected to LWCommerce?",
+      "response": "Yes. Loveworld Business House (LBH) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 454,
+      "call": "Where is Loveworld Business House (LBH) listed?",
+      "response": "You can find Loveworld Business House (LBH) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 455,
+      "call": "What is Loveworld Standards Organisation (LSO)?",
+      "response": "Loveworld Standards Organisation (LSO) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 456,
+      "call": "Is Loveworld Standards Organisation (LSO) connected to LWCommerce?",
+      "response": "Yes. Loveworld Standards Organisation (LSO) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 457,
+      "call": "Where is Loveworld Standards Organisation (LSO) listed?",
+      "response": "You can find Loveworld Standards Organisation (LSO) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 458,
+      "call": "What is Loveworld Bank of Industry (LBOI)?",
+      "response": "Loveworld Bank of Industry (LBOI) is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 459,
+      "call": "Is Loveworld Bank of Industry (LBOI) connected to LWCommerce?",
+      "response": "Yes. Loveworld Bank of Industry (LBOI) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 460,
+      "call": "Where is Loveworld Bank of Industry (LBOI) listed?",
+      "response": "You can find Loveworld Bank of Industry (LBOI) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 461,
+      "call": "What is Loveworld Free Trade Zone?",
+      "response": "Loveworld Free Trade Zone is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 462,
+      "call": "Is Loveworld Free Trade Zone connected to LWCommerce?",
+      "response": "Yes. Loveworld Free Trade Zone is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 463,
+      "call": "Where is Loveworld Free Trade Zone listed?",
+      "response": "You can find Loveworld Free Trade Zone referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 464,
+      "call": "What is Market Intelligence Hub?",
+      "response": "Market Intelligence Hub is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 465,
+      "call": "Is Market Intelligence Hub connected to LWCommerce?",
+      "response": "Yes. Market Intelligence Hub is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 466,
+      "call": "Where is Market Intelligence Hub listed?",
+      "response": "You can find Market Intelligence Hub referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 467,
+      "call": "What is Business Boost Campaign?",
+      "response": "Business Boost Campaign is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 468,
+      "call": "Is Business Boost Campaign connected to LWCommerce?",
+      "response": "Yes. Business Boost Campaign is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 469,
+      "call": "Where is Business Boost Campaign listed?",
+      "response": "You can find Business Boost Campaign referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 470,
+      "call": "What is School of Commerce?",
+      "response": "School of Commerce is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 471,
+      "call": "Is School of Commerce connected to LWCommerce?",
+      "response": "Yes. School of Commerce is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 472,
+      "call": "Where is School of Commerce listed?",
+      "response": "You can find School of Commerce referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 473,
+      "call": "What is Eagle’s Nest?",
+      "response": "Eagle’s Nest is listed on the Ministry of Commerce, LW Nation website as part of its departments, programs, agencies, commercial corporations, or Kingdom Commerce Platforms."
+    },
+    {
+      "id": 474,
+      "call": "Is Eagle’s Nest connected to LWCommerce?",
+      "response": "Yes. Eagle’s Nest is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 475,
+      "call": "Where is Eagle’s Nest listed?",
+      "response": "You can find Eagle’s Nest referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 476,
+      "call": "Is Commerce Distribution Network (CDN) connected to LWCommerce?",
+      "response": "Yes. Commerce Distribution Network (CDN) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 477,
+      "call": "Where is Commerce Distribution Network (CDN) listed?",
+      "response": "You can find Commerce Distribution Network (CDN) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 478,
+      "call": "Is Loveworld Economic Summit (LES) connected to LWCommerce?",
+      "response": "Yes. Loveworld Economic Summit (LES) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 479,
+      "call": "Where is Loveworld Economic Summit (LES) listed?",
+      "response": "You can find Loveworld Economic Summit (LES) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 480,
+      "call": "Is Loveworld Capital (LC) connected to LWCommerce?",
+      "response": "Yes. Loveworld Capital (LC) is presented on the Ministry of Commerce website as part of the wider commerce ecosystem."
+    },
+    {
+      "id": 481,
+      "call": "Where is Loveworld Capital (LC) listed?",
+      "response": "You can find Loveworld Capital (LC) referenced on the Ministry of Commerce, LW Nation website."
+    },
+    {
+      "id": 482,
+      "call": "How do I create an account?",
+      "response": "Use the Join the Registry or Register option and follow the account-creation process."
+    },
+    {
+      "id": 483,
+      "call": "Where do I log in?",
+      "response": "The Loveworld Business Registry provides an Account Login area where registered users can enter their email and password."
+    },
+    {
+      "id": 484,
+      "call": "I already have an account.",
+      "response": "You can use the registry's Login option to access your account."
+    },
+    {
+      "id": 485,
+      "call": "I forgot my password.",
+      "response": "Use the Forgot your password? option on the registry login page to begin password recovery."
+    },
+    {
+      "id": 486,
+      "call": "Can I remember my login?",
+      "response": "The registry login screen includes a Remember me option."
+    },
+    {
+      "id": 487,
+      "call": "I don't have an account.",
+      "response": "You can select the sign-up option on the registry login screen to create an account."
+    },
+    {
+      "id": 488,
+      "call": "What do I do after creating an account?",
+      "response": "After creating your account, set up your workspace and build your business profile."
+    },
+    {
+      "id": 489,
+      "call": "What information should my profile contain?",
+      "response": "Provide the business details people need to understand your organization and reach you."
+    },
+    {
+      "id": 490,
+      "call": "Why complete my profile?",
+      "response": "A clear profile helps people understand your business and makes business discovery and connection easier."
+    },
+    {
+      "id": 491,
+      "call": "Can I update my business profile?",
+      "response": "The registry is built around business profiles. If you have access to your account, use the available account and profile tools to keep your information current."
+    },
+    {
+      "id": 492,
+      "call": "I need a business in Lagos.",
+      "response": "Use the registry search field with the service or business type you need and enter Lagos in the location field."
+    },
+    {
+      "id": 493,
+      "call": "Find me a business near me.",
+      "response": "Use the registry's search and location fields to specify the business type and your preferred location."
+    },
+    {
+      "id": 494,
+      "call": "I want to browse all businesses.",
+      "response": "Use the Browse the Directory option to explore businesses in the registry."
+    },
+    {
+      "id": 495,
+      "call": "How do I browse categories?",
+      "response": "Open the directory and choose Browse by Category to explore the listed sectors."
+    },
+    {
+      "id": 496,
+      "call": "How do I browse locations?",
+      "response": "Use Browse by Location to discover businesses according to location."
+    },
+    {
+      "id": 497,
+      "call": "What can I type into the search box?",
+      "response": "You can enter what you are looking for, such as a business name, product, service, or business type."
+    },
+    {
+      "id": 498,
+      "call": "Can I search by company name?",
+      "response": "Yes. The registry search field is designed to help users look for businesses and examples on the site include searching by a business name."
+    },
+    {
+      "id": 499,
+      "call": "Can I search for services?",
+      "response": "Yes. Search for the service you need and use the location field when you want to narrow the results geographically."
+    },
+    {
+      "id": 500,
+      "call": "Can I find local businesses?",
+      "response": "Yes. The registry specifically highlights local searches and supports discovery by location."
+    },
+    {
+      "id": 501,
+      "call": "Does the registry help with business discovery?",
+      "response": "Yes. Business discovery is one of the registry's central purposes."
+    },
+    {
+      "id": 502,
+      "call": "Is LWCommerce for founders?",
+      "response": "Yes. The Ministry identifies Founders as part of its audience and describes them as people who are moving ideas into functioning businesses with structure and direction."
+    },
+    {
+      "id": 503,
+      "call": "What does LWCommerce offer founders?",
+      "response": "Yes. The Ministry identifies Founders as part of its audience and describes them as people who are moving ideas into functioning businesses with structure and direction."
+    },
+    {
+      "id": 504,
+      "call": "Can founders use LWCommerce?",
+      "response": "Yes. The Ministry identifies Founders as part of its audience and describes them as people who are moving ideas into functioning businesses with structure and direction."
+    },
+    {
+      "id": 505,
+      "call": "Why would a founders use the Ministry of Commerce?",
+      "response": "Yes. The Ministry identifies Founders as part of its audience and describes them as people who are moving ideas into functioning businesses with structure and direction."
+    },
+    {
+      "id": 506,
+      "call": "How does the Ministry support founders?",
+      "response": "Yes. The Ministry identifies Founders as part of its audience and describes them as people who are moving ideas into functioning businesses with structure and direction."
+    },
+    {
+      "id": 507,
+      "call": "Is LWCommerce for business owners?",
+      "response": "Yes. The Ministry identifies Business Owners as part of its audience and describes them as people who are growing beyond their current level into structured and sustainable growth."
+    },
+    {
+      "id": 508,
+      "call": "What does LWCommerce offer business owners?",
+      "response": "Yes. The Ministry identifies Business Owners as part of its audience and describes them as people who are growing beyond their current level into structured and sustainable growth."
+    },
+    {
+      "id": 509,
+      "call": "Can business owners use LWCommerce?",
+      "response": "Yes. The Ministry identifies Business Owners as part of its audience and describes them as people who are growing beyond their current level into structured and sustainable growth."
+    },
+    {
+      "id": 510,
+      "call": "Why would a business owners use the Ministry of Commerce?",
+      "response": "Yes. The Ministry identifies Business Owners as part of its audience and describes them as people who are growing beyond their current level into structured and sustainable growth."
+    },
+    {
+      "id": 511,
+      "call": "How does the Ministry support business owners?",
+      "response": "Yes. The Ministry identifies Business Owners as part of its audience and describes them as people who are growing beyond their current level into structured and sustainable growth."
+    },
+    {
+      "id": 512,
+      "call": "Is LWCommerce for service providers?",
+      "response": "Yes. The Ministry identifies Service Providers as part of its audience and describes them as people who are seeking visibility, stronger partnerships, and representation within a trusted ecosystem."
+    },
+    {
+      "id": 513,
+      "call": "What does LWCommerce offer service providers?",
+      "response": "Yes. The Ministry identifies Service Providers as part of its audience and describes them as people who are seeking visibility, stronger partnerships, and representation within a trusted ecosystem."
+    },
+    {
+      "id": 514,
+      "call": "Can service providers use LWCommerce?",
+      "response": "Yes. The Ministry identifies Service Providers as part of its audience and describes them as people who are seeking visibility, stronger partnerships, and representation within a trusted ecosystem."
+    },
+    {
+      "id": 515,
+      "call": "Why would a service providers use the Ministry of Commerce?",
+      "response": "Yes. The Ministry identifies Service Providers as part of its audience and describes them as people who are seeking visibility, stronger partnerships, and representation within a trusted ecosystem."
+    },
+    {
+      "id": 516,
+      "call": "How does the Ministry support service providers?",
+      "response": "Yes. The Ministry identifies Service Providers as part of its audience and describes them as people who are seeking visibility, stronger partnerships, and representation within a trusted ecosystem."
+    },
+    {
+      "id": 517,
+      "call": "Is LWCommerce for partners / investors?",
+      "response": "Yes. The Ministry identifies Partners / Investors as part of its audience and describes them as people who are looking for structured and credible opportunities within an organized business network."
+    },
+    {
+      "id": 518,
+      "call": "What does LWCommerce offer partners / investors?",
+      "response": "Yes. The Ministry identifies Partners / Investors as part of its audience and describes them as people who are looking for structured and credible opportunities within an organized business network."
+    },
+    {
+      "id": 519,
+      "call": "Can partners / investors use LWCommerce?",
+      "response": "Yes. The Ministry identifies Partners / Investors as part of its audience and describes them as people who are looking for structured and credible opportunities within an organized business network."
+    },
+    {
+      "id": 520,
+      "call": "Why would a partners / investors use the Ministry of Commerce?",
+      "response": "Yes. The Ministry identifies Partners / Investors as part of its audience and describes them as people who are looking for structured and credible opportunities within an organized business network."
+    },
+    {
+      "id": 521,
+      "call": "How does the Ministry support partners / investors?",
+      "response": "Yes. The Ministry identifies Partners / Investors as part of its audience and describes them as people who are looking for structured and credible opportunities within an organized business network."
+    },
+    {
+      "id": 522,
+      "call": "What does Building Businesses mean?",
+      "response": "It summarizes the ministry's focus on helping businesses develop structure, direction, and sustainable growth."
+    },
+    {
+      "id": 523,
+      "call": "What does Driving Economic Growth mean?",
+      "response": "It reflects the ministry's stated objective of supporting business activity, development, trade, partnerships, and growth."
+    },
+    {
+      "id": 524,
+      "call": "Is LWCommerce only for startups?",
+      "response": "No. The ministry identifies founders, business owners, service providers, partners, and investors as audiences."
+    },
+    {
+      "id": 525,
+      "call": "Is LWCommerce only for established companies?",
+      "response": "No. The ministry also speaks to founders and startups, alongside established business owners and organizations."
+    },
+    {
+      "id": 526,
+      "call": "Does LWCommerce support startups?",
+      "response": "Yes. The ministry explicitly lists startups among the organizations it works with and lists the Tech Startup Growth Initiative."
+    },
+    {
+      "id": 527,
+      "call": "Does LWCommerce support entrepreneurs?",
+      "response": "Yes. The ministry states that it works with entrepreneurs, startups, and organizations across different markets."
+    },
+    {
+      "id": 528,
+      "call": "Does LWCommerce support partnerships?",
+      "response": "Yes. Stronger partnerships and structured opportunities are part of the ecosystem described by the ministry."
+    },
+    {
+      "id": 529,
+      "call": "Does LWCommerce support investment?",
+      "response": "Yes. Investments & Partnerships is a ministry department, and Loveworld Capital and the Investment Promotion Agency are also listed."
+    },
+    {
+      "id": 530,
+      "call": "Does LWCommerce support export?",
+      "response": "Yes. The Export Readiness Program and Loveworld Trade & Export Promotion Agency are listed within the ecosystem."
+    },
+    {
+      "id": 531,
+      "call": "Does LWCommerce support technology businesses?",
+      "response": "Yes. Technology Services and Software Development are registry categories, and the ministry also lists the Tech Startup Growth Initiative."
+    },
+    {
+      "id": 532,
+      "call": "Does LWCommerce support digital commerce?",
+      "response": "Yes. E-Commerce & Digital Trade is one of the ministry's departments."
+    },
+    {
+      "id": 533,
+      "call": "Does LWCommerce support innovation?",
+      "response": "Yes. Digital Infrastructure & Innovation is one of the ministry's departments."
+    },
+    {
+      "id": 534,
+      "call": "Does LWCommerce have a school?",
+      "response": "Yes. The Ministry lists the Loveworld School of Commerce and School of Commerce."
+    },
+    {
+      "id": 535,
+      "call": "Does LWCommerce organize events?",
+      "response": "Yes. Commerce Programs & Events is a department, and the ministry lists events and forums such as the Loveworld Economic Summit and Loveworld Trade & Investment Forum."
+    },
+    {
+      "id": 536,
+      "call": "How can I contact LWCommerce?",
+      "response": "The Ministry of Commerce website provides a Contact section and displays an email contact for inquiries."
+    },
+    {
+      "id": 537,
+      "call": "Where is the official Ministry website?",
+      "response": "The official Ministry of Commerce, LW Nation website is lwcommerce.org."
+    },
+    {
+      "id": 538,
+      "call": "Where is the business registry?",
+      "response": "The Loveworld Business Registry is available at registry.lwcommerce.org."
+    },
+    {
+      "id": 539,
+      "call": "Can I advertise?",
+      "response": "Yes. The registry includes an Advertise with Us option for businesses interested in advertising opportunities."
+    },
+    {
+      "id": 540,
+      "call": "Can I give feedback?",
+      "response": "Yes. The registry includes a Give Feedback option."
+    },
+    {
+      "id": 541,
+      "call": "What social platforms does the registry list?",
+      "response": "The registry footer lists Facebook, Instagram, and X as social links."
+    },
+    {
+      "id": 542,
+      "call": "What partners are shown on the registry?",
+      "response": "The registry footer references the Loveworld Ministry Portal, KingsChat, and Loveworld SAT."
+    },
+    {
+      "id": 543,
+      "call": "Can you explain Agriculture & Agro Trade simply?",
+      "response": "In simple terms, Agriculture & Agro Trade is part of the Loveworld commerce ecosystem and is intended to support business activity, discovery, growth, or structured opportunities."
+    }
+  ]
+}

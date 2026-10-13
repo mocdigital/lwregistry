@@ -1,0 +1,12 @@
+{
+  "type": "http",
+  "url": "https://api.figma.com/v1/files/FILE_KEY",
+  "headers": {
+    "Authorization": "Bearer YOUR_FIGMA_PERSONAL_ACCESS_TOKEN",
+    "Content-Type": "application/json"
+  },
+  "metadata": {
+    "project": "LW Reg",
+    "description": "Figma access for LW Reg project — replace placeholders before running add-mcp-server"
+  }
+}

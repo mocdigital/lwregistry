@@ -1,0 +1,55 @@
+- generic [ref=e2]:
+  - heading "Offline Migration Verification" [level=1] [ref=e3]
+  - paragraph [ref=e4]: This page reads the isolated SQLite database created by the new snapshot-import migration.
+  - list [ref=e5]:
+    - listitem [ref=e6]:
+      - text: "Database file:"
+      - code [ref=e7]: /Applications/MAMP/htdocs/lwregistry/database/offline-migration-test.sqlite
+    - listitem [ref=e8]:
+      - text: "Expected imported record slug:"
+      - code [ref=e9]: demo-sbo-001-radiant-logistics-cooperative
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: Imported SBOs
+      - generic [ref=e13]: "103"
+    - generic [ref=e14]:
+      - generic [ref=e15]: Imported Users
+      - generic [ref=e16]: "103"
+    - generic [ref=e17]:
+      - generic [ref=e18]: Imported Addresses
+      - generic [ref=e19]: "105"
+  - heading "Imported Record" [level=2] [ref=e20]
+  - table [ref=e21]:
+    - rowgroup [ref=e22]:
+      - row [ref=e23]:
+        - columnheader "ID" [ref=e24]
+        - columnheader "Name" [ref=e25]
+        - columnheader "Slug" [ref=e26]
+        - columnheader "Status" [ref=e27]
+        - columnheader "City" [ref=e28]
+        - columnheader "Country" [ref=e29]
+    - rowgroup [ref=e30]:
+      - row [ref=e31]:
+        - cell "21" [ref=e32]
+        - cell "Demo SBO 001 - Radiant Logistics Cooperative" [ref=e33]
+        - cell [ref=e34]:
+          - code [ref=e35]: demo-sbo-001-radiant-logistics-cooperative
+        - cell "approved" [ref=e36]
+        - cell "Lagos" [ref=e37]
+        - cell "Nigeria" [ref=e38]
+      - row [ref=e39]:
+        - cell "21" [ref=e40]
+        - cell "Demo SBO 001 - Radiant Logistics Cooperative" [ref=e41]
+        - cell [ref=e42]:
+          - code [ref=e43]: demo-sbo-001-radiant-logistics-cooperative
+        - cell "approved" [ref=e44]
+        - cell "New york" [ref=e45]
+        - cell "United States" [ref=e46]
+      - row [ref=e47]:
+        - cell "21" [ref=e48]
+        - cell "Demo SBO 001 - Radiant Logistics Cooperative" [ref=e49]
+        - cell [ref=e50]:
+          - code [ref=e51]: demo-sbo-001-radiant-logistics-cooperative
+        - cell "approved" [ref=e52]
+        - cell "London" [ref=e53]
+        - cell "United Kingdom" [ref=e54]

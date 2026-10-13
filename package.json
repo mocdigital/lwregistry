@@ -1,0 +1,42 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "npm run typecheck && vite build",
+        "typecheck": "node scripts/check-vue-components.mjs && vue-tsc --noEmit -p tsconfig.json",
+        "dev": "npm run mcp:merge && concurrently -c \"#93c5fd,#c4b5fd\" \"php artisan serve\" \"vite\" --names=server,vite",
+        "mcp:generate": "node scripts/generate-mcp-config.js",
+        "mcp:merge": "node scripts/merge-mcp-config.js",
+        "mcp:watch": "node scripts/watch-mcp-template.js",
+        "mcp:add": "node scripts/add-mcp-server.js",
+        "mcp:backup": "cp .mcp.json .mcp.json.backup.$(date +%Y%m%d-%H%M%S) 2>/dev/null && echo 'Backup created' || echo 'No .mcp.json found'",
+        "mcp:restore": "test -f .mcp.json.backup && cp .mcp.json.backup .mcp.json && echo 'Restored from backup' || echo 'No backup found'",
+        "mcp:status": "echo 'MCP Configuration Status:' && test -f .mcp.json && echo '✅ .mcp.json exists' || echo '❌ .mcp.json missing' && test -f .mcp.json.template && echo '✅ .mcp.json.template exists' || echo '❌ .mcp.json.template missing'",
+        "dev:mcp": "npm run mcp:watch"
+    },
+    "dependencies": {
+        "@inertiajs/vue3": "^2.3.27",
+        "@tailwindcss/vite": "^4.1.11",
+        "@vitejs/plugin-vue": "^6.0.8",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "laravel-echo": "^1.19.0",
+        "laravel-vite-plugin": "^2.0",
+        "pusher-js": "^8.5.0",
+        "quill": "^2.0.3",
+        "tailwindcss": "^4.0.7",
+        "vite": "^7.0.4",
+        "vue": "^3.5.41"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.9.5",
+        "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
+        "lightningcss-linux-x64-gnu": "^1.29.1"
+    },
+    "devDependencies": {
+        "daisyui": "^5.1.14",
+        "typescript": "~5.6",
+        "vue-tsc": "^2.2.12"
+    }
+}

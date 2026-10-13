@@ -1,0 +1,113 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'default' => [
+        'document_name' => '{country} Business Registration Certificate / Registry Extract',
+        'description' => 'Upload the official business registration certificate, certificate of incorporation, commercial register extract, or equivalent registry proof issued by the competent authority in {country}.',
+        'registry_authority' => 'National business or company registry',
+        'source_url' => 'https://opencorporates.com/registers',
+        'source_note' => 'Best-effort starter requirement based on global company-register references. Admin review is required before relying on this wording for local compliance.',
+        'needs_admin_review' => true,
+    ],
+
+    'countries' => [
+        'Australia' => [
+            'document_name' => 'ASIC Certificate of Registration / Company Extract',
+            'description' => 'Upload the ASIC company registration certificate, Australian Business Number record, or current company extract.',
+            'registry_authority' => 'Australian Securities and Investments Commission',
+            'source_url' => 'https://asic.gov.au/',
+            'source_note' => 'ASIC is the national company registrar for Australian companies.',
+            'needs_admin_review' => false,
+        ],
+        'Canada' => [
+            'document_name' => 'Certificate of Incorporation or Provincial/Federal Registry Extract',
+            'description' => 'Upload the federal or provincial certificate of incorporation, registration certificate, or current registry extract for the business.',
+            'registry_authority' => 'Corporations Canada or provincial/territorial registry',
+            'source_url' => 'https://ised-isde.canada.ca/site/corporations-canada/en',
+            'source_note' => 'Canada has federal and provincial/territorial registries; admins should confirm the applicant jurisdiction.',
+            'needs_admin_review' => true,
+        ],
+        'Ghana' => [
+            'document_name' => 'Office of the Registrar of Companies Registration Document',
+            'description' => 'Upload the certificate of incorporation, certificate to commence business, business name registration, or current company profile issued by Ghana Office of the Registrar of Companies.',
+            'registry_authority' => 'Office of the Registrar of Companies, Ghana',
+            'source_url' => 'https://rgd.gov.gh/',
+            'source_note' => 'Ghana corporate registrations are administered by the Registrar-General/Office of the Registrar of Companies.',
+            'needs_admin_review' => false,
+        ],
+        'India' => [
+            'document_name' => 'Ministry of Corporate Affairs Certificate of Incorporation',
+            'description' => 'Upload the certificate of incorporation, LLP registration certificate, or MCA master-data extract for the business.',
+            'registry_authority' => 'Ministry of Corporate Affairs',
+            'source_url' => 'https://www.mca.gov.in/',
+            'source_note' => 'MCA is the central company registry for Indian companies and LLPs.',
+            'needs_admin_review' => false,
+        ],
+        'Kenya' => [
+            'document_name' => 'Business Registration Service Certificate / CR12 Extract',
+            'description' => 'Upload the certificate of incorporation, business name registration certificate, or CR12/company registry extract.',
+            'registry_authority' => 'Business Registration Service, Kenya',
+            'source_url' => 'https://brs.go.ke/',
+            'source_note' => 'BRS administers business registration services in Kenya.',
+            'needs_admin_review' => false,
+        ],
+        'Nigeria' => [
+            'document_name' => 'Corporate Affairs Commission (CAC) Document',
+            'description' => 'Upload your Corporate Affairs Commission registration document, such as CAC certificate, status report, or business name registration certificate.',
+            'registry_authority' => 'Corporate Affairs Commission',
+            'source_url' => 'https://www.cac.gov.ng/',
+            'source_note' => 'CAC is the statutory company and business-name registry in Nigeria.',
+            'needs_admin_review' => false,
+        ],
+        'South Africa' => [
+            'document_name' => 'CIPC Company Registration Document',
+            'description' => 'Upload the CIPC company registration certificate, disclosure certificate, or current company registration extract.',
+            'registry_authority' => 'Companies and Intellectual Property Commission',
+            'source_url' => 'https://www.cipc.co.za/',
+            'source_note' => 'CIPC administers company and intellectual-property registration in South Africa.',
+            'needs_admin_review' => false,
+        ],
+        'Uganda' => [
+            'document_name' => 'URSB Business Registration Document',
+            'description' => 'Upload the certificate of incorporation, business name registration certificate, or registry extract issued by URSB.',
+            'registry_authority' => 'Uganda Registration Services Bureau',
+            'source_url' => 'https://ursb.go.ug/',
+            'source_note' => 'URSB administers business registration in Uganda.',
+            'needs_admin_review' => false,
+        ],
+        'United Kingdom' => [
+            'document_name' => 'Companies House Certificate of Incorporation / Company Register Extract',
+            'description' => 'Upload the Companies House certificate of incorporation, company profile, or current company register extract.',
+            'registry_authority' => 'Companies House',
+            'source_url' => 'https://www.gov.uk/government/organisations/companies-house',
+            'source_note' => 'Companies House is the UK registrar of companies.',
+            'needs_admin_review' => false,
+        ],
+        'United States' => [
+            'document_name' => 'Secretary of State Formation / Registration Document',
+            'description' => 'Upload the certificate/articles of incorporation, certificate of organization, foreign registration, or good-standing/registry certificate from the relevant state authority.',
+            'registry_authority' => 'State Secretary of State or equivalent state business registry',
+            'source_url' => 'https://opencorporates.com/registers/us',
+            'source_note' => 'US business registrations are state-level. Admins should confirm the applicant state and entity type.',
+            'needs_admin_review' => true,
+        ],
+        'Zambia' => [
+            'document_name' => 'PACRA Registration Document',
+            'description' => 'Upload the certificate of incorporation, business name registration certificate, or registry extract issued by PACRA.',
+            'registry_authority' => 'Patents and Companies Registration Agency',
+            'source_url' => 'https://www.pacra.org.zm/',
+            'source_note' => 'PACRA administers company and business-name registration in Zambia.',
+            'needs_admin_review' => false,
+        ],
+        'Zimbabwe' => [
+            'document_name' => 'Companies Registry Incorporation / Registration Document',
+            'description' => 'Upload the certificate of incorporation, business name registration certificate, or current company registry extract.',
+            'registry_authority' => 'Companies and Intellectual Property Office / Companies Registry',
+            'source_url' => 'https://opencorporates.com/registers/zw',
+            'source_note' => 'Best-effort registry reference. Admin review is recommended for current local requirements.',
+            'needs_admin_review' => true,
+        ],
+    ],
+];

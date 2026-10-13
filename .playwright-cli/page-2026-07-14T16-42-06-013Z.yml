@@ -1,0 +1,475 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public
+        - img "Loveworld Registry" [ref=e5]
+      - text: 
+      - generic [ref=e6]:
+        - text:  
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Advertise" [ref=e9] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/advertise
+          - listitem [ref=e10]:
+            - link "Give Feedback" [ref=e11] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/feedback
+          - listitem [ref=e12]:
+            - link "Join" [ref=e13] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e14]:
+            - link "Log in" [ref=e15] [cursor=pointer]:
+              - /url: "#"
+  - generic [ref=e16]:
+    - region [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: Loveworld Business Registry
+          - heading "Global visibility starts here." [level=1] [ref=e21]
+          - paragraph [ref=e22]: Find trusted Spirit-led businesses, connect with the Loveworld economy, and make your next business relationship easier to start.
+          - generic [ref=e25]:
+            - textbox "Business or service to search for" [ref=e26]:
+              - /placeholder: What are you looking for? (E.g Parallex Bank)
+            - textbox "Search location" [ref=e27]:
+              - /placeholder: Location (E.g Lagos)
+            - button "Search businesses" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29]: 
+          - generic [ref=e30]:
+            - link "Browse the directory" [ref=e31] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses
+              - text: Browse the directory
+              - generic [ref=e32]: 
+            - link "How the Registry works" [ref=e33] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/about
+        - complementary "Registry promise" [ref=e34]:
+          - generic [ref=e35]: 
+          - generic [ref=e37]:
+            - strong [ref=e38]: Built for trust and discovery.
+            - paragraph [ref=e39]: Clear business profiles, meaningful connections, and a calmer way to navigate opportunities.
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Advertisement space
+          - strong [ref=e45]: Reach verified Loveworld businesses
+          - generic [ref=e46]: 970×250 px · 320×100 mobile
+        - link "Advertise with Us" [ref=e47] [cursor=pointer]:
+          - /url: http://localhost:8888/lw_registry/public/advertise
+      - generic [ref=e48]: Advertisement
+    - region [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: Explore the network
+            - heading "Discover SBOs by category." [level=2] [ref=e54]
+          - link "View all businesses" [ref=e55] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses
+            - text: View all businesses
+            - generic [ref=e56]: 
+        - generic [ref=e57]:
+          - link "Beauty & Personal Care 1 SBO" [ref=e58] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/beauty-personal-care
+            - generic [ref=e59]: 
+            - generic [ref=e61]:
+              - strong [ref=e62]: Beauty & Personal Care
+              - generic [ref=e63]: 1 SBO
+            - generic [ref=e64]: 
+          - link "Churches & Ministries 0 SBOs" [ref=e65] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/churches-ministries
+            - generic [ref=e66]: 
+            - generic [ref=e68]:
+              - strong [ref=e69]: Churches & Ministries
+              - generic [ref=e70]: 0 SBOs
+            - generic [ref=e71]: 
+          - link "Faith-Based Schools 0 SBOs" [ref=e72] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/faith-based-schools
+            - generic [ref=e73]: 
+            - generic [ref=e75]:
+              - strong [ref=e76]: Faith-Based Schools
+              - generic [ref=e77]: 0 SBOs
+            - generic [ref=e78]: 
+          - link "Restaurants & Cafés 0 SBOs" [ref=e79] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/restaurants-cafes
+            - generic [ref=e80]: 
+            - generic [ref=e82]:
+              - strong [ref=e83]: Restaurants & Cafés
+              - generic [ref=e84]: 0 SBOs
+            - generic [ref=e85]: 
+          - link "Hotels & Hospitality 0 SBOs" [ref=e86] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/hotels-hospitality
+            - generic [ref=e87]: 
+            - generic [ref=e89]:
+              - strong [ref=e90]: Hotels & Hospitality
+              - generic [ref=e91]: 0 SBOs
+            - generic [ref=e92]: 
+          - link "Construction & Real Estate 0 SBOs" [ref=e93] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/construction-real-estate
+            - generic [ref=e94]: 
+            - generic [ref=e96]:
+              - strong [ref=e97]: Construction & Real Estate
+              - generic [ref=e98]: 0 SBOs
+            - generic [ref=e99]: 
+          - link "Technology Services 0 SBOs" [ref=e100] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/technology-services
+            - generic [ref=e101]: 
+            - generic [ref=e103]:
+              - strong [ref=e104]: Technology Services
+              - generic [ref=e105]: 0 SBOs
+            - generic [ref=e106]: 
+          - link "Health & Medical Services 0 SBOs" [ref=e107] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/health-medical-services
+            - generic [ref=e108]: 
+            - generic [ref=e110]:
+              - strong [ref=e111]: Health & Medical Services
+              - generic [ref=e112]: 0 SBOs
+            - generic [ref=e113]: 
+          - link "Legal Consultants 0 SBOs" [ref=e114] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/legal-consultants
+            - generic [ref=e115]: 
+            - generic [ref=e117]:
+              - strong [ref=e118]: Legal Consultants
+              - generic [ref=e119]: 0 SBOs
+            - generic [ref=e120]: 
+          - link "Finance & Banking 0 SBOs" [ref=e121] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/finance-banking
+            - generic [ref=e122]: 
+            - generic [ref=e124]:
+              - strong [ref=e125]: Finance & Banking
+              - generic [ref=e126]: 0 SBOs
+            - generic [ref=e127]: 
+          - link "Bookstores & Publishers 0 SBOs" [ref=e128] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/bookstores-publishers
+            - generic [ref=e129]: 
+            - generic [ref=e131]:
+              - strong [ref=e132]: Bookstores & Publishers
+              - generic [ref=e133]: 0 SBOs
+            - generic [ref=e134]: 
+          - link "Transportation & Logistics 0 SBOs" [ref=e135] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/transportation-logistics
+            - generic [ref=e136]: 
+            - generic [ref=e138]:
+              - strong [ref=e139]: Transportation & Logistics
+              - generic [ref=e140]: 0 SBOs
+            - generic [ref=e141]: 
+          - link "Arts 0 SBOs" [ref=e142] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/arts
+            - generic [ref=e143]: 
+            - generic [ref=e145]:
+              - strong [ref=e146]: Arts
+              - generic [ref=e147]: 0 SBOs
+            - generic [ref=e148]: 
+          - link "Aviation 0 SBOs" [ref=e149] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/aviation
+            - generic [ref=e150]: 
+            - generic [ref=e152]:
+              - strong [ref=e153]: Aviation
+              - generic [ref=e154]: 0 SBOs
+            - generic [ref=e155]: 
+          - link "Education 0 SBOs" [ref=e156] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/education
+            - generic [ref=e157]: 
+            - generic [ref=e159]:
+              - strong [ref=e160]: Education
+              - generic [ref=e161]: 0 SBOs
+            - generic [ref=e162]: 
+          - link "Entertainment 0 SBOs" [ref=e163] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/entertainment
+            - generic [ref=e164]: 
+            - generic [ref=e166]:
+              - strong [ref=e167]: Entertainment
+              - generic [ref=e168]: 0 SBOs
+            - generic [ref=e169]: 
+          - link "FMCG 0 SBOs" [ref=e170] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/fmcg
+            - generic [ref=e171]: 
+            - generic [ref=e173]:
+              - strong [ref=e174]: FMCG
+              - generic [ref=e175]: 0 SBOs
+            - generic [ref=e176]: 
+          - link "Manufacturing 0 SBOs" [ref=e177] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/manufacturing
+            - generic [ref=e178]: 
+            - generic [ref=e180]:
+              - strong [ref=e181]: Manufacturing
+              - generic [ref=e182]: 0 SBOs
+            - generic [ref=e183]: 
+          - link "Media 0 SBOs" [ref=e184] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses/categories/media
+            - generic [ref=e185]: 
+            - generic [ref=e187]:
+              - strong [ref=e188]: Media
+              - generic [ref=e189]: 0 SBOs
+            - generic [ref=e190]: 
+    - generic [ref=e192]:
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e195]: Advertisement space
+          - strong [ref=e196]: Reach verified Loveworld businesses
+          - generic [ref=e197]: 728×90 px · 320×100 mobile
+        - link "Advertise with Us" [ref=e198] [cursor=pointer]:
+          - /url: http://localhost:8888/lw_registry/public/advertise
+      - generic [ref=e199]: Advertisement
+    - region [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e203]:
+          - generic [ref=e204]: A clear path forward
+          - heading "How the Registry works." [level=2] [ref=e205]
+          - paragraph [ref=e206]: Everything is designed to help you move from discovery to a trusted business relationship with confidence.
+        - list [ref=e207]:
+          - listitem [ref=e208]:
+            - generic [ref=e209]: "01"
+            - generic [ref=e210]:
+              - heading "Create an account" [level=3] [ref=e211]
+              - paragraph [ref=e212]: Join as an SBO manager or business owner and set up your workspace.
+          - listitem [ref=e213]:
+            - generic [ref=e214]: "02"
+            - generic [ref=e215]:
+              - heading "Build your profile" [level=3] [ref=e216]
+              - paragraph [ref=e217]: Share the business details people need to understand and reach you.
+          - listitem [ref=e218]:
+            - generic [ref=e219]: "03"
+            - generic [ref=e220]:
+              - heading "Connect with opportunity" [level=3] [ref=e221]
+              - paragraph [ref=e222]: Discover businesses, collaborate, and take part in procurement opportunities.
+    - region [ref=e223]:
+      - generic [ref=e224]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: Ready when you are
+          - heading "Make your next business connection count." [level=2] [ref=e227]
+        - link "Explore the directory" [ref=e228] [cursor=pointer]:
+          - /url: http://localhost:8888/lw_registry/public/businesses
+          - text: Explore the directory
+          - generic [ref=e229]: 
+  - generic [ref=e231]:
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]: Advertisement space
+        - strong [ref=e235]: Reach verified Loveworld businesses
+        - generic [ref=e236]: 970×90 px · 320×100 mobile
+      - link "Advertise with Us" [ref=e237] [cursor=pointer]:
+        - /url: http://localhost:8888/lw_registry/public/advertise
+    - generic [ref=e238]: Advertisement
+  - contentinfo [ref=e239]:
+    - generic [ref=e240]:
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - generic [ref=e244]: Loveworld Registry momentum
+          - generic [ref=e245]: 2 Strategic Business Organizations have applied
+          - paragraph [ref=e246]: Join SBOs using the registry to build visibility, complete verification, and access ministry commerce opportunities.
+        - generic [ref=e247]:
+          - button "Register your SBO" [ref=e248] [cursor=pointer]
+          - link "Browse SBOs" [ref=e249] [cursor=pointer]:
+            - /url: http://localhost:8888/lw_registry/public/businesses
+      - generic [ref=e250]:
+        - heading "Popular SBO Categories" [level=6] [ref=e252]
+        - list [ref=e254]:
+          - listitem [ref=e255]:
+            - link "Agriculture & Agro Trade" [ref=e256] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/agriculture-agro-trade
+          - listitem [ref=e257]:
+            - link "Arts" [ref=e258] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/arts
+          - listitem [ref=e259]:
+            - link "Aviation" [ref=e260] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/aviation
+          - listitem [ref=e261]:
+            - link "Beauty & Personal Care" [ref=e262] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/beauty-personal-care
+          - listitem [ref=e263]:
+            - link "Bookstores & Publishers" [ref=e264] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/bookstores-publishers
+          - listitem [ref=e265]:
+            - link "Childcare & Family Services" [ref=e266] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/childcare-family-services
+          - listitem [ref=e267]:
+            - link "Churches & Ministries" [ref=e268] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/churches-ministries
+          - listitem [ref=e269]:
+            - link "Cleaning & Maintenance" [ref=e270] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/cleaning-maintenance
+        - list [ref=e272]:
+          - listitem [ref=e273]:
+            - link "Construction & Real Estate" [ref=e274] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/construction-real-estate
+          - listitem [ref=e275]:
+            - link "Consulting & Advisory" [ref=e276] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/consulting-advisory
+          - listitem [ref=e277]:
+            - link "Education" [ref=e278] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/education
+          - listitem [ref=e279]:
+            - link "Education & Training" [ref=e280] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/education-training
+          - listitem [ref=e281]:
+            - link "Engineering & Manufacturing" [ref=e282] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/engineering-manufacturing
+          - listitem [ref=e283]:
+            - link "Entertainment" [ref=e284] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/entertainment
+          - listitem [ref=e285]:
+            - link "Events & Conferences" [ref=e286] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/events-conferences
+          - listitem [ref=e287]:
+            - link "FMCG" [ref=e288] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/fmcg
+        - list [ref=e290]:
+          - listitem [ref=e291]:
+            - link "Faith-Based NGOs" [ref=e292] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/faith-based-ngos
+          - listitem [ref=e293]:
+            - link "Faith-Based Schools" [ref=e294] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/faith-based-schools
+          - listitem [ref=e295]:
+            - link "Fashion & Apparel" [ref=e296] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/fashion-apparel
+          - listitem [ref=e297]:
+            - link "Finance & Banking" [ref=e298] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/finance-banking
+          - listitem [ref=e299]:
+            - link "Graphics & Printing" [ref=e300] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/graphics-printing
+          - listitem [ref=e301]:
+            - link "Health & Medical Services" [ref=e302] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/health-medical-services
+          - listitem [ref=e303]:
+            - link "Hotels & Hospitality" [ref=e304] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/hotels-hospitality
+          - listitem [ref=e305]:
+            - link "Interior Design" [ref=e306] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/interior-design
+        - list [ref=e308]:
+          - listitem [ref=e309]:
+            - link "Legal Consultants" [ref=e310] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/legal-consultants
+          - listitem [ref=e311]:
+            - link "Manufacturing" [ref=e312] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/manufacturing
+          - listitem [ref=e313]:
+            - link "Marketing & Advertising" [ref=e314] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/marketing-advertising
+          - listitem [ref=e315]:
+            - link "Media" [ref=e316] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/media
+          - listitem [ref=e317]:
+            - link "Media & Communications" [ref=e318] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/media-communications
+          - listitem [ref=e319]:
+            - link "Music & Entertainment" [ref=e320] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/music-entertainment
+          - listitem [ref=e321]:
+            - link "Non-Profits & NGOs" [ref=e322] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/non-profits-ngos
+          - listitem [ref=e323]:
+            - link "Photography & Media" [ref=e324] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/photography-media
+        - list [ref=e326]:
+          - listitem [ref=e327]:
+            - link "Restaurants & Cafés" [ref=e328] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/restaurants-cafes
+          - listitem [ref=e329]:
+            - link "Retail & Wholesale" [ref=e330] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/retail-wholesale
+          - listitem [ref=e331]:
+            - link "Software Development" [ref=e332] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/software-development
+          - listitem [ref=e333]:
+            - link "Sports & Recreation" [ref=e334] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/sports-recreation
+          - listitem [ref=e335]:
+            - link "Technology Services" [ref=e336] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/technology-services
+          - listitem [ref=e337]:
+            - link "Transportation & Logistics" [ref=e338] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/transportation-logistics
+          - listitem [ref=e339]:
+            - link "Travel & Tourism" [ref=e340] [cursor=pointer]:
+              - /url: http://localhost:8888/lw_registry/public/businesses/categories/travel-tourism
+      - separator [ref=e341]
+      - img "Loveworld Registry Logo" [ref=e344]
+      - separator [ref=e345]
+      - generic [ref=e346]:
+        - generic [ref=e347]:
+          - heading "Popular Local Searches:" [level=6] [ref=e348]
+          - paragraph [ref=e349]: Churches, Ministries, Schools
+          - paragraph [ref=e350]: Restaurants, Cafés, Events
+          - paragraph [ref=e351]: Clinics, Pharmacies, Dentists
+        - generic [ref=e352]:
+          - heading "Advertisers" [level=6] [ref=e353]
+          - list [ref=e354]:
+            - listitem [ref=e355]:
+              - link "Advertise with Us" [ref=e356] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/advertise
+        - generic [ref=e357]:
+          - heading "About Us" [level=6] [ref=e358]
+          - list [ref=e359]:
+            - listitem [ref=e360]:
+              - link "About Loveworld Registry" [ref=e361] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/about
+            - listitem [ref=e362]:
+              - link "Our Mission" [ref=e363] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/about
+        - generic [ref=e364]:
+          - heading "Quick Links" [level=6] [ref=e365]
+          - list [ref=e366]:
+            - listitem [ref=e367]:
+              - link "Browse by Category" [ref=e368] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e369]:
+              - link "Browse by Location" [ref=e370] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e371]:
+              - link "Give Feedback" [ref=e372] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/feedback
+        - generic [ref=e373]:
+          - heading "Mobile & Tools" [level=6] [ref=e374]
+          - list [ref=e375]:
+            - listitem [ref=e376]:
+              - link "Follow us on Facebook" [ref=e377] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e378]:
+              - link "Follow us on Instagram" [ref=e379] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e380]:
+              - link "Follow us on X" [ref=e381] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e382]:
+          - heading "Partners" [level=6] [ref=e383]
+          - list [ref=e384]:
+            - listitem [ref=e385]:
+              - link "Loveworld Ministry Portal" [ref=e386] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e387]:
+              - link "KingsChat" [ref=e388] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e389]:
+              - link "Loveworld SAT" [ref=e390] [cursor=pointer]:
+                - /url: "#"
+      - separator [ref=e391]
+      - generic [ref=e392]: Copyright © 2025 Loveworld Business Registry. All Rights Reserved.
+  - generic:
+    - dialog [active] [ref=e393]:
+      - generic [ref=e394]:
+        - generic [ref=e395]:
+          - heading "Account Login" [level=5] [ref=e396]
+          - button "Close" [ref=e397] [cursor=pointer]
+        - generic [ref=e403]:
+          - generic [ref=e404]:
+            - generic [ref=e405]:
+              - generic [ref=e406]: Email
+              - textbox "Email" [ref=e407]
+            - generic [ref=e408]:
+              - generic [ref=e409]: Password
+              - generic [ref=e410]:
+                - textbox "Password" [ref=e411]
+                - button "Show password" [ref=e412] [cursor=pointer]
+            - generic [ref=e416]:
+              - generic [ref=e417]:
+                - checkbox "Remember me" [ref=e418]
+                - generic [ref=e419]: Remember me
+              - link "Forgot your password?" [ref=e421] [cursor=pointer]:
+                - /url: http://localhost:8888/lw_registry/public/forgot-password
+            - button "Login" [ref=e422] [cursor=pointer]
+          - generic [ref=e424]:
+            - text: Don't have an account yet?
+            - link "Click here to sign up!" [ref=e425] [cursor=pointer]:
+              - /url: "#"
+    - text:  

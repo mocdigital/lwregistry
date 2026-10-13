@@ -1,0 +1,131 @@
+/* Tailwind core */
+@import 'tailwindcss';
+
+/* Plugins */
+@plugin "daisyui";
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+/* Source scanning */
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+/* Dark mode helper */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================
+   Brand Font
+================================ */
+@font-face {
+  font-family: 'YLocal Book';
+  src: url('../fonts/Ylocal/YPLocalWeb-Book.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================
+   DaisyUI / Global Theme Overrides
+   (THIS IS WHAT FIXES THE FONT)
+================================ */
+:root,
+[data-theme] {
+  --font-sans: 'YLocal Book', ui-sans-serif, system-ui;
+
+  /* Brand + palette tokens */
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f5f5f5;
+  --color-zinc-200: #e5e5e5;
+  --color-zinc-300: #d4d4d4;
+  --color-zinc-400: #a3a3a3;
+  --color-zinc-500: #737373;
+  --color-zinc-600: #525252;
+  --color-zinc-700: #404040;
+  --color-zinc-800: #262626;
+  --color-zinc-900: #171717;
+  --color-zinc-950: #0a0a0a;
+
+  --light-color: var(--color-primary);
+  --color-primary: oklch(47% 0.14 155);
+  --color-primary-hover: oklch(40% 0.13 155);
+  --color-primary-soft: oklch(95% 0.03 155);
+  --color-primary-ink: oklch(35% 0.10 155);
+  --color-link: oklch(43% 0.105 205);
+  --color-ink: oklch(28% 0.035 235);
+  --color-surface: oklch(99% 0.006 230);
+  --color-surface-subtle: oklch(96.5% 0.012 230);
+  --color-border: oklch(88% 0.018 230);
+
+  --color-accent: var(--color-primary);
+  --color-accent-content: #fff;
+  --color-accent-foreground: var(--color-ink);
+}
+
+/* Dark theme adjustments */
+@layer theme {
+  .dark {
+    --color-accent: var(--color-white);
+    --color-accent-content: var(--color-white);
+    --color-accent-foreground: var(--color-neutral-800);
+  }
+}
+
+/* ================================
+   Base Layer
+================================ */
+@layer base {
+  *,
+  ::before,
+  ::after,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* ================================
+   Flux / Forms
+================================ */
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+  @apply grid gap-2;
+}
+
+[data-flux-label] {
+  @apply !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+  @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--color-primary, oklch(47% 0.14 155)) !important;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  button:not(.icon-only),
+  [role="button"]:not(.icon-only) {
+    min-height: 44px;
+  }
+}

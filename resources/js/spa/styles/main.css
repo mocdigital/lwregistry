@@ -1,0 +1,513 @@
+@import 'tailwindcss';
+@import './tokens.css';
+/* Last, and unlayered, so it wins over the utilities it remaps. */
+@import './dark.css';
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Geist ships contextual alternates and proper kerning; both are off by
+     * default in some engines. */
+    font-feature-settings: 'kern', 'calt';
+    /* Cormorant Garamond is a variable font with an optical size axis — let it
+     * use the display cut at headline sizes instead of the text cut scaled up. */
+    font-optical-sizing: auto;
+  }
+
+  /* Every heading starts in the middle tier — Plus Jakarta Sans 600 — because that is
+   * where most of them live (24 of the 55 that state no family). The rule in
+   * tokens.css keys off SIZE, not tag depth: an <h2> is Cormorant when it is a
+   * 30px page title and Geist when it is a 13px section label, and no element
+   * selector can tell those apart. So the two outer bands say so explicitly at
+   * the call site (`font-serif` at 24px+, `font-sans` below 16px) and this is
+   * only the default they override. Do not "simplify" this into h1/h2 = serif;
+   * that renders the small section-label h2s in a display serif at 13px. */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  /* Ragged-right paragraphs beat orphaned last words. */
+  p {
+    text-wrap: pretty;
+  }
+
+  /*
+   * Nothing may push the page sideways.
+   *
+   * The registry renders names, addresses, URLs and category labels it did not
+   * write, in three languages, at 320px. Any one of them can be a single token
+   * longer than the column — a bare URL in a chat bubble, "Telecommunications"
+   * in a 110px chip, a German-length compound in a card title — and a token
+   * that cannot break makes the WHOLE page scroll horizontally, not just its
+   * own box.
+   *
+   * `break-word` first so normal text still breaks between words; `anywhere`
+   * only where that is not enough. This is a floor, not a licence to skip
+   * `min-w-0` on flex children — a flex item still refuses to shrink below its
+   * content without it.
+   */
+  body {
+    overflow-wrap: break-word;
+  }
+
+  /* A long unbroken token in one of these is the common case, and headings
+   * balance rather than wrap, which makes them the worst offenders. */
+  h1, h2, h3, h4, h5, h6, p, li, dd, dt, td, th, a, span, button {
+    overflow-wrap: anywhere;
+  }
+
+  /* The UA stylesheet puts <strong> and <b> at 700, which is the one weight
+   * Geist is no longer loaded at — left alone they would either synthesise a
+   * fake bold or silently break the "700 is the display serif" rule. */
+  strong, b {
+    font-weight: 600;
+  }
+
+  /* Figures that change in place — prices, countdowns, table columns — must not
+   * jitter as digits swap. */
+  table, [data-numeric] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Visible focus for keyboard users — absent from the Figma designs, which
+   * define no focus states on any interactive component. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/*
+ * Primary action button.
+ *
+ * The design system's rule: a primary button RESTS in the inactive state
+ * (teal #0d9488) and only becomes active (green #007035) once actioned. Green
+ * is therefore never the default appearance — see tokens.css.
+ *
+ * Active is expressed three ways so it works for press, for a controlled
+ * component, and for a plain class toggle:
+ *   :active            while pressed
+ *   [data-active]      bound state, e.g. :data-active="isValid"
+ *   .is-active         static
+ */
+/*
+ * A row in the chat message menu. Nine of them per menu and one menu per
+ * message, so the classes are named once here rather than repeated on every
+ * button in the template.
+ */
+/*
+ * Rendered rich text — the sanitised output of App\Support\RichText.
+ *
+ * The CSS reset strips list markers and paragraph spacing, so a description
+ * written as a bulleted list arrives as one run-on block. These put back only
+ * what the allowlist can produce.
+ */
+/*
+ * ---------------------------------------------------------------------------
+ * Mobile corrections that belong in one place
+ * ---------------------------------------------------------------------------
+ *
+ * Each of these was true on 108 controls, or every screen, and fixing them per
+ * component would be a hundred edits that the hundred-and-first component
+ * would not inherit.
+ */
+
+@media (max-width: 639px) {
+  /*
+   * iOS Safari zooms the whole page in when a focused field's text is smaller
+   * than 16px — and it does NOT zoom back out on blur. One tap on a search box
+   * therefore left the entire interface magnified, which is the single most
+   * common reason a site "does not sit well" on an iPhone.
+   *
+   * 108 inputs across the app were set at 12px or 14px. Corrected here rather
+   * than on each, so a field added tomorrow is right without anybody
+   * remembering this.
+   *
+   * Checkboxes and radios are excluded: they render no text, and forcing a
+   * size on them changes the control's dimensions.
+   */
+  input:not([type='checkbox']):not([type='radio']),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /*
+   * Nothing may push the page sideways. A single over-wide element turns every
+   * screen into a horizontal scroller, and the culprit is usually invisible —
+   * a long unbroken word, a wide table, an absolutely positioned decoration.
+   */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/*
+ * A long unbroken string — a URL somebody pasted, a reference number, an email
+ * address — is wider than a phone and drags the layout out with it. Breaking
+ * inside a word is ugly; being unable to read the page is worse.
+ *
+ * NOT for a flex or grid item that has to hold its width. Unlike
+ * `overflow-wrap: break-word`, `anywhere` counts toward intrinsic sizing: the
+ * element's min-content width becomes one character, so a `flex-1 min-w-0`
+ * column stops resisting its siblings and collapses to a ribbon of single
+ * syllables. Reach for Tailwind's `break-words` there; this is for a block
+ * whose width is already settled.
+ */
+@utility break-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/*
+ * Scroll-in for the public site's sections, driven by useScrollEffects.
+ *
+ * The classes are added by script, never in markup: a section is fully visible
+ * until `reveal-init` is put on it, so a page whose JS has not run — or a reader
+ * who has asked for less motion — sees everything, immediately. `reveal-in`
+ * settles it into place.
+ *
+ * transform and opacity only, so it composites on the GPU and cannot shift the
+ * layout of anything around it. The blur applied on scroll is an inline style,
+ * kept smooth by transitioning filter here.
+ */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+ * Two-column bands whose halves slide in from their own side — the about-page
+ * text-beside-image pattern. The columns start pushed out and faded; when the
+ * band arrives, `.is-in` settles them. translateX only, a modest 36px so it
+ * never drags the page sideways, and the section itself does not move.
+ */
+.reveal-from-left,
+.reveal-from-right {
+  opacity: 0;
+}
+
+.reveal-from-left {
+  transform: translateX(-36px);
+}
+
+.reveal-from-right {
+  transform: translateX(36px);
+}
+
+.reveal-split.is-in .reveal-from-left,
+.reveal-split.is-in .reveal-from-right {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+ * A row of cards rising in one after another — the about-page team grid. The
+ * children start lifted and faded; when the section arrives they settle, each a
+ * beat after the one before it, so the eye is led across the row rather than the
+ * whole thing appearing at once.
+ */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.reveal-stagger.is-in .reveal-up {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 1.1s ease,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger.is-in .reveal-up:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger.is-in .reveal-up:nth-child(2) { transition-delay: 0.5s; }
+.reveal-stagger.is-in .reveal-up:nth-child(3) { transition-delay: 0.9s; }
+.reveal-stagger.is-in .reveal-up:nth-child(4) { transition-delay: 1.3s; }
+.reveal-stagger.is-in .reveal-up:nth-child(5) { transition-delay: 1.7s; }
+.reveal-stagger.is-in .reveal-up:nth-child(6) { transition-delay: 2.1s; }
+
+/*
+ * The tighter rhythm for the small cards inside an About band — a shorter rise
+ * and closer together, so the card fills itself in briskly rather than at the
+ * team grid's stately pace.
+ */
+.reveal-stagger-quick .reveal-up {
+  transform: translateY(20px);
+}
+
+.reveal-stagger-quick.is-in .reveal-up {
+  transition:
+    opacity 0.5s ease,
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger-quick.is-in .reveal-up:nth-child(1) { transition-delay: 0.08s; }
+.reveal-stagger-quick.is-in .reveal-up:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger-quick.is-in .reveal-up:nth-child(3) { transition-delay: 0.32s; }
+.reveal-stagger-quick.is-in .reveal-up:nth-child(4) { transition-delay: 0.44s; }
+
+/* The focus-blur eases in and out rather than snapping frame to frame. */
+main section {
+  transition: filter 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+/*
+ * The homepage hero copy rising in, one line after another. The children start
+ * lifted and faded and settle when `.is-ready` is set a beat after mount; the
+ * nth-child delays are the stagger. Only four blocks, so they are named rather
+ * than looped.
+ */
+.hero-copy > * {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.hero-copy.is-ready > * {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-copy.is-ready > *:nth-child(1) { transition-delay: 0.05s; }
+.hero-copy.is-ready > *:nth-child(2) { transition-delay: 0.18s; }
+.hero-copy.is-ready > *:nth-child(3) { transition-delay: 0.31s; }
+.hero-copy.is-ready > *:nth-child(4) { transition-delay: 0.44s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init,
+  .reveal-from-left,
+  .reveal-from-right,
+  .reveal-up {
+    opacity: 1;
+    transform: none;
+  }
+
+  main section {
+    transition: none;
+    filter: none !important;
+  }
+}
+
+@utility rich-text {
+  & p {
+    margin-bottom: 0.75rem;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
+
+  & ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  & ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  & li {
+    margin-bottom: 0.25rem;
+  }
+
+  & h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  & h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  & blockquote {
+    border-left: 2px solid var(--color-border);
+    padding-left: 0.75rem;
+    color: var(--color-ink-secondary);
+  }
+
+  & a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  & strong,
+  & b {
+    font-weight: 600;
+  }
+
+  /*
+   * Quill 2 writes a bulleted list as <ol><li data-list="bullet">, so the
+   * element alone does not say which kind of list it is. Without this every
+   * bulleted list renders numbered on the page that displays it.
+   */
+  & li[data-list='bullet'] {
+    list-style: disc;
+  }
+
+  & li[data-list='ordered'] {
+    list-style: decimal;
+  }
+
+  /* Alignment and indentation are classes, not inline styles. */
+  & .ql-align-center {
+    text-align: center;
+  }
+
+  & .ql-align-right {
+    text-align: right;
+  }
+
+  & .ql-align-justify {
+    text-align: justify;
+  }
+
+  & .ql-indent-1 {
+    padding-left: 3rem;
+  }
+
+  & .ql-indent-2 {
+    padding-left: 6rem;
+  }
+
+  & .ql-indent-3 {
+    padding-left: 9rem;
+  }
+}
+
+@utility chat-menu-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: var(--text-2xs);
+  color: var(--color-ink);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background-color: var(--color-surface-secondary);
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--color-primary-inactive);
+  color: var(--color-ink-inverse);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background-color: var(--color-primary-inactive-hover);
+  }
+
+  &:active,
+  &[data-active],
+  &.is-active {
+    background-color: var(--color-primary);
+  }
+
+  &[data-active]:hover,
+  &.is-active:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+/*
+ * Page gutter for the 80px-padded screens (directory, categories, support,
+ * about, advertise, the dashboards). One utility so every section on a page
+ * lines up on the same left/right edge — the design pads these at 80px, and
+ * this steps down to 40 and 20 below xl.
+ */
+/*
+ * The wordmark, on whatever the surface is.
+ *
+ * The asset is dark ink on transparency and no white variant came back from
+ * Figma, so it is inverted rather than shipped twice — one file that cannot go
+ * out of sync with itself. The footer and the auth panel invert unconditionally
+ * because their bands are navy in both themes; this is for the placements whose
+ * background follows the theme.
+ */
+@utility logo-adaptive {
+  :root[data-theme='dark'] & {
+    filter: brightness(0) invert(1);
+  }
+}
+
+@utility section-x {
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (width >= 80rem) {
+    padding-inline: 5rem;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  /* The design runs content from x=20 to x=1257 within the 1280 frame, so the
+   * gutter is ~20-24px, not the 40px a wider shell would use. */
+  padding-inline: 0.75rem; /* 12 */
+
+  @media (width >= 48rem) {
+    padding-inline: 1rem;  /* 16 */
+  }
+
+  @media (width >= 80rem) {
+    padding-inline: 1.25rem; /* 20 */
+  }
+}

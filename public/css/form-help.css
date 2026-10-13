@@ -1,0 +1,31 @@
+.form-help-label {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.form-help-generated-label {
+  color: var(--dark-color, #0B2545);
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+/* Defensive rule for cached scripts or older Livewire fragments. */
+.form-help-tooltip-trigger {
+  display: none !important;
+}
+
+.ad-dimension-help {
+  color: #42526d;
+  font-weight: 600;
+}
+
+.ad-dimension-help.is-ready {
+  color: #0b6f47;
+}
+
+.ad-dimension-help.is-warning {
+  color: #8a5a00;
+}

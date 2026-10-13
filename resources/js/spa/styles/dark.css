@@ -1,0 +1,1017 @@
+/* ===========================================================================
+   Dark mode for the literal colours.
+
+   GENERATED — see the note at the bottom before editing by hand.
+
+   The token layer (tokens.css) already has a full dark palette, and every
+   screen built against `bg-surface` / `text-ink` / `border-border` follows it
+   for free. Most screens are not built that way: they carry the Figma hexes
+   verbatim — `bg-white`, `text-[#0f172a]`, `border-[#e2e8f0]` — about 2,500
+   times. Those are frozen values; nothing about a theme can reach them, which
+   is why cards and sections stayed white with dark ink on them.
+
+   Rewriting 2,500 call sites to tokens would touch every file in the front end
+   and would have to decide, one by one, which greens are "the brand" and which
+   are "a surface" — and get it right silently. This remaps the NEUTRALS and the
+   STATUS TINTS instead, in one reviewable place, and leaves brand colour alone
+   except where a rule below says otherwise.
+
+   Rules are unlayered, so they beat Tailwind's `@layer utilities` regardless of
+   specificity — no `!important` anywhere.
+
+   When a screen is next touched, prefer the token: `bg-surface` over
+   `bg-white`. This file is a bridge, not the destination.
+   ========================================================================= */
+
+/* ---- Page and card surfaces ---- */
+:root[data-theme='dark'] .bg-white,
+:root[data-theme='dark'] .hover\:bg-white:hover,
+:root[data-theme='dark'] .focus\:bg-white:focus,
+:root[data-theme='dark'] .focus-visible\:bg-white:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-white:disabled,
+:root[data-theme='dark'] .checked\:bg-white:checked {
+  background-color: var(--color-surface);
+}
+
+/* ---- Recessed surfaces — the greys a card sits on ---- */
+:root[data-theme='dark'] .bg-\[\#f8fafc\],
+:root[data-theme='dark'] .hover\:bg-\[\#f8fafc\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f8fafc\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f8fafc\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f8fafc\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f8fafc\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f9fafb\],
+:root[data-theme='dark'] .hover\:bg-\[\#f9fafb\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f9fafb\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f9fafb\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f9fafb\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f9fafb\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f4f7f9\],
+:root[data-theme='dark'] .hover\:bg-\[\#f4f7f9\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f4f7f9\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f4f7f9\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f4f7f9\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f4f7f9\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f7f7ff\],
+:root[data-theme='dark'] .hover\:bg-\[\#f7f7ff\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f7f7ff\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f7f7ff\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f7f7ff\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f7f7ff\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f0f4f8\],
+:root[data-theme='dark'] .hover\:bg-\[\#f0f4f8\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f0f4f8\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f0f4f8\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f0f4f8\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f0f4f8\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f0f4f1\],
+:root[data-theme='dark'] .hover\:bg-\[\#f0f4f1\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f0f4f1\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f0f4f1\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f0f4f1\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f0f4f1\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f8f9fa\],
+:root[data-theme='dark'] .hover\:bg-\[\#f8f9fa\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f8f9fa\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f8f9fa\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f8f9fa\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f8f9fa\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+:root[data-theme='dark'] .bg-\[\#f3f2ef\],
+:root[data-theme='dark'] .hover\:bg-\[\#f3f2ef\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f3f2ef\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f3f2ef\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f3f2ef\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f3f2ef\]:checked {
+  background-color: var(--color-surface-secondary);
+}
+
+/* ---- Raised greys — chips, wells, hover plates ---- */
+:root[data-theme='dark'] .bg-\[\#f1f5f9\],
+:root[data-theme='dark'] .hover\:bg-\[\#f1f5f9\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f1f5f9\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f1f5f9\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f1f5f9\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f1f5f9\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+:root[data-theme='dark'] .bg-\[\#e2e8f0\],
+:root[data-theme='dark'] .hover\:bg-\[\#e2e8f0\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#e2e8f0\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#e2e8f0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#e2e8f0\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#e2e8f0\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+:root[data-theme='dark'] .bg-\[\#e2e8f0\]\/25,
+:root[data-theme='dark'] .hover\:bg-\[\#e2e8f0\]\/25:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#e2e8f0\]\/25:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#e2e8f0\]\/25:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#e2e8f0\]\/25:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#e2e8f0\]\/25:checked {
+  background-color: color-mix(in oklab, var(--color-surface-tertiary) 25%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#f3f4f6\],
+:root[data-theme='dark'] .hover\:bg-\[\#f3f4f6\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f3f4f6\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f3f4f6\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f3f4f6\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f3f4f6\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+:root[data-theme='dark'] .bg-\[\#d1d6e0\],
+:root[data-theme='dark'] .hover\:bg-\[\#d1d6e0\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#d1d6e0\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#d1d6e0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#d1d6e0\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#d1d6e0\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+:root[data-theme='dark'] .bg-\[\#cbd5e1\],
+:root[data-theme='dark'] .hover\:bg-\[\#cbd5e1\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#cbd5e1\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#cbd5e1\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#cbd5e1\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#cbd5e1\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+:root[data-theme='dark'] .bg-\[\#e0e0e0\],
+:root[data-theme='dark'] .hover\:bg-\[\#e0e0e0\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#e0e0e0\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#e0e0e0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#e0e0e0\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#e0e0e0\]:checked {
+  background-color: var(--color-surface-tertiary);
+}
+
+/* ---- Status tints ---- */
+:root[data-theme='dark'] .bg-\[\#f0fdf4\],
+:root[data-theme='dark'] .hover\:bg-\[\#f0fdf4\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f0fdf4\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f0fdf4\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f0fdf4\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f0fdf4\]:checked {
+  background-color: color-mix(in oklab, var(--color-success) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#d1fae5\],
+:root[data-theme='dark'] .hover\:bg-\[\#d1fae5\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#d1fae5\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#d1fae5\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#d1fae5\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#d1fae5\]:checked {
+  background-color: color-mix(in oklab, var(--color-success) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#dcfce7\],
+:root[data-theme='dark'] .hover\:bg-\[\#dcfce7\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#dcfce7\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#dcfce7\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#dcfce7\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#dcfce7\]:checked {
+  background-color: color-mix(in oklab, var(--color-success) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#e6f4ea\],
+:root[data-theme='dark'] .hover\:bg-\[\#e6f4ea\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#e6f4ea\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#e6f4ea\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#e6f4ea\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#e6f4ea\]:checked {
+  background-color: color-mix(in oklab, var(--color-success) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#ecfdf5\],
+:root[data-theme='dark'] .hover\:bg-\[\#ecfdf5\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#ecfdf5\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#ecfdf5\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#ecfdf5\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#ecfdf5\]:checked {
+  background-color: color-mix(in oklab, var(--color-success) 14%, transparent);
+}
+
+:root[data-theme='dark'] .bg-\[\#fef3c7\],
+:root[data-theme='dark'] .hover\:bg-\[\#fef3c7\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fef3c7\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fef3c7\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fef3c7\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fef3c7\]:checked {
+  background-color: color-mix(in oklab, var(--color-warning) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#fffbeb\],
+:root[data-theme='dark'] .hover\:bg-\[\#fffbeb\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fffbeb\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fffbeb\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fffbeb\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fffbeb\]:checked {
+  background-color: color-mix(in oklab, var(--color-warning) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#fff9e6\],
+:root[data-theme='dark'] .hover\:bg-\[\#fff9e6\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fff9e6\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fff9e6\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fff9e6\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fff9e6\]:checked {
+  background-color: color-mix(in oklab, var(--color-warning) 14%, transparent);
+}
+
+:root[data-theme='dark'] .bg-\[\#fef2f2\],
+:root[data-theme='dark'] .hover\:bg-\[\#fef2f2\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fef2f2\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fef2f2\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fef2f2\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fef2f2\]:checked {
+  background-color: color-mix(in oklab, var(--color-danger) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#fee2e2\],
+:root[data-theme='dark'] .hover\:bg-\[\#fee2e2\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fee2e2\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fee2e2\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fee2e2\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fee2e2\]:checked {
+  background-color: color-mix(in oklab, var(--color-danger) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#fff1f2\],
+:root[data-theme='dark'] .hover\:bg-\[\#fff1f2\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#fff1f2\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#fff1f2\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#fff1f2\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#fff1f2\]:checked {
+  background-color: color-mix(in oklab, var(--color-danger) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#ffe4e6\],
+:root[data-theme='dark'] .hover\:bg-\[\#ffe4e6\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#ffe4e6\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#ffe4e6\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#ffe4e6\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#ffe4e6\]:checked {
+  background-color: color-mix(in oklab, var(--color-danger) 14%, transparent);
+}
+
+:root[data-theme='dark'] .bg-\[\#eff6ff\],
+:root[data-theme='dark'] .hover\:bg-\[\#eff6ff\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#eff6ff\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#eff6ff\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#eff6ff\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#eff6ff\]:checked {
+  background-color: color-mix(in oklab, var(--color-info) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#e0f2fe\],
+:root[data-theme='dark'] .hover\:bg-\[\#e0f2fe\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#e0f2fe\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#e0f2fe\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#e0f2fe\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#e0f2fe\]:checked {
+  background-color: color-mix(in oklab, var(--color-info) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#f0f9ff\],
+:root[data-theme='dark'] .hover\:bg-\[\#f0f9ff\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#f0f9ff\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#f0f9ff\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#f0f9ff\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#f0f9ff\]:checked {
+  background-color: color-mix(in oklab, var(--color-info) 14%, transparent);
+}
+:root[data-theme='dark'] .bg-\[\#dbeafe\],
+:root[data-theme='dark'] .hover\:bg-\[\#dbeafe\]:hover,
+:root[data-theme='dark'] .focus\:bg-\[\#dbeafe\]:focus,
+:root[data-theme='dark'] .focus-visible\:bg-\[\#dbeafe\]:focus-visible,
+:root[data-theme='dark'] .disabled\:bg-\[\#dbeafe\]:disabled,
+:root[data-theme='dark'] .checked\:bg-\[\#dbeafe\]:checked {
+  background-color: color-mix(in oklab, var(--color-info) 14%, transparent);
+}
+
+/* ---- Body ink ---- */
+:root[data-theme='dark'] .text-\[\#0f172a\],
+:root[data-theme='dark'] .hover\:text-\[\#0f172a\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0f172a\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0f172a\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0f172a\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0f172a\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#0f172a\]\/60,
+:root[data-theme='dark'] .hover\:text-\[\#0f172a\]\/60:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0f172a\]\/60:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0f172a\]\/60:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0f172a\]\/60:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0f172a\]\/60:checked {
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+}
+:root[data-theme='dark'] .text-\[\#1e293b\],
+:root[data-theme='dark'] .hover\:text-\[\#1e293b\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1e293b\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1e293b\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1e293b\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1e293b\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#1f2937\],
+:root[data-theme='dark'] .hover\:text-\[\#1f2937\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1f2937\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1f2937\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1f2937\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1f2937\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#1f2937\]\/40,
+:root[data-theme='dark'] .hover\:text-\[\#1f2937\]\/40:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1f2937\]\/40:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1f2937\]\/40:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1f2937\]\/40:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1f2937\]\/40:checked {
+  color: color-mix(in oklab, var(--color-ink) 40%, transparent);
+}
+:root[data-theme='dark'] .text-\[\#1a1a1a\],
+:root[data-theme='dark'] .hover\:text-\[\#1a1a1a\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1a1a1a\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1a1a1a\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1a1a1a\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1a1a1a\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#1c1917\],
+:root[data-theme='dark'] .hover\:text-\[\#1c1917\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1c1917\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1c1917\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1c1917\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1c1917\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#1e2337\],
+:root[data-theme='dark'] .hover\:text-\[\#1e2337\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1e2337\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1e2337\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1e2337\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1e2337\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#1e1b4b\],
+:root[data-theme='dark'] .hover\:text-\[\#1e1b4b\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1e1b4b\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1e1b4b\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1e1b4b\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1e1b4b\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#001529\],
+:root[data-theme='dark'] .hover\:text-\[\#001529\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#001529\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#001529\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#001529\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#001529\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#0b192c\],
+:root[data-theme='dark'] .hover\:text-\[\#0b192c\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0b192c\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0b192c\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0b192c\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0b192c\]:checked {
+  color: var(--color-ink);
+}
+:root[data-theme='dark'] .text-\[\#0a192f\],
+:root[data-theme='dark'] .hover\:text-\[\#0a192f\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0a192f\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0a192f\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0a192f\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0a192f\]:checked {
+  color: var(--color-ink);
+}
+
+/* ---- Secondary ink ---- */
+:root[data-theme='dark'] .text-\[\#475569\],
+:root[data-theme='dark'] .hover\:text-\[\#475569\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#475569\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#475569\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#475569\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#475569\]:checked {
+  color: var(--color-ink-secondary);
+}
+:root[data-theme='dark'] .text-\[\#475569\]\/60,
+:root[data-theme='dark'] .hover\:text-\[\#475569\]\/60:hover,
+:root[data-theme='dark'] .focus\:text-\[\#475569\]\/60:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#475569\]\/60:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#475569\]\/60:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#475569\]\/60:checked {
+  color: color-mix(in oklab, var(--color-ink-secondary) 60%, transparent);
+}
+:root[data-theme='dark'] .text-\[\#64748b\],
+:root[data-theme='dark'] .hover\:text-\[\#64748b\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#64748b\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#64748b\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#64748b\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#64748b\]:checked {
+  color: var(--color-ink-secondary);
+}
+:root[data-theme='dark'] .text-\[\#6b7280\],
+:root[data-theme='dark'] .hover\:text-\[\#6b7280\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#6b7280\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#6b7280\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#6b7280\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#6b7280\]:checked {
+  color: var(--color-ink-secondary);
+}
+:root[data-theme='dark'] .text-\[\#666\],
+:root[data-theme='dark'] .hover\:text-\[\#666\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#666\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#666\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#666\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#666\]:checked {
+  color: var(--color-ink-secondary);
+}
+:root[data-theme='dark'] .text-\[\#5e5e5e\],
+:root[data-theme='dark'] .hover\:text-\[\#5e5e5e\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#5e5e5e\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#5e5e5e\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#5e5e5e\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#5e5e5e\]:checked {
+  color: var(--color-ink-secondary);
+}
+
+/* ---- Tertiary ink ---- */
+:root[data-theme='dark'] .text-\[\#94a3b8\],
+:root[data-theme='dark'] .hover\:text-\[\#94a3b8\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#94a3b8\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#94a3b8\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#94a3b8\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#94a3b8\]:checked {
+  color: var(--color-ink-tertiary);
+}
+:root[data-theme='dark'] .text-\[\#9ca3af\],
+:root[data-theme='dark'] .hover\:text-\[\#9ca3af\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#9ca3af\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#9ca3af\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#9ca3af\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#9ca3af\]:checked {
+  color: var(--color-ink-tertiary);
+}
+:root[data-theme='dark'] .text-\[\#d1d5db\],
+:root[data-theme='dark'] .hover\:text-\[\#d1d5db\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#d1d5db\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#d1d5db\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#d1d5db\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#d1d5db\]:checked {
+  color: var(--color-ink-tertiary);
+}
+:root[data-theme='dark'] .text-\[\#cbd5e1\],
+:root[data-theme='dark'] .hover\:text-\[\#cbd5e1\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#cbd5e1\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#cbd5e1\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#cbd5e1\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#cbd5e1\]:checked {
+  color: var(--color-ink-tertiary);
+}
+
+/* ---- Status text lifts off the dark surface ---- */
+:root[data-theme='dark'] .text-\[\#15803d\],
+:root[data-theme='dark'] .hover\:text-\[\#15803d\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#15803d\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#15803d\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#15803d\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#15803d\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#00875a\],
+:root[data-theme='dark'] .hover\:text-\[\#00875a\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#00875a\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#00875a\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#00875a\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#00875a\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#059669\],
+:root[data-theme='dark'] .hover\:text-\[\#059669\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#059669\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#059669\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#059669\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#059669\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#0e8345\],
+:root[data-theme='dark'] .hover\:text-\[\#0e8345\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0e8345\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0e8345\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0e8345\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0e8345\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#2e7d32\],
+:root[data-theme='dark'] .hover\:text-\[\#2e7d32\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#2e7d32\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#2e7d32\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#2e7d32\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#2e7d32\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#2d8a4e\],
+:root[data-theme='dark'] .hover\:text-\[\#2d8a4e\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#2d8a4e\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#2d8a4e\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#2d8a4e\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#2d8a4e\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#047857\],
+:root[data-theme='dark'] .hover\:text-\[\#047857\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#047857\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#047857\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#047857\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#047857\]:checked {
+  color: var(--color-success);
+}
+:root[data-theme='dark'] .text-\[\#065f46\],
+:root[data-theme='dark'] .hover\:text-\[\#065f46\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#065f46\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#065f46\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#065f46\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#065f46\]:checked {
+  color: var(--color-success);
+}
+
+:root[data-theme='dark'] .text-\[\#b45309\],
+:root[data-theme='dark'] .hover\:text-\[\#b45309\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#b45309\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#b45309\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#b45309\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#b45309\]:checked {
+  color: var(--color-warning);
+}
+:root[data-theme='dark'] .text-\[\#92400e\],
+:root[data-theme='dark'] .hover\:text-\[\#92400e\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#92400e\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#92400e\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#92400e\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#92400e\]:checked {
+  color: var(--color-warning);
+}
+:root[data-theme='dark'] .text-\[\#b78103\],
+:root[data-theme='dark'] .hover\:text-\[\#b78103\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#b78103\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#b78103\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#b78103\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#b78103\]:checked {
+  color: var(--color-warning);
+}
+
+:root[data-theme='dark'] .text-\[\#991b1b\],
+:root[data-theme='dark'] .hover\:text-\[\#991b1b\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#991b1b\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#991b1b\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#991b1b\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#991b1b\]:checked {
+  color: var(--color-danger);
+}
+:root[data-theme='dark'] .text-\[\#b91c1c\],
+:root[data-theme='dark'] .hover\:text-\[\#b91c1c\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#b91c1c\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#b91c1c\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#b91c1c\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#b91c1c\]:checked {
+  color: var(--color-danger);
+}
+
+:root[data-theme='dark'] .text-\[\#1e3a8a\],
+:root[data-theme='dark'] .hover\:text-\[\#1e3a8a\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1e3a8a\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1e3a8a\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1e3a8a\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1e3a8a\]:checked {
+  color: var(--color-info);
+}
+:root[data-theme='dark'] .text-\[\#0369a1\],
+:root[data-theme='dark'] .hover\:text-\[\#0369a1\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#0369a1\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#0369a1\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#0369a1\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#0369a1\]:checked {
+  color: var(--color-info);
+}
+:root[data-theme='dark'] .text-\[\#2563eb\],
+:root[data-theme='dark'] .hover\:text-\[\#2563eb\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#2563eb\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#2563eb\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#2563eb\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#2563eb\]:checked {
+  color: var(--color-info);
+}
+:root[data-theme='dark'] .text-\[\#1b63ca\],
+:root[data-theme='dark'] .hover\:text-\[\#1b63ca\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1b63ca\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1b63ca\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1b63ca\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1b63ca\]:checked {
+  color: var(--color-info);
+}
+:root[data-theme='dark'] .text-\[\#1d4ed8\],
+:root[data-theme='dark'] .hover\:text-\[\#1d4ed8\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#1d4ed8\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#1d4ed8\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#1d4ed8\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#1d4ed8\]:checked {
+  color: var(--color-info);
+}
+:root[data-theme='dark'] .text-\[\#06c\],
+:root[data-theme='dark'] .hover\:text-\[\#06c\]:hover,
+:root[data-theme='dark'] .focus\:text-\[\#06c\]:focus,
+:root[data-theme='dark'] .focus-visible\:text-\[\#06c\]:focus-visible,
+:root[data-theme='dark'] .disabled\:text-\[\#06c\]:disabled,
+:root[data-theme='dark'] .checked\:text-\[\#06c\]:checked {
+  color: var(--color-info);
+}
+
+/* ---- Hairlines ---- */
+:root[data-theme='dark'] .border-\[\#e2e8f0\],
+:root[data-theme='dark'] .hover\:border-\[\#e2e8f0\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#e2e8f0\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#e2e8f0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#e2e8f0\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#e2e8f0\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#e5e7eb\],
+:root[data-theme='dark'] .hover\:border-\[\#e5e7eb\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#e5e7eb\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#e5e7eb\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#e5e7eb\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#e5e7eb\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#f1f5f9\],
+:root[data-theme='dark'] .hover\:border-\[\#f1f5f9\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#f1f5f9\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#f1f5f9\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#f1f5f9\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#f1f5f9\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#f3f4f6\],
+:root[data-theme='dark'] .hover\:border-\[\#f3f4f6\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#f3f4f6\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#f3f4f6\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#f3f4f6\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#f3f4f6\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#e0e0e0\],
+:root[data-theme='dark'] .hover\:border-\[\#e0e0e0\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#e0e0e0\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#e0e0e0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#e0e0e0\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#e0e0e0\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#dcdcdc\],
+:root[data-theme='dark'] .hover\:border-\[\#dcdcdc\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#dcdcdc\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#dcdcdc\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#dcdcdc\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#dcdcdc\]:checked {
+  border-color: var(--color-border);
+}
+:root[data-theme='dark'] .border-\[\#cbd5e1\],
+:root[data-theme='dark'] .hover\:border-\[\#cbd5e1\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#cbd5e1\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#cbd5e1\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#cbd5e1\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#cbd5e1\]:checked {
+  border-color: var(--color-border);
+}
+
+/* ---- Status borders ---- */
+:root[data-theme='dark'] .border-\[\#a7f3d0\],
+:root[data-theme='dark'] .hover\:border-\[\#a7f3d0\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#a7f3d0\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#a7f3d0\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#a7f3d0\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#a7f3d0\]:checked {
+  border-color: color-mix(in oklab, var(--color-success) 35%, transparent);
+}
+
+:root[data-theme='dark'] .border-\[\#fde68a\],
+:root[data-theme='dark'] .hover\:border-\[\#fde68a\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#fde68a\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#fde68a\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#fde68a\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#fde68a\]:checked {
+  border-color: color-mix(in oklab, var(--color-warning) 35%, transparent);
+}
+:root[data-theme='dark'] .border-\[\#fcd34d\],
+:root[data-theme='dark'] .hover\:border-\[\#fcd34d\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#fcd34d\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#fcd34d\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#fcd34d\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#fcd34d\]:checked {
+  border-color: color-mix(in oklab, var(--color-warning) 35%, transparent);
+}
+
+:root[data-theme='dark'] .border-\[\#fecaca\],
+:root[data-theme='dark'] .hover\:border-\[\#fecaca\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#fecaca\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#fecaca\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#fecaca\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#fecaca\]:checked {
+  border-color: color-mix(in oklab, var(--color-danger) 35%, transparent);
+}
+
+:root[data-theme='dark'] .border-\[\#e0f2fe\],
+:root[data-theme='dark'] .hover\:border-\[\#e0f2fe\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#e0f2fe\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#e0f2fe\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#e0f2fe\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#e0f2fe\]:checked {
+  border-color: color-mix(in oklab, var(--color-info) 35%, transparent);
+}
+:root[data-theme='dark'] .border-\[\#bfdbfe\],
+:root[data-theme='dark'] .hover\:border-\[\#bfdbfe\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#bfdbfe\]:focus,
+:root[data-theme='dark'] .focus-visible\:border-\[\#bfdbfe\]:focus-visible,
+:root[data-theme='dark'] .disabled\:border-\[\#bfdbfe\]:disabled,
+:root[data-theme='dark'] .checked\:border-\[\#bfdbfe\]:checked {
+  border-color: color-mix(in oklab, var(--color-info) 35%, transparent);
+}
+
+/* ---- Primary teal becomes amber -------------------------------------------
+   #0d9488 is the resting primary — the inactive state of `btn-primary` and the
+   literal hex on two dozen buttons, links and outlines. Against the dark navy
+   surfaces it sits close in value to the background and stops reading as the
+   thing to press; amber carries where teal does not.
+
+   Where it is a BACKGROUND the foreground goes dark with it. Amber under white
+   text is about 2:1, which fails at any size; under near-black it is about 9:1.
+   The buttons carry `text-white` in their markup, so this has to override it
+   rather than leave the label unreadable.
+
+   The token is remapped too, so `btn-primary` and anything built on
+   `--color-primary-inactive` follows without knowing about this file. */
+
+:root[data-theme='dark'] {
+  --color-primary-inactive: #f59e0b;
+  --color-primary-inactive-hover: #d97706;
+  --color-ink-inverse: #0b192c;
+}
+
+:root[data-theme='dark'] .bg-\[\#0d9488\],
+:root[data-theme='dark'] .hover\:bg-\[\#0d9488\]:hover,
+:root[data-theme='dark'] .checked\:bg-\[\#0d9488\]:checked {
+  background-color: #f59e0b;
+  color: #0b192c;
+}
+
+:root[data-theme='dark'] .text-\[\#0d9488\],
+:root[data-theme='dark'] .hover\:text-\[\#0d9488\]:hover,
+:root[data-theme='dark'] .text-\[\#0f766e\],
+:root[data-theme='dark'] .text-\[\#115e59\],
+:root[data-theme='dark'] .text-\[\#14b8a6\] {
+  color: #f59e0b;
+}
+
+:root[data-theme='dark'] .border-\[\#0d9488\],
+:root[data-theme='dark'] .hover\:border-\[\#0d9488\]:hover,
+:root[data-theme='dark'] .focus\:border-\[\#0d9488\]:focus {
+  border-color: #f59e0b;
+}
+
+/* The teal-tinted plate that goes with them. */
+:root[data-theme='dark'] .bg-\[\#ccfbf1\],
+:root[data-theme='dark'] .bg-\[\#f0fdfa\] {
+  background-color: color-mix(in oklab, #f59e0b 16%, transparent);
+}
+
+/* ---- The remaining literals -----------------------------------------------
+   A handful of one-off forms the scan above does not cover: `text-black`, a
+   Tailwind slate class, and two rgba() values typed inline. The home hero is
+   the visible one — its headline is `text-black` over a panel that loses its
+   light background on a phone, so in dark mode it was black on navy. */
+
+:root[data-theme='dark'] .text-black,
+:root[data-theme='dark'] .text-slate-800,
+:root[data-theme='dark'] .text-\[var\(--color-navy-blue\)\] {
+  color: var(--color-ink);
+}
+
+:root[data-theme='dark'] .text-slate-600 {
+  color: var(--color-ink-secondary);
+}
+
+:root[data-theme='dark'] .bg-slate-100 {
+  background-color: var(--color-surface-secondary);
+}
+
+:root[data-theme='dark'] .bg-slate-200 {
+  background-color: var(--color-surface-tertiary);
+}
+
+:root[data-theme='dark'] .border-black {
+  border-color: var(--color-border);
+}
+
+/* ---- Icon plates ----------------------------------------------------------
+   The directory rows, the seal panel and the notification list draw a small
+   coloured plate behind a flat SVG — a navy or teal glyph on a pale tint. The
+   tint follows the theme (the rules above), but the glyph is artwork with its
+   colour baked in, so on a dark plate a navy icon disappears.
+
+   Inverting hue-rotates a coloured icon into nonsense, so these are lightened
+   instead: `brightness(0) invert(1)` flattens the artwork to a silhouette and
+   makes it white, which is what a monochrome glyph on a dark plate wants.
+
+   Scoped to <img> inside a tinted plate — a logo or a photo is not artwork we
+   may repaint, and neither is an inline <svg>, which takes `currentColor` and
+   is already following the theme. */
+
+:root[data-theme='dark'] .bg-\[\#eff6ff\] > img,
+:root[data-theme='dark'] .bg-\[\#ccfbf1\] > img,
+:root[data-theme='dark'] .bg-\[\#f0fdf4\] > img,
+:root[data-theme='dark'] .bg-\[\#dcfce7\] > img,
+:root[data-theme='dark'] .bg-\[\#d1fae5\] > img,
+:root[data-theme='dark'] .bg-\[\#e6f4ea\] > img,
+:root[data-theme='dark'] .bg-\[\#ecfdf5\] > img,
+:root[data-theme='dark'] .bg-\[\#fef3c7\] > img,
+:root[data-theme='dark'] .bg-\[\#fffbeb\] > img,
+:root[data-theme='dark'] .bg-\[\#fef2f2\] > img,
+:root[data-theme='dark'] .bg-\[\#fee2e2\] > img,
+:root[data-theme='dark'] .bg-\[\#e0f2fe\] > img,
+:root[data-theme='dark'] .bg-\[\#f1f5f9\] > img,
+:root[data-theme='dark'] .bg-\[\#f8fafc\] > img,
+:root[data-theme='dark'] .bg-\[\#f9fafb\] > img,
+:root[data-theme='dark'] .bg-\[\#e2e8f0\] > img,
+:root[data-theme='dark'] .bg-\[\#f3f4f6\] > img {
+  filter: brightness(0) invert(1);
+}
+
+/* ---- Form controls --------------------------------------------------------
+   Inputs are the one place a bare `bg-white` is not enough: the UA gives a
+   control its own background, text and caret, and a control the page never
+   coloured explicitly stays white on a dark form. Registration is mostly those.
+   Scoped to real controls, so nothing else inherits it. */
+
+:root[data-theme='dark'] input:not([type='checkbox']):not([type='radio']):not([type='range']),
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] textarea {
+  background-color: var(--color-surface-secondary);
+  color: var(--color-ink);
+  border-color: var(--color-border-input);
+}
+
+:root[data-theme='dark'] input::placeholder,
+:root[data-theme='dark'] textarea::placeholder {
+  color: var(--color-ink-tertiary);
+}
+
+/* A native date/time picker's own glyph is black artwork. */
+:root[data-theme='dark'] input[type='date']::-webkit-calendar-picker-indicator,
+:root[data-theme='dark'] input[type='time']::-webkit-calendar-picker-indicator,
+:root[data-theme='dark'] input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.7);
+}
+
+
+/* ---- Boxes that carry their own light background --------------------------
+   A hero photograph, a printed certificate, a screenshot mockup: the surface
+   inside them does not follow the theme, so neither may the ink on it. The
+   home hero is the case that forced this — its copy sits over a bright
+   photograph at every width, and remapping it to the dark ink ramp put pale
+   text on a pale sky.
+
+   Mark the container `theme-fixed` and the literals inside it stay literal.
+   This is narrow on purpose: it undoes the remap, it does not opt the subtree
+   out of dark mode, so anything using a TOKEN inside still follows the theme
+   and should be changed to a literal if it must not. */
+
+:root[data-theme='dark'] .theme-fixed .text-\[\#0f172a\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#0f172a\] {
+  color: #0f172a;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1e293b\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1e293b\] {
+  color: #1e293b;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1f2937\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1f2937\] {
+  color: #1f2937;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1a1a1a\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1a1a1a\] {
+  color: #1a1a1a;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1c1917\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1c1917\] {
+  color: #1c1917;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1e2337\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1e2337\] {
+  color: #1e2337;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1e1b4b\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1e1b4b\] {
+  color: #1e1b4b;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#001529\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#001529\] {
+  color: #001529;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#0b192c\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#0b192c\] {
+  color: #0b192c;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#0a192f\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#0a192f\] {
+  color: #0a192f;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#475569\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#475569\] {
+  color: #475569;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#64748b\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#64748b\] {
+  color: #64748b;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#6b7280\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#6b7280\] {
+  color: #6b7280;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#666\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#666\] {
+  color: #666;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#5e5e5e\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#5e5e5e\] {
+  color: #5e5e5e;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#94a3b8\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#94a3b8\] {
+  color: #94a3b8;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#9ca3af\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#9ca3af\] {
+  color: #9ca3af;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#d1d5db\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#d1d5db\] {
+  color: #d1d5db;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#cbd5e1\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#cbd5e1\] {
+  color: #cbd5e1;
+}
+:root[data-theme='dark'] .theme-fixed .text-\[\#1e3a8a\],
+:root[data-theme='dark'] .theme-fixed.text-\[\#1e3a8a\] {
+  color: #1e3a8a;
+}
+:root[data-theme='dark'] .theme-fixed .bg-white,
+:root[data-theme='dark'] .theme-fixed.bg-white {
+  background-color: #ffffff;
+}
+:root[data-theme='dark'] .theme-fixed .bg-\[\#f8fafc\],
+:root[data-theme='dark'] .theme-fixed.bg-\[\#f8fafc\] {
+  background-color: #f8fafc;
+}
+:root[data-theme='dark'] .theme-fixed .bg-\[\#f9fafb\],
+:root[data-theme='dark'] .theme-fixed.bg-\[\#f9fafb\] {
+  background-color: #f9fafb;
+}
+:root[data-theme='dark'] .theme-fixed .bg-\[\#f1f5f9\],
+:root[data-theme='dark'] .theme-fixed.bg-\[\#f1f5f9\] {
+  background-color: #f1f5f9;
+}
+:root[data-theme='dark'] .theme-fixed .bg-\[\#e2e8f0\],
+:root[data-theme='dark'] .theme-fixed.bg-\[\#e2e8f0\] {
+  background-color: #e2e8f0;
+}
+:root[data-theme='dark'] .theme-fixed .bg-\[\#f3f4f6\],
+:root[data-theme='dark'] .theme-fixed.bg-\[\#f3f4f6\] {
+  background-color: #f3f4f6;
+}
+:root[data-theme='dark'] .theme-fixed .border-\[\#e2e8f0\],
+:root[data-theme='dark'] .theme-fixed.border-\[\#e2e8f0\] {
+  border-color: #e2e8f0;
+}
+:root[data-theme='dark'] .theme-fixed .border-\[\#e5e7eb\],
+:root[data-theme='dark'] .theme-fixed.border-\[\#e5e7eb\] {
+  border-color: #e5e7eb;
+}
+:root[data-theme='dark'] .theme-fixed .border-\[\#f1f5f9\],
+:root[data-theme='dark'] .theme-fixed.border-\[\#f1f5f9\] {
+  border-color: #f1f5f9;
+}
+:root[data-theme='dark'] .theme-fixed .border-\[\#f3f4f6\],
+:root[data-theme='dark'] .theme-fixed.border-\[\#f3f4f6\] {
+  border-color: #f3f4f6;
+}
+
+/* ---------------------------------------------------------------------------
+   Regenerating: the colour lists above are the hexes the front end actually
+   uses, gathered by scanning `resources/js/spa/**/*.vue`. Adding a screen with
+   a new literal means adding it to the right group here — or, better, using
+   the token and needing no entry at all.
+   ------------------------------------------------------------------------ */

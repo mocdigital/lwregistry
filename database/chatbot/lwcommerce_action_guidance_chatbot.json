@@ -1,0 +1,3452 @@
+{
+  "name": "LWCommerce Action Guidance AI Chatbot",
+  "version": "1.0",
+  "format": "JSON",
+  "purpose": "Guide users through actions on LWCommerce and the BEGIN platform in a natural conversational way.",
+  "sources": [
+    "https://registry.lwcommerce.org/",
+    "https://lwcommerce.org/",
+    "https://begin.lwcommerce.org/"
+  ],
+  "important_accuracy_rule": "Do not invent buttons, payment methods, bidding features, eligibility rules, fees, deadlines, or transaction statuses. When the published information does not confirm an action, explain the confirmed process and direct the user to the relevant live platform or support team.",
+  "action_policy": {
+    "payments": "Guide users to complete the platform's published payment step. Do not request or store card numbers, passwords, PINs, OTPs, or other sensitive credentials in chatbot messages.",
+    "bidding": "The published BEGIN information describes the DealRoom as a business pitch competition, not a conventional bidding or auction feature. Do not tell users that a bid button exists unless the live platform explicitly confirms it.",
+    "account_security": "Never ask users to disclose passwords, OTPs, PINs, full payment-card details, or other authentication secrets.",
+    "current_information": "Fees, event dates, application requirements, contact details, and platform workflows can change. Verify the live platform before presenting changing information as current."
+  },
+  "training_pairs": [
+    {
+      "id": 1,
+      "call": "How do I create an account?",
+      "response": "To create an account, start from the relevant registration or Join option on the platform. Enter the requested information, submit the registration, and follow any verification or confirmation steps shown."
+    },
+    {
+      "id": 2,
+      "call": "I want to register my business.",
+      "response": "Start the business registration process on the platform. You will be guided through account creation and the information required for your business application."
+    },
+    {
+      "id": 3,
+      "call": "How do I start my SBO application?",
+      "response": "Begin the SBO application from the registration portal. Complete the Business Information section first, then proceed to the Required Compliance Documents section."
+    },
+    {
+      "id": 4,
+      "call": "What is the first step?",
+      "response": "The first step is to create or access your account and begin the applicable registration or SBO application."
+    },
+    {
+      "id": 5,
+      "call": "Can I save my application?",
+      "response": "Yes. The BEGIN Portal allows applicants to save their progress and continue later."
+    },
+    {
+      "id": 6,
+      "call": "I need to continue an application.",
+      "response": "Sign in to the account you used for the application and continue from the point where you saved your progress."
+    },
+    {
+      "id": 7,
+      "call": "I have not finished my application.",
+      "response": "You can save your progress and return later. Complete the remaining sections before submitting the application."
+    },
+    {
+      "id": 8,
+      "call": "What happens after I register?",
+      "response": "After registration, complete the required business information and compliance sections. Successful submission leads to a confirmation email."
+    },
+    {
+      "id": 9,
+      "call": "Do I need to complete Business Information first?",
+      "response": "Yes. Business Information must be completed successfully before you can proceed to the Required Compliance Documents section."
+    },
+    {
+      "id": 10,
+      "call": "Can I register more than one business?",
+      "response": "Yes. You may register more than one business, provided each business is submitted as a separate application and meets the programme requirements."
+    },
+    {
+      "id": 11,
+      "call": "I registered last year. Do I register again?",
+      "response": "Yes. Previous applicants should complete the current registration process and pay the applicable current registration fee."
+    },
+    {
+      "id": 12,
+      "call": "I started last year but did not finish.",
+      "response": "If you completed the first section previously but did not complete the Required Compliance Documents section, the current guidance says you need to start the registration process again."
+    },
+    {
+      "id": 13,
+      "call": "What are the BEGIN registration fees?",
+      "response": "The current BEGIN FAQ lists 15 Espees for a Citizen's SBO, 25 Espees for an Enterprise SBO, and 50 Espees for an Investor."
+    },
+    {
+      "id": 14,
+      "call": "How much does a Citizen's SBO pay?",
+      "response": "The current BEGIN FAQ lists the Citizen's SBO registration fee as 15 Espees."
+    },
+    {
+      "id": 15,
+      "call": "How much does an Enterprise SBO pay?",
+      "response": "The current BEGIN FAQ lists the Enterprise SBO registration fee as 25 Espees."
+    },
+    {
+      "id": 16,
+      "call": "How much does an Investor pay?",
+      "response": "The current BEGIN FAQ lists the Investor registration fee as 50 Espees."
+    },
+    {
+      "id": 17,
+      "call": "Is payment compulsory?",
+      "response": "Yes. The BEGIN FAQ states that payment must be completed before you can access the Required Compliance Documents section."
+    },
+    {
+      "id": 18,
+      "call": "When do I pay?",
+      "response": "Payment is required as part of the BEGIN registration process and must be completed before accessing the Required Compliance Documents section."
+    },
+    {
+      "id": 19,
+      "call": "What happens after successful payment?",
+      "response": "A payment confirmation email will be sent after successful payment."
+    },
+    {
+      "id": 20,
+      "call": "I paid but did not receive confirmation.",
+      "response": "Check the email address associated with your application and your spam or junk folder. If confirmation is still missing, contact the SBO Support Team."
+    },
+    {
+      "id": 21,
+      "call": "Does payment guarantee DealRoom selection?",
+      "response": "No. Payment gives access to the BEGIN Programme; DealRoom selection depends on meeting the programme requirements and assessment criteria."
+    },
+    {
+      "id": 22,
+      "call": "Can I access the compliance documents before payment?",
+      "response": "No. The current BEGIN FAQ states that payment must be completed before the Required Compliance Documents section can be accessed."
+    },
+    {
+      "id": 23,
+      "call": "What information do I need for the Business Information section?",
+      "response": "Prepare your personal information, business information, business LinkedIn information if available, ownership details, shareholding information where applicable, business sector, business description, and application category."
+    },
+    {
+      "id": 24,
+      "call": "What should I write in my business description?",
+      "response": "Explain what your business does, your products or services, target customers, the problem you solve, how you make money, achievements, and future plans."
+    },
+    {
+      "id": 25,
+      "call": "I don't have a Business LinkedIn page.",
+      "response": "The current BEGIN guidance says you may leave the Business LinkedIn field blank if you do not have one."
+    },
+    {
+      "id": 26,
+      "call": "What is shareholding structure?",
+      "response": "It refers to the percentage ownership held by each shareholder in a Limited Liability Company. Business Names can ignore this field."
+    },
+    {
+      "id": 27,
+      "call": "What are the compliance documents?",
+      "response": "They are the business documents and information required to assess the business and determine its investment readiness."
+    },
+    {
+      "id": 28,
+      "call": "What sections are in Required Compliance Documents?",
+      "response": "The current application lists Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal."
+    },
+    {
+      "id": 29,
+      "call": "What documents should I prepare?",
+      "response": "Prepare your Business Registration Document, Pitch Deck, Business Introduction Video, Customer Testimonials, Tax Clearance Certificate, Audited Financial Accounts, Board or Management Structure, Organisational Chart, and applicable Legal Contracts."
+    },
+    {
+      "id": 30,
+      "call": "Are all uploads mandatory?",
+      "response": "No. Some uploads are compulsory while others are optional or required only when applicable to the business."
+    },
+    {
+      "id": 31,
+      "call": "What is the maximum file size?",
+      "response": "The current BEGIN FAQ states a maximum upload size of 25MB per document unless otherwise stated."
+    },
+    {
+      "id": 32,
+      "call": "What counts as a customer testimonial?",
+      "response": "Examples include recommendation letters, reference letters, customer reviews, and written feedback. Where possible, include the customer's name, email address, and business name."
+    },
+    {
+      "id": 33,
+      "call": "What goes in the funding requirement?",
+      "response": "Include the amount required, purpose of the funding, expected outcome, and ROI where applicable."
+    },
+    {
+      "id": 34,
+      "call": "What is a pitch deck?",
+      "response": "A pitch deck presents the business, including the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 35,
+      "call": "What should the two-minute business video contain?",
+      "response": "Cover your business, the problem you solve, your products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 36,
+      "call": "Are bank statements required?",
+      "response": "The current BEGIN FAQ says bank statements are no longer required as part of the current application documents."
+    },
+    {
+      "id": 37,
+      "call": "Are audited financial statements required?",
+      "response": "Yes. Applicants should upload audited financial accounts for the last three years where available."
+    },
+    {
+      "id": 38,
+      "call": "Do I need legal contracts?",
+      "response": "Only if applicable. If you have contracts with suppliers, partners, or clients, indicate Yes and upload your top three contracts."
+    },
+    {
+      "id": 39,
+      "call": "I have no business partners.",
+      "response": "Indicate that you do not currently have any business partners."
+    },
+    {
+      "id": 40,
+      "call": "I have no patents or trademarks.",
+      "response": "Indicate that you do not currently have any registered intellectual property."
+    },
+    {
+      "id": 41,
+      "call": "I have no board of directors.",
+      "response": "Provide details of your existing management or leadership structure instead."
+    },
+    {
+      "id": 42,
+      "call": "What is the DealRoom?",
+      "response": "The DealRoom is described as a Business Pitch Competition where qualified businesses present their businesses to investors and funding partners."
+    },
+    {
+      "id": 43,
+      "call": "How do I qualify for the DealRoom?",
+      "response": "Participate in the BEGIN Programme and satisfy its requirements. Selection depends on compliance, investment readiness, business viability, growth potential, and successful completion of the programme."
+    },
+    {
+      "id": 44,
+      "call": "Does registering guarantee DealRoom selection?",
+      "response": "No. Meeting minimum requirements does not automatically guarantee selection."
+    },
+    {
+      "id": 45,
+      "call": "Can I attend the DealRoom without BEGIN?",
+      "response": "No. The current FAQ states that you must participate in the BEGIN Programme and satisfy the programme requirements before you can qualify."
+    },
+    {
+      "id": 46,
+      "call": "What happens if I am not selected?",
+      "response": "You can still benefit from BEGIN's training, mentorship, business support, and networking opportunities and may be considered for future opportunities where applicable."
+    },
+    {
+      "id": 47,
+      "call": "How do investors choose businesses?",
+      "response": "Investors make independent decisions using factors such as business model, market opportunity, financial readiness, scalability, management team, and alignment with investment objectives."
+    },
+    {
+      "id": 48,
+      "call": "Is the DealRoom an auction?",
+      "response": "The current published information describes the DealRoom as a business pitch competition for investors and funding partners. It does not describe it as an auction or conventional bidding system."
+    },
+    {
+      "id": 49,
+      "call": "Can I place a bid?",
+      "response": "The published BEGIN information does not describe a standard bid feature. If you mean pitching for funding in the DealRoom, the programme describes qualified businesses presenting to investors and funding partners."
+    },
+    {
+      "id": 50,
+      "call": "When is the DealRoom?",
+      "response": "The current BEGIN FAQ states that the DealRoom is scheduled for 4 and 5 September in Ghana. Check the live programme information for the latest event details."
+    },
+    {
+      "id": 51,
+      "call": "How do I log in?",
+      "response": "Open the registry or programme login area, enter your registered email and password, and submit the login form."
+    },
+    {
+      "id": 52,
+      "call": "I forgot my password.",
+      "response": "Use the Forgot your password? option on the login page and follow the password recovery instructions."
+    },
+    {
+      "id": 53,
+      "call": "My password is not working.",
+      "response": "Confirm that you are using the correct registered email and password. If the problem continues, use password recovery or contact support."
+    },
+    {
+      "id": 54,
+      "call": "I cannot access my account.",
+      "response": "First try the password recovery option. If you still cannot access the account, contact the relevant platform support team."
+    },
+    {
+      "id": 55,
+      "call": "Can I keep my application unfinished?",
+      "response": "Yes. The BEGIN Portal allows you to save your progress and continue later."
+    },
+    {
+      "id": 56,
+      "call": "How do I continue after saving?",
+      "response": "Log back into your account and open the saved application to continue the remaining sections."
+    },
+    {
+      "id": 57,
+      "call": "What if I submit incomplete information?",
+      "response": "The BEGIN FAQ says the customer support team will assist where necessary."
+    },
+    {
+      "id": 58,
+      "call": "Can I correct my application after submission?",
+      "response": "Contact the SBO Support Team if you need to make corrections after submitting."
+    },
+    {
+      "id": 59,
+      "call": "Will I get confirmation after applying?",
+      "response": "Yes. A registration completion email is sent after successfully submitting all Required Compliance Documents."
+    },
+    {
+      "id": 60,
+      "call": "Will someone contact me after submission?",
+      "response": "You will receive a confirmation email, and a team member may contact you if additional information or clarification is required."
+    },
+    {
+      "id": 61,
+      "call": "How do I contact BEGIN?",
+      "response": "The current BEGIN page lists info@lwcommerce.org for questions and +2347063472561 as a contact number."
+    },
+    {
+      "id": 62,
+      "call": "Where is the BEGIN venue?",
+      "response": "The current BEGIN page lists Oasis Center, Loveworld Campground, Asese, Ogun State, Nigeria as the ceremony venue."
+    },
+    {
+      "id": 63,
+      "call": "Guide me through registration.",
+      "response": "Sure. 1) Create or access your account. 2) Start the SBO application. 3) Select your application category. 4) Complete Business Information. 5) Complete payment. 6) Access and complete Required Compliance Documents. 7) Submit the completed application. 8) Watch for your confirmation email."
+    },
+    {
+      "id": 64,
+      "call": "Guide me through payment.",
+      "response": "Choose the applicable registration category, confirm the fee shown by the platform, complete the payment through the platform's payment flow, and wait for the payment confirmation email."
+    },
+    {
+      "id": 65,
+      "call": "Guide me through completing my application.",
+      "response": "Complete Business Information first, then the Required Compliance Documents section. Prepare your documents in advance, upload the applicable files, review your answers, and submit."
+    },
+    {
+      "id": 66,
+      "call": "Guide me to the DealRoom.",
+      "response": "First participate in BEGIN. Complete the application and programme requirements, strengthen your investment readiness, and meet the selection criteria. Qualified businesses can then be considered for the DealRoom."
+    },
+    {
+      "id": 67,
+      "call": "Guide me as an investor.",
+      "response": "Register as an Investor, complete the applicable registration process and payment, and follow the programme instructions. Investors make independent decisions based on business and investment considerations."
+    },
+    {
+      "id": 68,
+      "call": "Guide me as a business owner.",
+      "response": "Register as a Citizen's SBO if you operate a privately owned business, complete the application, provide the required information and documents, and follow the programme journey."
+    },
+    {
+      "id": 69,
+      "call": "Guide me as an Enterprise SBO.",
+      "response": "Select Enterprise SBO when your organization is officially registered under the LoveWorld ecosystem, then complete the applicable application information, payment, and compliance requirements."
+    },
+    {
+      "id": 70,
+      "call": "How do I creating an account?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 71,
+      "call": "Can you help me creating an account?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 72,
+      "call": "What is the process for creating an account?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 73,
+      "call": "I want to creating an account. What should I do?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 74,
+      "call": "Please guide me through creating an account.",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 75,
+      "call": "What should I do to creating an account?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 76,
+      "call": "I'm trying to creating an account.",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 77,
+      "call": "Where do I start if I want to creating an account?",
+      "response": "Create an account on the platform and follow the registration prompts."
+    },
+    {
+      "id": 78,
+      "call": "How do I registering a business?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 79,
+      "call": "Can you help me registering a business?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 80,
+      "call": "What is the process for registering a business?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 81,
+      "call": "I want to registering a business. What should I do?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 82,
+      "call": "Please guide me through registering a business.",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 83,
+      "call": "What should I do to registering a business?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 84,
+      "call": "I'm trying to registering a business.",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 85,
+      "call": "Where do I start if I want to registering a business?",
+      "response": "Start the business registration process, complete the requested information, and follow the application steps."
+    },
+    {
+      "id": 86,
+      "call": "How do I starting an SBO application?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 87,
+      "call": "Can you help me starting an SBO application?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 88,
+      "call": "What is the process for starting an SBO application?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 89,
+      "call": "I want to starting an SBO application. What should I do?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 90,
+      "call": "Please guide me through starting an SBO application.",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 91,
+      "call": "What should I do to starting an SBO application?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 92,
+      "call": "I'm trying to starting an SBO application.",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 93,
+      "call": "Where do I start if I want to starting an SBO application?",
+      "response": "Start the SBO application, complete Business Information, then proceed to Required Compliance Documents after payment."
+    },
+    {
+      "id": 94,
+      "call": "How do I making payment?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 95,
+      "call": "Can you help me making payment?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 96,
+      "call": "What is the process for making payment?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 97,
+      "call": "I want to making payment. What should I do?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 98,
+      "call": "Please guide me through making payment.",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 99,
+      "call": "What should I do to making payment?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 100,
+      "call": "I'm trying to making payment.",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 101,
+      "call": "Where do I start if I want to making payment?",
+      "response": "Use the platform's payment step, confirm the applicable fee, complete payment, and check for the confirmation email."
+    },
+    {
+      "id": 102,
+      "call": "How do I saving an application?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 103,
+      "call": "Can you help me saving an application?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 104,
+      "call": "What is the process for saving an application?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 105,
+      "call": "I want to saving an application. What should I do?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 106,
+      "call": "Please guide me through saving an application.",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 107,
+      "call": "What should I do to saving an application?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 108,
+      "call": "I'm trying to saving an application.",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 109,
+      "call": "Where do I start if I want to saving an application?",
+      "response": "Use the portal's save/progress feature and return later to continue the application."
+    },
+    {
+      "id": 110,
+      "call": "How do I continuing an application?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 111,
+      "call": "Can you help me continuing an application?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 112,
+      "call": "What is the process for continuing an application?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 113,
+      "call": "I want to continuing an application. What should I do?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 114,
+      "call": "Please guide me through continuing an application.",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 115,
+      "call": "What should I do to continuing an application?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 116,
+      "call": "I'm trying to continuing an application.",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 117,
+      "call": "Where do I start if I want to continuing an application?",
+      "response": "Sign in and reopen your saved application to continue the outstanding sections."
+    },
+    {
+      "id": 118,
+      "call": "How do I completing Business Information?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 119,
+      "call": "Can you help me completing Business Information?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 120,
+      "call": "What is the process for completing Business Information?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 121,
+      "call": "I want to completing Business Information. What should I do?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 122,
+      "call": "Please guide me through completing Business Information.",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 123,
+      "call": "What should I do to completing Business Information?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 124,
+      "call": "I'm trying to completing Business Information.",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 125,
+      "call": "Where do I start if I want to completing Business Information?",
+      "response": "Complete the personal, business, ownership, sector, description, and application-category information requested."
+    },
+    {
+      "id": 126,
+      "call": "How do I uploading compliance documents?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 127,
+      "call": "Can you help me uploading compliance documents?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 128,
+      "call": "What is the process for uploading compliance documents?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 129,
+      "call": "I want to uploading compliance documents. What should I do?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 130,
+      "call": "Please guide me through uploading compliance documents.",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 131,
+      "call": "What should I do to uploading compliance documents?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 132,
+      "call": "I'm trying to uploading compliance documents.",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 133,
+      "call": "Where do I start if I want to uploading compliance documents?",
+      "response": "Prepare the required documents, upload the applicable files within the stated size limit, and review them before submission."
+    },
+    {
+      "id": 134,
+      "call": "How do I submitting an application?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 135,
+      "call": "Can you help me submitting an application?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 136,
+      "call": "What is the process for submitting an application?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 137,
+      "call": "I want to submitting an application. What should I do?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 138,
+      "call": "Please guide me through submitting an application.",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 139,
+      "call": "What should I do to submitting an application?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 140,
+      "call": "I'm trying to submitting an application.",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 141,
+      "call": "Where do I start if I want to submitting an application?",
+      "response": "Complete all required sections, review your information, and submit the application."
+    },
+    {
+      "id": 142,
+      "call": "How do I checking payment confirmation?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 143,
+      "call": "Can you help me checking payment confirmation?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 144,
+      "call": "What is the process for checking payment confirmation?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 145,
+      "call": "I want to checking payment confirmation. What should I do?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 146,
+      "call": "Please guide me through checking payment confirmation.",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 147,
+      "call": "What should I do to checking payment confirmation?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 148,
+      "call": "I'm trying to checking payment confirmation.",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 149,
+      "call": "Where do I start if I want to checking payment confirmation?",
+      "response": "Look for the payment confirmation email after successful payment."
+    },
+    {
+      "id": 150,
+      "call": "How do I checking registration confirmation?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 151,
+      "call": "Can you help me checking registration confirmation?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 152,
+      "call": "What is the process for checking registration confirmation?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 153,
+      "call": "I want to checking registration confirmation. What should I do?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 154,
+      "call": "Please guide me through checking registration confirmation.",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 155,
+      "call": "What should I do to checking registration confirmation?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 156,
+      "call": "I'm trying to checking registration confirmation.",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 157,
+      "call": "Where do I start if I want to checking registration confirmation?",
+      "response": "Look for the registration completion email after successfully submitting the required documents."
+    },
+    {
+      "id": 158,
+      "call": "How do I preparing for the DealRoom?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 159,
+      "call": "Can you help me preparing for the DealRoom?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 160,
+      "call": "What is the process for preparing for the DealRoom?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 161,
+      "call": "I want to preparing for the DealRoom. What should I do?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 162,
+      "call": "Please guide me through preparing for the DealRoom.",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 163,
+      "call": "What should I do to preparing for the DealRoom?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 164,
+      "call": "I'm trying to preparing for the DealRoom.",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 165,
+      "call": "Where do I start if I want to preparing for the DealRoom?",
+      "response": "Complete BEGIN requirements and build investment readiness; selection is based on the published criteria."
+    },
+    {
+      "id": 166,
+      "call": "How do I finding out if you were selected?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 167,
+      "call": "Can you help me finding out if you were selected?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 168,
+      "call": "What is the process for finding out if you were selected?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 169,
+      "call": "I want to finding out if you were selected. What should I do?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 170,
+      "call": "Please guide me through finding out if you were selected.",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 171,
+      "call": "What should I do to finding out if you were selected?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 172,
+      "call": "I'm trying to finding out if you were selected.",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 173,
+      "call": "Where do I start if I want to finding out if you were selected?",
+      "response": "Wait for the programme's selection communication; completing requirements does not automatically guarantee DealRoom selection."
+    },
+    {
+      "id": 174,
+      "call": "How do I updating a submitted application?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 175,
+      "call": "Can you help me updating a submitted application?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 176,
+      "call": "What is the process for updating a submitted application?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 177,
+      "call": "I want to updating a submitted application. What should I do?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 178,
+      "call": "Please guide me through updating a submitted application.",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 179,
+      "call": "What should I do to updating a submitted application?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 180,
+      "call": "I'm trying to updating a submitted application.",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 181,
+      "call": "Where do I start if I want to updating a submitted application?",
+      "response": "Contact the SBO Support Team if you need corrections after submission."
+    },
+    {
+      "id": 182,
+      "call": "Who can apply?",
+      "response": "Eligible Enterprise SBOs, Citizen's SBOs, and Investors can apply through the BEGIN website."
+    },
+    {
+      "id": 183,
+      "call": "Can an unregistered business apply?",
+      "response": "The current BEGIN guidance says the programme is open to legally registered businesses. If your business is not registered, contact customer support for guidance on registration in your country."
+    },
+    {
+      "id": 184,
+      "call": "Can businesses outside Nigeria apply?",
+      "response": "Yes. Businesses registered outside Nigeria can apply if they meet the programme requirements and submit appropriate business registration documents from their country."
+    },
+    {
+      "id": 185,
+      "call": "Can I apply as an investor?",
+      "response": "Yes. Investor is one of the application categories listed by BEGIN."
+    },
+    {
+      "id": 186,
+      "call": "How do I know my category?",
+      "response": "Choose Enterprise SBO if your organization is officially registered under LoveWorld, Citizen's SBO if you own a private business, or Investor if you are registering to invest."
+    },
+    {
+      "id": 187,
+      "call": "How do I prepare the Citizen's SBO part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 188,
+      "call": "What should I do with the Citizen's SBO section?",
+      "response": "Use the Citizen's SBO section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 189,
+      "call": "Can you help me with Citizen's SBO?",
+      "response": "Yes. Follow the instructions shown for Citizen's SBO, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 190,
+      "call": "How do I complete the Citizen's SBO part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 191,
+      "call": "How do I review the Citizen's SBO part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 192,
+      "call": "How do I upload the Citizen's SBO part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 193,
+      "call": "How do I prepare the Enterprise SBO part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 194,
+      "call": "What should I do with the Enterprise SBO section?",
+      "response": "Use the Enterprise SBO section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 195,
+      "call": "Can you help me with Enterprise SBO?",
+      "response": "Yes. Follow the instructions shown for Enterprise SBO, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 196,
+      "call": "How do I complete the Enterprise SBO part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 197,
+      "call": "How do I review the Enterprise SBO part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 198,
+      "call": "How do I upload the Enterprise SBO part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 199,
+      "call": "How do I prepare the Investor part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 200,
+      "call": "What should I do with the Investor section?",
+      "response": "Use the Investor section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 201,
+      "call": "Can you help me with Investor?",
+      "response": "Yes. Follow the instructions shown for Investor, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 202,
+      "call": "How do I complete the Investor part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 203,
+      "call": "How do I review the Investor part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 204,
+      "call": "How do I upload the Investor part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 205,
+      "call": "How do I prepare the Business Information part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 206,
+      "call": "What should I do with the Business Information section?",
+      "response": "Use the Business Information section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 207,
+      "call": "Can you help me with Business Information?",
+      "response": "Yes. Follow the instructions shown for Business Information, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 208,
+      "call": "How do I complete the Business Information part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 209,
+      "call": "How do I review the Business Information part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 210,
+      "call": "How do I upload the Business Information part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 211,
+      "call": "How do I prepare the Required Compliance Documents part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 212,
+      "call": "What should I do with the Required Compliance Documents section?",
+      "response": "Use the Required Compliance Documents section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 213,
+      "call": "Can you help me with Required Compliance Documents?",
+      "response": "Yes. Follow the instructions shown for Required Compliance Documents, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 214,
+      "call": "How do I complete the Required Compliance Documents part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 215,
+      "call": "How do I review the Required Compliance Documents part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 216,
+      "call": "How do I upload the Required Compliance Documents part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 217,
+      "call": "How do I prepare the Business Overview part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 218,
+      "call": "What should I do with the Business Overview section?",
+      "response": "Use the Business Overview section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 219,
+      "call": "Can you help me with Business Overview?",
+      "response": "Yes. Follow the instructions shown for Business Overview, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 220,
+      "call": "How do I complete the Business Overview part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 221,
+      "call": "How do I review the Business Overview part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 222,
+      "call": "How do I upload the Business Overview part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 223,
+      "call": "How do I prepare the Market & Competition part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 224,
+      "call": "What should I do with the Market & Competition section?",
+      "response": "Use the Market & Competition section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 225,
+      "call": "Can you help me with Market & Competition?",
+      "response": "Yes. Follow the instructions shown for Market & Competition, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 226,
+      "call": "How do I complete the Market & Competition part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 227,
+      "call": "How do I review the Market & Competition part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 228,
+      "call": "How do I upload the Market & Competition part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 229,
+      "call": "How do I prepare the Support & Partnerships part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 230,
+      "call": "What should I do with the Support & Partnerships section?",
+      "response": "Use the Support & Partnerships section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 231,
+      "call": "Can you help me with Support & Partnerships?",
+      "response": "Yes. Follow the instructions shown for Support & Partnerships, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 232,
+      "call": "How do I complete the Support & Partnerships part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 233,
+      "call": "How do I review the Support & Partnerships part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 234,
+      "call": "How do I upload the Support & Partnerships part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 235,
+      "call": "How do I prepare the Financial Readiness part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 236,
+      "call": "What should I do with the Financial Readiness section?",
+      "response": "Use the Financial Readiness section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 237,
+      "call": "Can you help me with Financial Readiness?",
+      "response": "Yes. Follow the instructions shown for Financial Readiness, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 238,
+      "call": "How do I complete the Financial Readiness part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 239,
+      "call": "How do I review the Financial Readiness part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 240,
+      "call": "How do I upload the Financial Readiness part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 241,
+      "call": "How do I prepare the Governance & Legal part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 242,
+      "call": "What should I do with the Governance & Legal section?",
+      "response": "Use the Governance & Legal section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 243,
+      "call": "Can you help me with Governance & Legal?",
+      "response": "Yes. Follow the instructions shown for Governance & Legal, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 244,
+      "call": "How do I complete the Governance & Legal part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 245,
+      "call": "How do I review the Governance & Legal part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 246,
+      "call": "How do I upload the Governance & Legal part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 247,
+      "call": "How do I prepare the Business Registration Document part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 248,
+      "call": "What should I do with the Business Registration Document section?",
+      "response": "Use the Business Registration Document section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 249,
+      "call": "Can you help me with Business Registration Document?",
+      "response": "Yes. Follow the instructions shown for Business Registration Document, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 250,
+      "call": "How do I complete the Business Registration Document part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 251,
+      "call": "How do I review the Business Registration Document part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 252,
+      "call": "How do I upload the Business Registration Document part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 253,
+      "call": "How do I prepare the Pitch Deck part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 254,
+      "call": "What should I do with the Pitch Deck section?",
+      "response": "Use the Pitch Deck section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 255,
+      "call": "Can you help me with Pitch Deck?",
+      "response": "Yes. Follow the instructions shown for Pitch Deck, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 256,
+      "call": "How do I complete the Pitch Deck part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 257,
+      "call": "How do I review the Pitch Deck part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 258,
+      "call": "How do I upload the Pitch Deck part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 259,
+      "call": "How do I prepare the Business Introduction Video part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 260,
+      "call": "What should I do with the Business Introduction Video section?",
+      "response": "Use the Business Introduction Video section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 261,
+      "call": "Can you help me with Business Introduction Video?",
+      "response": "Yes. Follow the instructions shown for Business Introduction Video, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 262,
+      "call": "How do I complete the Business Introduction Video part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 263,
+      "call": "How do I review the Business Introduction Video part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 264,
+      "call": "How do I upload the Business Introduction Video part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 265,
+      "call": "How do I prepare the Customer Testimonials part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 266,
+      "call": "What should I do with the Customer Testimonials section?",
+      "response": "Use the Customer Testimonials section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 267,
+      "call": "Can you help me with Customer Testimonials?",
+      "response": "Yes. Follow the instructions shown for Customer Testimonials, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 268,
+      "call": "How do I complete the Customer Testimonials part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 269,
+      "call": "How do I review the Customer Testimonials part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 270,
+      "call": "How do I upload the Customer Testimonials part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 271,
+      "call": "How do I prepare the Tax Clearance Certificate part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 272,
+      "call": "What should I do with the Tax Clearance Certificate section?",
+      "response": "Use the Tax Clearance Certificate section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 273,
+      "call": "Can you help me with Tax Clearance Certificate?",
+      "response": "Yes. Follow the instructions shown for Tax Clearance Certificate, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 274,
+      "call": "How do I complete the Tax Clearance Certificate part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 275,
+      "call": "How do I review the Tax Clearance Certificate part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 276,
+      "call": "How do I upload the Tax Clearance Certificate part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 277,
+      "call": "How do I prepare the Audited Financial Accounts part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 278,
+      "call": "What should I do with the Audited Financial Accounts section?",
+      "response": "Use the Audited Financial Accounts section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 279,
+      "call": "Can you help me with Audited Financial Accounts?",
+      "response": "Yes. Follow the instructions shown for Audited Financial Accounts, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 280,
+      "call": "How do I complete the Audited Financial Accounts part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 281,
+      "call": "How do I review the Audited Financial Accounts part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 282,
+      "call": "How do I upload the Audited Financial Accounts part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 283,
+      "call": "How do I prepare the Organisational Chart part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 284,
+      "call": "What should I do with the Organisational Chart section?",
+      "response": "Use the Organisational Chart section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 285,
+      "call": "Can you help me with Organisational Chart?",
+      "response": "Yes. Follow the instructions shown for Organisational Chart, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 286,
+      "call": "How do I complete the Organisational Chart part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 287,
+      "call": "How do I review the Organisational Chart part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 288,
+      "call": "How do I upload the Organisational Chart part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 289,
+      "call": "How do I prepare the Legal Contracts part?",
+      "response": "Prepare the relevant information or document before beginning that section."
+    },
+    {
+      "id": 290,
+      "call": "What should I do with the Legal Contracts section?",
+      "response": "Use the Legal Contracts section to provide the information or documentation requested by the application. Complete all required items before submitting."
+    },
+    {
+      "id": 291,
+      "call": "Can you help me with Legal Contracts?",
+      "response": "Yes. Follow the instructions shown for Legal Contracts, provide accurate information, and complete any required fields or uploads."
+    },
+    {
+      "id": 292,
+      "call": "How do I complete the Legal Contracts part?",
+      "response": "Complete the section with accurate information and submit all applicable fields."
+    },
+    {
+      "id": 293,
+      "call": "How do I review the Legal Contracts part?",
+      "response": "Review the information carefully before moving to the next step."
+    },
+    {
+      "id": 294,
+      "call": "How do I upload the Legal Contracts part?",
+      "response": "Upload the applicable document and ensure it meets the platform's stated requirements."
+    },
+    {
+      "id": 295,
+      "call": "I need help registering as a Citizen's SBO.",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 296,
+      "call": "Can you walk me through registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 297,
+      "call": "What do I need before I start registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 298,
+      "call": "What happens when I am registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 299,
+      "call": "What is the correct way to go about registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 300,
+      "call": "I'm stuck while registering as a Citizen's SBO. What should I do?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 301,
+      "call": "Can the chatbot guide me through registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 302,
+      "call": "What are the steps for registering as a Citizen's SBO?",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 303,
+      "call": "I want to know how to handle registering as a Citizen's SBO.",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 304,
+      "call": "Please explain how to registering as a Citizen's SBO.",
+      "response": "Citizen's SBO registration is for a privately owned business operated by a LoveWorld member. Select that category, complete the application information, make the applicable payment, and complete the required compliance section."
+    },
+    {
+      "id": 305,
+      "call": "I need help registering as an Enterprise SBO.",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 306,
+      "call": "Can you walk me through registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 307,
+      "call": "What do I need before I start registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 308,
+      "call": "What happens when I am registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 309,
+      "call": "What is the correct way to go about registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 310,
+      "call": "I'm stuck while registering as an Enterprise SBO. What should I do?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 311,
+      "call": "Can the chatbot guide me through registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 312,
+      "call": "What are the steps for registering as an Enterprise SBO?",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 313,
+      "call": "I want to know how to handle registering as an Enterprise SBO.",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 314,
+      "call": "Please explain how to registering as an Enterprise SBO.",
+      "response": "Enterprise SBO is for an organization officially registered under the LoveWorld ecosystem. Select the Enterprise SBO category and complete the required application and compliance steps."
+    },
+    {
+      "id": 315,
+      "call": "I need help registering as an Investor.",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 316,
+      "call": "Can you walk me through registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 317,
+      "call": "What do I need before I start registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 318,
+      "call": "What happens when I am registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 319,
+      "call": "What is the correct way to go about registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 320,
+      "call": "I'm stuck while registering as an Investor. What should I do?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 321,
+      "call": "Can the chatbot guide me through registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 322,
+      "call": "What are the steps for registering as an Investor?",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 323,
+      "call": "I want to know how to handle registering as an Investor.",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 324,
+      "call": "Please explain how to registering as an Investor.",
+      "response": "Investor registration is for an individual or organization interested in funding, partnering with, or investing in participating businesses. Select Investor and complete the applicable registration process."
+    },
+    {
+      "id": 325,
+      "call": "I need help preparing for registration.",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 326,
+      "call": "Can you walk me through preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 327,
+      "call": "What do I need before I start preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 328,
+      "call": "What happens when I am preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 329,
+      "call": "What is the correct way to go about preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 330,
+      "call": "I'm stuck while preparing for registration. What should I do?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 331,
+      "call": "Can the chatbot guide me through preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 332,
+      "call": "What are the steps for preparing for registration?",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 333,
+      "call": "I want to know how to handle preparing for registration.",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 334,
+      "call": "Please explain how to preparing for registration.",
+      "response": "Before starting, gather your business registration document, business information, ownership details, business description, and applicable compliance documents."
+    },
+    {
+      "id": 335,
+      "call": "I need help preparing for payment.",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 336,
+      "call": "Can you walk me through preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 337,
+      "call": "What do I need before I start preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 338,
+      "call": "What happens when I am preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 339,
+      "call": "What is the correct way to go about preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 340,
+      "call": "I'm stuck while preparing for payment. What should I do?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 341,
+      "call": "Can the chatbot guide me through preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 342,
+      "call": "What are the steps for preparing for payment?",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 343,
+      "call": "I want to know how to handle preparing for payment.",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 344,
+      "call": "Please explain how to preparing for payment.",
+      "response": "Confirm your application category and the current fee displayed by the platform before completing payment."
+    },
+    {
+      "id": 345,
+      "call": "I need help recovering access.",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 346,
+      "call": "Can you walk me through recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 347,
+      "call": "What do I need before I start recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 348,
+      "call": "What happens when I am recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 349,
+      "call": "What is the correct way to go about recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 350,
+      "call": "I'm stuck while recovering access. What should I do?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 351,
+      "call": "Can the chatbot guide me through recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 352,
+      "call": "What are the steps for recovering access?",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 353,
+      "call": "I want to know how to handle recovering access.",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 354,
+      "call": "Please explain how to recovering access.",
+      "response": "Use the platform's password-recovery option rather than sharing your password with anyone."
+    },
+    {
+      "id": 355,
+      "call": "I need help completing the business profile.",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 356,
+      "call": "Can you walk me through completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 357,
+      "call": "What do I need before I start completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 358,
+      "call": "What happens when I am completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 359,
+      "call": "What is the correct way to go about completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 360,
+      "call": "I'm stuck while completing the business profile. What should I do?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 361,
+      "call": "Can the chatbot guide me through completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 362,
+      "call": "What are the steps for completing the business profile?",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 363,
+      "call": "I want to know how to handle completing the business profile.",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 364,
+      "call": "Please explain how to completing the business profile.",
+      "response": "Provide accurate business information, sector, description, ownership information, and other requested details."
+    },
+    {
+      "id": 365,
+      "call": "I need help completing the compliance section.",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 366,
+      "call": "Can you walk me through completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 367,
+      "call": "What do I need before I start completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 368,
+      "call": "What happens when I am completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 369,
+      "call": "What is the correct way to go about completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 370,
+      "call": "I'm stuck while completing the compliance section. What should I do?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 371,
+      "call": "Can the chatbot guide me through completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 372,
+      "call": "What are the steps for completing the compliance section?",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 373,
+      "call": "I want to know how to handle completing the compliance section.",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 374,
+      "call": "Please explain how to completing the compliance section.",
+      "response": "Work through Business Overview, Market & Competition, Support & Partnerships, Financial Readiness, and Governance & Legal, providing the applicable information and documents."
+    },
+    {
+      "id": 375,
+      "call": "I need help preparing a pitch deck.",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 376,
+      "call": "Can you walk me through preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 377,
+      "call": "What do I need before I start preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 378,
+      "call": "What happens when I am preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 379,
+      "call": "What is the correct way to go about preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 380,
+      "call": "I'm stuck while preparing a pitch deck. What should I do?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 381,
+      "call": "Can the chatbot guide me through preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 382,
+      "call": "What are the steps for preparing a pitch deck?",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 383,
+      "call": "I want to know how to handle preparing a pitch deck.",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 384,
+      "call": "Please explain how to preparing a pitch deck.",
+      "response": "Include the problem and solution, market opportunity, business model, traction, team, financials, and funding needs."
+    },
+    {
+      "id": 385,
+      "call": "I need help preparing the business video.",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 386,
+      "call": "Can you walk me through preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 387,
+      "call": "What do I need before I start preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 388,
+      "call": "What happens when I am preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 389,
+      "call": "What is the correct way to go about preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 390,
+      "call": "I'm stuck while preparing the business video. What should I do?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 391,
+      "call": "Can the chatbot guide me through preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 392,
+      "call": "What are the steps for preparing the business video?",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 393,
+      "call": "I want to know how to handle preparing the business video.",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 394,
+      "call": "Please explain how to preparing the business video.",
+      "response": "Keep the business introduction focused on what the business does, the problem it solves, products or services, target market, achievements, and future plans."
+    },
+    {
+      "id": 395,
+      "call": "I need help preparing financial information.",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 396,
+      "call": "Can you walk me through preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 397,
+      "call": "What do I need before I start preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 398,
+      "call": "What happens when I am preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 399,
+      "call": "What is the correct way to go about preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 400,
+      "call": "I'm stuck while preparing financial information. What should I do?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 401,
+      "call": "Can the chatbot guide me through preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 402,
+      "call": "What are the steps for preparing financial information?",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 403,
+      "call": "I want to know how to handle preparing financial information.",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 404,
+      "call": "Please explain how to preparing financial information.",
+      "response": "Gather the financial information and audited accounts requested by the current application requirements."
+    },
+    {
+      "id": 405,
+      "call": "I need help preparing legal information.",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 406,
+      "call": "Can you walk me through preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 407,
+      "call": "What do I need before I start preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 408,
+      "call": "What happens when I am preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 409,
+      "call": "What is the correct way to go about preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 410,
+      "call": "I'm stuck while preparing legal information. What should I do?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 411,
+      "call": "Can the chatbot guide me through preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 412,
+      "call": "What are the steps for preparing legal information?",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 413,
+      "call": "I want to know how to handle preparing legal information.",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 414,
+      "call": "Please explain how to preparing legal information.",
+      "response": "Provide the applicable governance and legal information and upload contracts where they apply."
+    },
+    {
+      "id": 415,
+      "call": "I need help checking whether a document is applicable.",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 416,
+      "call": "Can you walk me through checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 417,
+      "call": "What do I need before I start checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 418,
+      "call": "What happens when I am checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 419,
+      "call": "What is the correct way to go about checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 420,
+      "call": "I'm stuck while checking whether a document is applicable. What should I do?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 421,
+      "call": "Can the chatbot guide me through checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 422,
+      "call": "What are the steps for checking whether a document is applicable?",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 423,
+      "call": "I want to know how to handle checking whether a document is applicable.",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 424,
+      "call": "Please explain how to checking whether a document is applicable.",
+      "response": "Not every upload is mandatory. Check whether the document applies to your business and follow the current application instructions."
+    },
+    {
+      "id": 425,
+      "call": "I need help getting help with an application.",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 426,
+      "call": "Can you walk me through getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 427,
+      "call": "What do I need before I start getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 428,
+      "call": "What happens when I am getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 429,
+      "call": "What is the correct way to go about getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 430,
+      "call": "I'm stuck while getting help with an application. What should I do?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 431,
+      "call": "Can the chatbot guide me through getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 432,
+      "call": "What are the steps for getting help with an application?",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 433,
+      "call": "I want to know how to handle getting help with an application.",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 434,
+      "call": "Please explain how to getting help with an application.",
+      "response": "Use the platform's support channel when you encounter a problem or need clarification, especially after submission."
+    },
+    {
+      "id": 435,
+      "call": "I need help preparing for investor review.",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 436,
+      "call": "Can you walk me through preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 437,
+      "call": "What do I need before I start preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 438,
+      "call": "What happens when I am preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 439,
+      "call": "What is the correct way to go about preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 440,
+      "call": "I'm stuck while preparing for investor review. What should I do?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 441,
+      "call": "Can the chatbot guide me through preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 442,
+      "call": "What are the steps for preparing for investor review?",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 443,
+      "call": "I want to know how to handle preparing for investor review.",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 444,
+      "call": "Please explain how to preparing for investor review.",
+      "response": "Strengthen your business model, market opportunity, financial readiness, scalability, management information, and overall investment readiness."
+    },
+    {
+      "id": 445,
+      "call": "I need help understanding DealRoom selection.",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 446,
+      "call": "Can you walk me through understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 447,
+      "call": "What do I need before I start understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 448,
+      "call": "What happens when I am understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 449,
+      "call": "What is the correct way to go about understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 450,
+      "call": "I'm stuck while understanding DealRoom selection. What should I do?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 451,
+      "call": "Can the chatbot guide me through understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 452,
+      "call": "What are the steps for understanding DealRoom selection?",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 453,
+      "call": "I want to know how to handle understanding DealRoom selection.",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 454,
+      "call": "Please explain how to understanding DealRoom selection.",
+      "response": "DealRoom selection is not automatic. Businesses are assessed against the programme's requirements and selection criteria."
+    },
+    {
+      "id": 455,
+      "call": "What should I do before I start payment?",
+      "response": "Before starting, prepare the information and documents needed for the action. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 456,
+      "call": "What should I do while I am doing it payment?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 457,
+      "call": "What should I do if I get stuck payment?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 458,
+      "call": "What should I do after I finish payment?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 459,
+      "call": "What should I do if something fails payment?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 460,
+      "call": "What should I do if I need to correct something payment?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. After you complete the payment step, wait for the platform's confirmation. The published BEGIN FAQ says a payment confirmation email is sent after successful payment."
+    },
+    {
+      "id": 461,
+      "call": "What should I do before I start registration?",
+      "response": "Before starting, prepare the information and documents needed for the action. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 462,
+      "call": "What should I do while I am doing it registration?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 463,
+      "call": "What should I do if I get stuck registration?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 464,
+      "call": "What should I do after I finish registration?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 465,
+      "call": "What should I do if something fails registration?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 466,
+      "call": "What should I do if I need to correct something registration?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. After submitting the required application information and documents, look for the registration completion email."
+    },
+    {
+      "id": 467,
+      "call": "What should I do before I start application?",
+      "response": "Before starting, prepare the information and documents needed for the action. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 468,
+      "call": "What should I do while I am doing it application?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 469,
+      "call": "What should I do if I get stuck application?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 470,
+      "call": "What should I do after I finish application?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 471,
+      "call": "What should I do if something fails application?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 472,
+      "call": "What should I do if I need to correct something application?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. If the application is incomplete, save your progress, return to the missing sections, and complete the required items before submission."
+    },
+    {
+      "id": 473,
+      "call": "What should I do before I start documents?",
+      "response": "Before starting, prepare the information and documents needed for the action. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 474,
+      "call": "What should I do while I am doing it documents?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 475,
+      "call": "What should I do if I get stuck documents?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 476,
+      "call": "What should I do after I finish documents?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 477,
+      "call": "What should I do if something fails documents?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 478,
+      "call": "What should I do if I need to correct something documents?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. Use the current Required Compliance Documents instructions to determine which files apply to your business."
+    },
+    {
+      "id": 479,
+      "call": "What should I do before I start DealRoom?",
+      "response": "Before starting, prepare the information and documents needed for the action. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 480,
+      "call": "What should I do while I am doing it DealRoom?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 481,
+      "call": "What should I do if I get stuck DealRoom?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 482,
+      "call": "What should I do after I finish DealRoom?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 483,
+      "call": "What should I do if something fails DealRoom?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 484,
+      "call": "What should I do if I need to correct something DealRoom?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. The DealRoom is for qualified businesses selected after meeting the programme requirements; registration or payment alone does not guarantee selection."
+    },
+    {
+      "id": 485,
+      "call": "What should I do before I start investor registration?",
+      "response": "Before starting, prepare the information and documents needed for the action. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 486,
+      "call": "What should I do while I am doing it investor registration?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 487,
+      "call": "What should I do if I get stuck investor registration?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 488,
+      "call": "What should I do after I finish investor registration?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 489,
+      "call": "What should I do if something fails investor registration?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 490,
+      "call": "What should I do if I need to correct something investor registration?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. Register under the Investor category and follow the current programme instructions."
+    },
+    {
+      "id": 491,
+      "call": "What should I do before I start business registration?",
+      "response": "Before starting, prepare the information and documents needed for the action. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 492,
+      "call": "What should I do while I am doing it business registration?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 493,
+      "call": "What should I do if I get stuck business registration?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 494,
+      "call": "What should I do after I finish business registration?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 495,
+      "call": "What should I do if something fails business registration?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 496,
+      "call": "What should I do if I need to correct something business registration?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. Register under the category that accurately describes the business and provide truthful business information."
+    },
+    {
+      "id": 497,
+      "call": "What should I do before I start support request?",
+      "response": "Before starting, prepare the information and documents needed for the action. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 498,
+      "call": "What should I do while I am doing it support request?",
+      "response": "Follow the current platform instructions one step at a time and use accurate information. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 499,
+      "call": "What should I do if I get stuck support request?",
+      "response": "Do not guess or submit inaccurate information. Use the platform support channel for assistance. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 500,
+      "call": "What should I do after I finish support request?",
+      "response": "Check for the relevant confirmation or status message and retain the confirmation email for your records. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 501,
+      "call": "What should I do if something fails support request?",
+      "response": "Review the information entered, check the platform's error message, and contact support if the issue remains unresolved. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 502,
+      "call": "What should I do if I need to correct something support request?",
+      "response": "If the application has already been submitted, contact the SBO Support Team about corrections. Contact the relevant support team when the published instructions do not resolve your issue."
+    },
+    {
+      "id": 503,
+      "call": "Can you make the payment for me?",
+      "response": "I can guide you through the payment process, but the payment itself must be completed by you through the platform's official payment flow."
+    },
+    {
+      "id": 504,
+      "call": "Can you submit my application for me?",
+      "response": "I can explain the steps and help you prepare your information, but you should review and submit your own application through the official platform."
+    },
+    {
+      "id": 505,
+      "call": "Can you enter my password?",
+      "response": "Do not share your password with the chatbot. Enter your password directly into the official platform login form."
+    },
+    {
+      "id": 506,
+      "call": "Should I send you my OTP?",
+      "response": "No. Never share an OTP, PIN, password, or full payment-card details with the chatbot."
+    },
+    {
+      "id": 507,
+      "call": "Can you choose my application category?",
+      "response": "I can explain the published categories, but you should choose the category that accurately describes your situation."
+    },
+    {
+      "id": 508,
+      "call": "Can you guarantee DealRoom selection?",
+      "response": "No. The published information says selection depends on programme requirements and assessment criteria."
+    },
+    {
+      "id": 509,
+      "call": "Can I use the chatbot to bid?",
+      "response": "The published BEGIN information describes the DealRoom as a pitch competition rather than a standard bidding system. I can guide you through the published DealRoom process."
+    },
+    {
+      "id": 510,
+      "call": "What if I don't know which document to upload?",
+      "response": "Check the current requirement for that section and upload the document only if it applies. If you are still unsure, contact support."
+    },
+    {
+      "id": 511,
+      "call": "What if my document is larger than 25MB?",
+      "response": "The current BEGIN FAQ states a maximum upload size of 25MB per document unless otherwise stated. Check the live platform for its current requirement."
+    },
+    {
+      "id": 512,
+      "call": "What if I don't have a document?",
+      "response": "Do not upload an unrelated or inaccurate document. Check whether the item is mandatory or applicable and contact support if you need clarification."
+    },
+    {
+      "id": 513,
+      "call": "Where do I begin with create an account?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 514,
+      "call": "What information do I need for create an account?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 515,
+      "call": "What should I check before create an account?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 516,
+      "call": "What happens after create an account?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 517,
+      "call": "What if I cannot complete create an account?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 518,
+      "call": "Can you explain create an account in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 519,
+      "call": "Where do I begin with register a business?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 520,
+      "call": "What information do I need for register a business?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 521,
+      "call": "What should I check before register a business?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 522,
+      "call": "What happens after register a business?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 523,
+      "call": "What if I cannot complete register a business?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 524,
+      "call": "Can you explain register a business in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 525,
+      "call": "Where do I begin with choose an application category?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 526,
+      "call": "What information do I need for choose an application category?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 527,
+      "call": "What should I check before choose an application category?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 528,
+      "call": "What happens after choose an application category?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 529,
+      "call": "What if I cannot complete choose an application category?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 530,
+      "call": "Can you explain choose an application category in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 531,
+      "call": "Where do I begin with pay the registration fee?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 532,
+      "call": "What information do I need for pay the registration fee?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 533,
+      "call": "What should I check before pay the registration fee?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 534,
+      "call": "What happens after pay the registration fee?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 535,
+      "call": "What if I cannot complete pay the registration fee?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 536,
+      "call": "Can you explain pay the registration fee in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 537,
+      "call": "Where do I begin with access Required Compliance Documents?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 538,
+      "call": "What information do I need for access Required Compliance Documents?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 539,
+      "call": "What should I check before access Required Compliance Documents?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 540,
+      "call": "What happens after access Required Compliance Documents?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 541,
+      "call": "What if I cannot complete access Required Compliance Documents?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 542,
+      "call": "Can you explain access Required Compliance Documents in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 543,
+      "call": "Where do I begin with complete Business Information?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 544,
+      "call": "What information do I need for complete Business Information?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 545,
+      "call": "What should I check before complete Business Information?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 546,
+      "call": "What happens after complete Business Information?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 547,
+      "call": "What if I cannot complete complete Business Information?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 548,
+      "call": "Can you explain complete Business Information in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 549,
+      "call": "Where do I begin with save my application?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 550,
+      "call": "What information do I need for save my application?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 551,
+      "call": "What should I check before save my application?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 552,
+      "call": "What happens after save my application?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 553,
+      "call": "What if I cannot complete save my application?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 554,
+      "call": "Can you explain save my application in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 555,
+      "call": "Where do I begin with continue a saved application?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 556,
+      "call": "What information do I need for continue a saved application?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 557,
+      "call": "What should I check before continue a saved application?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 558,
+      "call": "What happens after continue a saved application?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 559,
+      "call": "What if I cannot complete continue a saved application?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 560,
+      "call": "Can you explain continue a saved application in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 561,
+      "call": "Where do I begin with upload a Business Registration Document?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 562,
+      "call": "What information do I need for upload a Business Registration Document?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 563,
+      "call": "What should I check before upload a Business Registration Document?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 564,
+      "call": "What happens after upload a Business Registration Document?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 565,
+      "call": "What if I cannot complete upload a Business Registration Document?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 566,
+      "call": "Can you explain upload a Business Registration Document in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 567,
+      "call": "Where do I begin with upload a Pitch Deck?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 568,
+      "call": "What information do I need for upload a Pitch Deck?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 569,
+      "call": "What should I check before upload a Pitch Deck?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 570,
+      "call": "What happens after upload a Pitch Deck?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 571,
+      "call": "What if I cannot complete upload a Pitch Deck?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 572,
+      "call": "Can you explain upload a Pitch Deck in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 573,
+      "call": "Where do I begin with upload a Business Introduction Video?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 574,
+      "call": "What information do I need for upload a Business Introduction Video?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 575,
+      "call": "What should I check before upload a Business Introduction Video?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 576,
+      "call": "What happens after upload a Business Introduction Video?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 577,
+      "call": "What if I cannot complete upload a Business Introduction Video?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 578,
+      "call": "Can you explain upload a Business Introduction Video in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 579,
+      "call": "Where do I begin with add Customer Testimonials?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 580,
+      "call": "What information do I need for add Customer Testimonials?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 581,
+      "call": "What should I check before add Customer Testimonials?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 582,
+      "call": "What happens after add Customer Testimonials?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 583,
+      "call": "What if I cannot complete add Customer Testimonials?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 584,
+      "call": "Can you explain add Customer Testimonials in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 585,
+      "call": "Where do I begin with provide financial information?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 586,
+      "call": "What information do I need for provide financial information?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 587,
+      "call": "What should I check before provide financial information?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 588,
+      "call": "What happens after provide financial information?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 589,
+      "call": "What if I cannot complete provide financial information?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 590,
+      "call": "Can you explain provide financial information in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 591,
+      "call": "Where do I begin with provide ownership information?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 592,
+      "call": "What information do I need for provide ownership information?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 593,
+      "call": "What should I check before provide ownership information?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 594,
+      "call": "What happens after provide ownership information?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 595,
+      "call": "What if I cannot complete provide ownership information?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 596,
+      "call": "Can you explain provide ownership information in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 597,
+      "call": "Where do I begin with provide shareholding information?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 598,
+      "call": "What information do I need for provide shareholding information?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 599,
+      "call": "What should I check before provide shareholding information?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 600,
+      "call": "What happens after provide shareholding information?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 601,
+      "call": "What if I cannot complete provide shareholding information?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 602,
+      "call": "Can you explain provide shareholding information in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 603,
+      "call": "Where do I begin with provide business description?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 604,
+      "call": "What information do I need for provide business description?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 605,
+      "call": "What should I check before provide business description?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 606,
+      "call": "What happens after provide business description?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 607,
+      "call": "What if I cannot complete provide business description?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 608,
+      "call": "Can you explain provide business description in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 609,
+      "call": "Where do I begin with submit the application?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 610,
+      "call": "What information do I need for submit the application?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 611,
+      "call": "What should I check before submit the application?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 612,
+      "call": "What happens after submit the application?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 613,
+      "call": "What if I cannot complete submit the application?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 614,
+      "call": "Can you explain submit the application in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 615,
+      "call": "Where do I begin with confirm payment?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 616,
+      "call": "What information do I need for confirm payment?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 617,
+      "call": "What should I check before confirm payment?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 618,
+      "call": "What happens after confirm payment?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 619,
+      "call": "What if I cannot complete confirm payment?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 620,
+      "call": "Can you explain confirm payment in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 621,
+      "call": "Where do I begin with check registration confirmation?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 622,
+      "call": "What information do I need for check registration confirmation?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 623,
+      "call": "What should I check before check registration confirmation?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 624,
+      "call": "What happens after check registration confirmation?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 625,
+      "call": "What if I cannot complete check registration confirmation?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 626,
+      "call": "Can you explain check registration confirmation in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 627,
+      "call": "Where do I begin with contact support?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 628,
+      "call": "What information do I need for contact support?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 629,
+      "call": "What should I check before contact support?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 630,
+      "call": "What happens after contact support?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 631,
+      "call": "What if I cannot complete contact support?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 632,
+      "call": "Can you explain contact support in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 633,
+      "call": "Where do I begin with prepare for the DealRoom?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 634,
+      "call": "What information do I need for prepare for the DealRoom?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 635,
+      "call": "What should I check before prepare for the DealRoom?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 636,
+      "call": "What happens after prepare for the DealRoom?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 637,
+      "call": "What if I cannot complete prepare for the DealRoom?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 638,
+      "call": "Can you explain prepare for the DealRoom in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 639,
+      "call": "Where do I begin with understand investor selection?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 640,
+      "call": "What information do I need for understand investor selection?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 641,
+      "call": "What should I check before understand investor selection?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 642,
+      "call": "What happens after understand investor selection?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 643,
+      "call": "What if I cannot complete understand investor selection?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 644,
+      "call": "Can you explain understand investor selection in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 645,
+      "call": "Where do I begin with register as an Investor?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 646,
+      "call": "What information do I need for register as an Investor?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 647,
+      "call": "What should I check before register as an Investor?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 648,
+      "call": "What happens after register as an Investor?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 649,
+      "call": "What if I cannot complete register as an Investor?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 650,
+      "call": "Can you explain register as an Investor in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 651,
+      "call": "Where do I begin with register as a Citizen's SBO?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 652,
+      "call": "What information do I need for register as a Citizen's SBO?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 653,
+      "call": "What should I check before register as a Citizen's SBO?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 654,
+      "call": "What happens after register as a Citizen's SBO?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 655,
+      "call": "What if I cannot complete register as a Citizen's SBO?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 656,
+      "call": "Can you explain register as a Citizen's SBO in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 657,
+      "call": "Where do I begin with register as an Enterprise SBO?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 658,
+      "call": "What information do I need for register as an Enterprise SBO?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 659,
+      "call": "What should I check before register as an Enterprise SBO?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 660,
+      "call": "What happens after register as an Enterprise SBO?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 661,
+      "call": "What if I cannot complete register as an Enterprise SBO?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 662,
+      "call": "Can you explain register as an Enterprise SBO in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 663,
+      "call": "Where do I begin with prepare for compliance assessment?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 664,
+      "call": "What information do I need for prepare for compliance assessment?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 665,
+      "call": "What should I check before prepare for compliance assessment?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 666,
+      "call": "What happens after prepare for compliance assessment?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 667,
+      "call": "What if I cannot complete prepare for compliance assessment?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 668,
+      "call": "Can you explain prepare for compliance assessment in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 669,
+      "call": "Where do I begin with prepare for investment readiness?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 670,
+      "call": "What information do I need for prepare for investment readiness?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 671,
+      "call": "What should I check before prepare for investment readiness?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 672,
+      "call": "What happens after prepare for investment readiness?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 673,
+      "call": "What if I cannot complete prepare for investment readiness?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 674,
+      "call": "Can you explain prepare for investment readiness in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 675,
+      "call": "Where do I begin with prepare for export readiness?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 676,
+      "call": "What information do I need for prepare for export readiness?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 677,
+      "call": "What should I check before prepare for export readiness?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 678,
+      "call": "What happens after prepare for export readiness?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 679,
+      "call": "What if I cannot complete prepare for export readiness?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 680,
+      "call": "Can you explain prepare for export readiness in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    },
+    {
+      "id": 681,
+      "call": "Where do I begin with prepare my business for growth?",
+      "response": "Start with the relevant section of the official platform and follow the current instructions shown there."
+    },
+    {
+      "id": 682,
+      "call": "What information do I need for prepare my business for growth?",
+      "response": "Use the information requested by the current platform form or programme instructions. Provide accurate and complete information."
+    },
+    {
+      "id": 683,
+      "call": "What should I check before prepare my business for growth?",
+      "response": "Check that your information is accurate, the required fields are complete, and any applicable documents are ready."
+    },
+    {
+      "id": 684,
+      "call": "What happens after prepare my business for growth?",
+      "response": "Continue to the next applicable stage shown by the platform and watch for any confirmation or instruction."
+    },
+    {
+      "id": 685,
+      "call": "What if I cannot complete prepare my business for growth?",
+      "response": "Save your progress if the platform permits it, then return later or contact the relevant support team if you need help."
+    },
+    {
+      "id": 686,
+      "call": "Can you explain prepare my business for growth in simple terms?",
+      "response": "In simple terms, complete the applicable platform step with accurate information, follow the instructions shown, and confirm the result before moving on."
+    }
+  ],
+  "minimum_pairs": 500,
+  "total_pairs": 686
+}

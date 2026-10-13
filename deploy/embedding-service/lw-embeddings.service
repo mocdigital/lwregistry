@@ -1,0 +1,15 @@
+[Unit]
+Description=LW Registry embedding service (semantic search for the assistant)
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/var/www/embedding-service
+Environment=HF_HOME=/var/www/embedding-service/.cache
+ExecStart=/var/www/embedding-service/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8091
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

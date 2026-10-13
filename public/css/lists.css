@@ -1,0 +1,334 @@
+
+img {
+  transition: none;
+}
+
+img:hover {
+  transform: none;
+}
+
+:root{
+  --dark-color: #0B2545;
+  --light-color: var(--color-primary);
+  --bg-light-gray: var(--color-surface);
+  --accent-color: #F4B942;
+  --text-blue: #0F7C92;
+  --muted: var(--color-muted-ink);
+  --card-shadow: 0 2px 8px rgba(20,42,59,0.05);
+  --radius: 10px;
+}
+
+
+body {
+  color: var(--dark-color);
+  background: var(--color-surface);
+  -webkit-font-smoothing:antialiased;
+}
+
+.py-4 {
+  margin-top: 6em;
+}
+
+.page-title {
+  font-weight:700;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: var(--dark-color);
+}
+
+.filter-row {
+  background: #fff;
+  padding: 18px;
+  border-radius: 0px;
+  box-shadow: var(--card-shadow);
+}
+
+/* Button-tab style for 24/7 and Status */
+.btn-tab {
+  border-radius: 0px;
+  /* border-radius: 999px; */
+  padding: .45rem .85rem;
+  border: 1px solid rgba(20,42,59,0.06);
+  background: transparent;
+  color: var(--dark-color);
+  font-weight:600;
+}
+.btn-tab.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-ink);
+  border-color: var(--color-border);
+  box-shadow: none;
+}
+
+.listing-card {
+  background: #fff;
+  border-radius: 0px;
+  padding: 18px;
+  box-shadow: var(--card-shadow);
+  display: grid;
+  grid-template-columns: 96px 1fr 170px;
+  gap: 18px;
+  align-items: start;
+  border: none;
+}
+
+.listing-card img.thumb {
+  width:96px;
+  height:96px;
+  object-fit:contain;
+  border-radius:0px;
+  border:1px solid rgba(20,42,59,0.04);
+}
+
+.listing-title {
+  font-weight:700;
+  color:var(--dark-color);
+  margin-bottom:4px;
+  text-decoration: none;
+}
+
+.listing-title:hover {
+  color: var(--light-color);
+  transform: none;
+}
+
+.listing-meta { color:var(--muted); font-size:.95rem; margin-bottom:8px; }
+
+.listing-actions .btn {
+  border-radius:0px;
+  padding: .45rem .7rem;
+  font-size:.88rem;
+  border: solid var(--light-color) 1px;
+  color: var(--light-color);
+}
+
+.listing-actions .btn:hover {
+  border: solid var(--light-color) 1px;
+  background-color: var(--light-color);
+  color: #fff;
+}
+
+.rating {
+  text-align:right;
+  font-size:.9rem;
+}
+
+.open-badge {
+  color: #1aa35c;
+  font-weight:700;
+  font-size:.9rem;
+}
+
+.verified-badge {
+  color: var(--color-primary-ink);
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-soft);
+  border-radius: 999px;
+  padding: 2px 6px;
+  border: 1px solid var(--color-border);
+  cursor: default;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.verified-badge:hover {
+  background: var(--color-primary-soft);
+  transform: none;
+}
+
+.unverified-badge {
+  color: #94a3b8; /* muted gray-blue */
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(148,163,184,0.12);
+  border-radius: 999px;
+  padding: 2px 6px;
+  border: 1px dashed rgba(148,163,184,0.35);
+  cursor: default;
+  opacity: 0.85;
+  transition: opacity .18s ease;
+}
+
+.unverified-badge:hover {
+  opacity: 1;
+}
+
+/* subtle divider */
+.section-divider { height:1px; background: rgba(20,42,59,0.04); margin: 20px 0; border-radius: 1px; }
+
+/* SPONSORED ADS  */
+/* Container */
+#sponsored-ads .sponsored-wrap {
+  background: var(--bg-light-gray);
+  padding: 18px;
+  border-radius: 0px;
+  box-shadow: 0 6px 18px rgba(20, 42, 59, 0.06);
+}
+
+/* Header */
+.sponsored-header h3 {
+  color: var(--dark-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.sponsored-pill {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-ink);
+  border: 1px solid var(--color-border);
+  padding: 4px 8px;
+  border-radius: 0px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Cards */
+.sponsored-card {
+  border: 0;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform .16s ease, box-shadow .16s ease;
+  background: #ffffff;
+}
+.sponsored-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.sponsored-card .card-img-top {
+  height: 110px;
+  object-fit: cover;
+}
+
+.sponsored-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sponsored-card .card-title {
+  color: var(--dark-color);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.sponsored-card .card-text {
+  color: #5b6b72;
+}
+.sponsor-name {
+  color: var(--text-blue);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+/* CTAs */
+.btn-cta {
+  background: var(--light-color);
+  color: #fff;
+  border-radius: 0px;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  box-shadow: none;
+}
+.btn-cta:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+.btn-outline-cta {
+  color: var(--light-color);
+  border: 1px solid rgba(27,169,222,0.18);
+  background: transparent;
+  border-radius: 0px;
+  padding: 5px 9px;
+  font-size: 0.82rem;
+}
+.btn-cta:hover, .btn-outline-cta:hover {
+  opacity: .92;
+  text-decoration: none;
+}
+
+/* small footer */
+.sponsored-footer {
+  font-size: 0.78rem;
+  color: #7a888f;
+  padding-top: 6px;
+}
+
+/* Sticky behaviour: keeps ads visible within viewport on scroll */
+.sticky-top {
+  top: 22px; /* adjust for header height */
+}
+
+
+@media (max-width: 991px) {
+
+  .py-4 {
+    margin-top: 4em;
+  }
+
+    .hidden-mobile {
+      display: none;
+    }
+
+    .listing-card {
+      display: flex;
+      align-items: start;
+    }
+
+    .listing-card .thumb {
+      width: 72px;
+      height: 72px;
+    }
+
+    .listing-header {
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+
+    .listing-card .listing-title {
+      font-size: 1rem;
+    }
+
+    /* Put badge under title on small screens (looks less cramped) */
+    .listing-verified {
+      padding: 3px 7px;
+      font-size: .75rem;
+    }
+
+    /* Clamp the description so it doesn't go on forever */
+    .listing-meta {
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Buttons: 2 columns */
+    .listing-actions {
+      margin-top: 4px;
+    }
+    .listing-actions .btn {
+      flex: 1 1 calc(50% - 4px);
+      padding: .35rem .4rem;
+      font-size: .8rem;
+    }
+
+    /* Footer stacked nicely */
+    .listing-footer {
+      margin-top: 6px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .open-badge {
+      font-size: .85rem;
+    }
+
+  /* Sponsored Ads */
+  .sticky-top { position: static !important; top: auto; }
+  #sponsored-ads .sponsored-wrap { padding: 14px; }
+}

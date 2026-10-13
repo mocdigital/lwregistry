@@ -1,0 +1,399 @@
+/*
+ * Design tokens — extracted from Figma file ejCXVNFwI5aL1kFOeByZoL ("LW Reg").
+ *
+ * Source collections: Primitives (53), Semantic (17), Spacing (14), Radius (7).
+ * Everything below traces to a Figma variable except where a NOTE says otherwise.
+ * Deviations are deliberate and documented — do not "fix" them back without
+ * also fixing the Figma variable.
+ */
+
+@theme {
+  /* ---------------------------------------------------------------
+   * Primitives — Figma collection "Primitives"
+   * Matches the Tailwind default ramps except where noted.
+   * --------------------------------------------------------------- */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  --color-teal-50: #ccfbf1;
+  --color-teal-100: #99f6e4;
+  --color-teal-200: #5eead4;
+  --color-teal-300: #2dd4bf;
+  --color-teal-400: #14b8a6;
+  --color-teal-500: #0d9488;
+  /* NOTE: Figma has teal/600 = #0d5c75, a blue-shifted hue that breaks the
+   * ramp (it is darker AND bluer than teal/700 #0f766e). Using it as the
+   * primary hover made buttons change hue on hover. Corrected to the true
+   * next step down. The Figma value is preserved below as --color-brand-slate
+   * in case it is intentional brand ink used somewhere. */
+  --color-teal-600: #0f766e;
+  --color-teal-700: #115e59;
+  --color-teal-800: #134e4a;
+  --color-teal-900: #0f3d3a;
+  --color-brand-slate: #0d5c75; /* verbatim Figma teal/600 */
+
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+
+  --color-green-50: #e6f4ea; /* brand override, not Tailwind green-50 */
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #007035; /* brand override, not Tailwind green-700 */
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+
+  --color-navy-800: #0b192c;
+  --color-navy-900: #001529;
+
+  /* Orange — NOT in the Figma variable collections, but the homepage hero
+   * (1:115) is built on it: the "opportunities" accent word is #f97316 and the
+   * secondary CTA is #ffedd5 on #fed7aa with #9a3412 text. Tailwind's orange. */
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-500: #f97316;
+  --color-orange-800: #9a3412;
+
+  /* Hero eyebrow colour, also absent from the collections (hero 1:116). */
+  --color-navy-blue: #000080;
+
+  /* ---------------------------------------------------------------
+   * Semantic — Figma collection "Semantic"
+   * These are what components should reference. Never reach past these
+   * to a primitive inside a component.
+   *
+   * Names are chosen to read well as Tailwind utilities, since v4 generates
+   * one utility per --color-* entry:
+   *   --color-surface        -> bg-surface
+   *   --color-ink-secondary  -> text-ink-secondary
+   *   --color-primary        -> bg-primary / text-primary / border-primary
+   * Figma's own names (background/*, text/*, action/*) are given after each.
+   * --------------------------------------------------------------- */
+  --color-surface: var(--color-white);           /* background/primary */
+  --color-surface-secondary: var(--color-slate-50);   /* background/secondary */
+  --color-surface-tertiary: var(--color-slate-100);   /* background/tertiary */
+  --color-surface-dark: var(--color-navy-900);        /* background/dark */
+
+  --color-ink: var(--color-slate-900);           /* text/primary */
+  --color-ink-secondary: var(--color-slate-600); /* text/secondary */
+  --color-ink-tertiary: var(--color-slate-400);  /* text/tertiary */
+  --color-ink-inverse: var(--color-white);       /* text/inverse */
+
+  --color-border: var(--color-slate-200);        /* border/default */
+  --color-border-subtle: var(--color-slate-100); /* border/subtle */
+  /* NOTE: form controls and outline buttons use #e5e7eb (Tailwind gray-200),
+   * not border/default's slate-200 (#e2e8f0). Kept separate rather than
+   * silently unified — see Input/Default 265:49, Button/Secondary/Outline. */
+  --color-border-input: #e5e7eb;
+  --color-border-input-disabled: #f3f4f6;        /* Input/Disabled 265:62 */
+
+  /* Focus ring — the designs use teal on the focused input (Input/Focused
+   * 265:53). No other focus state is designed anywhere. */
+  --color-focus: var(--color-teal-500);
+
+  /* NOTE — the primary action colour is a TWO-STATE pair, per the designer:
+   *   green #007035 = ACTIVE   (enabled / available action)
+   *   teal  #0d9488 = INACTIVE (action not currently available)
+   * This is not what Figma's Semantic collection says — action/primary there
+   * aliases teal/500, but nothing is bound to it (get_variable_defs on the
+   * component library returns {}), and sampling every fill across the 48
+   * screens shows #007035 on button-named nodes 71x vs #0d9488 17x.
+   * Distinct from --color-disabled (#94a3b8), which is the greyed-out
+   * Button/Primary/Disabled variant 265:21. */
+  --color-primary: var(--color-green-700);          /* #007035 — active */
+  --color-primary-hover: #005a2a;                   /* darkened; no hover in Figma */
+  --color-primary-inactive: var(--color-teal-500);  /* #0d9488 — inactive */
+  --color-primary-inactive-hover: var(--color-teal-600);
+  --color-secondary: var(--color-amber-500);        /* action/secondary — CTA amber */
+  --color-secondary-hover: var(--color-amber-600);
+
+  --color-success: var(--color-green-500);       /* status/success */
+  /* NOTE: Figma aliases status/warning to amber/500 — the exact same value as
+   * action/secondary, so a warning is indistinguishable from a secondary CTA.
+   * Shifted one step to amber/600 so the two are separable. */
+  --color-warning: var(--color-amber-600);
+  --color-info: var(--color-blue-500);           /* status/info */
+  /* No danger token exists in Figma, but #ef4444 is used for errors in 46
+   * places across the screens, so that is adopted rather than inventing one. */
+  --color-danger: #ef4444;
+
+  /* Disabled state — Button/Primary/Disabled 265:21 */
+  --color-disabled: var(--color-slate-400);      /* #94a3b8 */
+
+  /* ---------------------------------------------------------------
+   * Spacing
+   *
+   * NOTE: deliberately NOT redefined. Figma's Spacing collection is
+   * 2/4/8/12/16/20/24/32/40/48/64/80/96/128px, which is exactly Tailwind's
+   * default 4px-multiplier scale:
+   *   2->p-0.5  4->p-1   8->p-2   12->p-3  16->p-4  20->p-5  24->p-6
+   *   32->p-8   40->p-10 48->p-12 64->p-16 80->p-20 96->p-24 128->p-32
+   * Declaring --spacing-16: 16px here would redefine p-16 from 64px to 16px
+   * while leaving p-6 on the multiplier, producing a scale where some numbers
+   * are px literals and others are 4x multiples. Use the default scale.
+   * --------------------------------------------------------------- */
+
+  /* ---------------------------------------------------------------
+   * Radius — Figma collection "Radius" (verbatim)
+   * --------------------------------------------------------------- */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---------------------------------------------------------------
+   * Typography
+   *
+   * NOTE: Figma defines ZERO text styles. The designs use 5 font families and
+   * 189 distinct size/weight/line-height combinations, including resize
+   * artifacts like 13.72549px and 13.837209px. That is not a system, so one is
+   * imposed here.
+   *
+   * Families kept:
+   *   Geist (5037 uses)             = UI / body
+   *   Plus Jakarta Sans (468)       = section + card headings
+   *   Cormorant Garamond (131)      = hero display serif. Low usage count, but
+   *                                   it sets the homepage headline (1:116),
+   *                                   so it is load-bearing, not decorative.
+   * Families dropped: Inter (428, redundant with Geist — it appears only in the
+   * component library, while the screens themselves use Geist) and Arial Black
+   * (2 uses, stray).
+   *
+   * ---- THE RULE: role x size, one band per family --------------------
+   *
+   * Three faces with three jobs is a system. Three faces that each turn up at
+   * every size is what the screens actually had — the same <h2> was serif in
+   * one view, Plus Jakarta Sans in the next and plain Geist in a third, with
+   * say which was right. Two questions decide it now, in this order:
+   *
+   *   1. Is this a TITLE (a heading, or a <p>/<span>/<dd> doing a heading's
+   *      job — a card title, a stat value)? If not, it is Geist. Body copy,
+   *      buttons, links, labels, inputs and table cells are Geist at every
+   *      size, including 18px lead paragraphs.
+   *   2. If it is a title, its SIZE picks the face:
+   *
+   *        >= 24px   DISPLAY   Cormorant Garamond   700   page + section heads
+   *        16-20px   HEADING   Plus Jakarta Sans    600   card + panel titles
+   *        <  16px   UI        Geist                600   eyebrows, micro-labels
+   *
+   * Consequences worth knowing before you fight one of them:
+   *   - The serif never appears below 24px. At 18px Cormorant's thin strokes
+   *     read as an accident rather than a choice.
+   *   - Plus Jakarta Sans never appears below 16px. It is WIDER than Afacad,
+   *     which it replaced, so a heading that used to fit one line may now wrap —
+   *     check the card titles when changing one. It is also wider than Geist, so it
+   *     loses more at small sizes than it gives back in character.
+   *   - 700 belongs to the display serif. Geist and Plus Jakarta Sans stop at
+   *     600, and
+   *     their 700 files are no longer even requested. Cormorant is
+   *     high-contrast and needs the weight to hold at 36px+; Geist is already
+   *     dense and 700 at 13px is what made the UI read heavy and unfinished.
+   *   - main.css defaults every h1-h6 to Plus Jakarta Sans 600, the middle
+   *     band. The two
+   *     outer bands are stated at the call site (`font-serif` / `font-sans`)
+   *     because no element selector can tell a 30px page title from a 13px
+   *     section label when both are <h2>.
+   *
+   * Size floor: the designs' most common body sizes are 11px (1600 uses) and
+   * 10px (593 uses), which are below readable on a 1280px layout. The floor is
+   * lifted to 12px. The lift is small (+1px at the bottom) so layout density is
+   * substantially preserved.
+   *
+   * Line height and tracking ship WITH the size. Every step below carries its
+   * own pair, so `text-4xl` alone is already correct and a `leading-*` next to
+   * it is either redundant or a regression. The display steps tighten as they
+   * grow (36px of leading on 36px of type is a wall) and take negative
+   * tracking, which is what a high-contrast serif wants at headline sizes.
+   * --------------------------------------------------------------- */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+
+  /* -- UI tier (Geist) -- */
+  --text-2xs: 0.75rem;      /* 12px — floor. absorbs Figma 8/9/10/11px */
+  --text-2xs--line-height: 1rem;         /* 16px */
+  --text-xs: 0.8125rem;     /* 13px — absorbs Figma 12/13px */
+  --text-xs--line-height: 1.125rem;      /* 18px */
+  --text-sm: 0.875rem;      /* 14px */
+  --text-sm--line-height: 1.25rem;       /* 20px */
+
+  /* -- Heading tier (Plus Jakarta Sans) -- */
+  --text-base: 1rem;        /* 16px — absorbs Figma 15/16px */
+  --text-base--line-height: 1.5rem;      /* 24px */
+  --text-lg: 1.125rem;      /* 18px */
+  --text-lg--line-height: 1.75rem;       /* 28px */
+  --text-xl: 1.25rem;       /* 20px */
+  --text-xl--line-height: 1.75rem;       /* 28px */
+
+  /* -- Display tier (Cormorant Garamond) --
+   * Leading tightens and tracking goes negative as the type grows. */
+  --text-2xl: 1.5rem;       /* 24px — absorbs Figma 22px */
+  --text-2xl--line-height: 1.95rem;      /* 31.2px — 1.3 */
+  --text-2xl--letter-spacing: -0.01em;
+  --text-3xl: 1.875rem;     /* 30px — absorbs Figma 28/32px */
+  --text-3xl--line-height: 2.25rem;      /* 36px — 1.2 */
+  --text-3xl--letter-spacing: -0.015em;
+  --text-4xl: 2.25rem;      /* 36px — absorbs Figma 38/40/42px */
+  --text-4xl--line-height: 2.5rem;       /* 40px — 1.11 */
+  --text-4xl--letter-spacing: -0.02em;
+  --text-5xl: 3rem;         /* 48px — absorbs Figma 45/56px */
+  --text-5xl--line-height: 3.15rem;      /* 50.4px — 1.05 */
+  --text-5xl--letter-spacing: -0.025em;
+
+  /* ---------------------------------------------------------------
+   * Breakpoints
+   * NOTE: every Figma frame is 1280px wide and there are no mobile comps, so
+   * only `xl` is designed. Everything below xl is invented, not translated.
+   * --------------------------------------------------------------- */
+  --breakpoint-sm: 40rem;   /* 640 */
+  --breakpoint-md: 48rem;   /* 768 */
+  --breakpoint-lg: 64rem;   /* 1024 */
+  --breakpoint-xl: 80rem;   /* 1280 — the designed width */
+  --breakpoint-2xl: 96rem;  /* 1536 */
+
+  /* Shell metrics taken from the designs.
+   * Referenced with v4's CSS-variable shorthand, e.g. h-(--header-height-mobile) */
+  --container-page: 1280px;
+  --header-height-desktop: 74px; /* Figma Header symbol 371:2 */
+  --header-height-mobile: 56px;  /* Figma mobile HeaderBar 366:16797 */
+}
+
+/* =============================================================================
+   Appearance preferences
+   =============================================================================
+
+   /settings/appearance offers a theme, an accent, a font size, a layout
+   density and a rail position. All five were client-side `ref`s that reset on
+   reload; they persist now (users.preferences) and this is what makes them
+   actually change the page.
+
+   Applied as attributes on <html> by the appearance composable, and written
+   into the shell by Blade before first paint so a dark-mode user never sees a
+   white flash.
+   ========================================================================== */
+
+/* ---- Dark ----------------------------------------------------------------
+   The slate ramp is not inverted — inverting a light palette gives muddy,
+   over-saturated darks. The surfaces come from the navy the product already
+   uses for its heroes, and the ink ramp is re-pointed at the light end of
+   slate, which keeps body text at 4.5:1 or better on every surface below. */
+
+:root[data-theme='dark'] {
+  --color-surface: #0f1b2d;
+  --color-surface-secondary: #0b1524;
+  --color-surface-tertiary: #172740;
+  --color-surface-dark: #060d18;
+
+  --color-ink: #e8eef7;
+  --color-ink-secondary: #a3b2c7;
+  --color-ink-tertiary: #6b7c94;
+  --color-ink-inverse: var(--color-slate-900);
+
+  --color-border: #23334b;
+  --color-border-subtle: #1a283d;
+  --color-border-input: #2b3d59;
+  --color-border-input-disabled: #1a283d;
+
+  /* Status colours lift a step: the light-mode values are tuned for white and
+     go muddy against a dark surface. */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #60a5fa;
+
+  color-scheme: dark;
+}
+
+/* Form controls, scrollbars and the like follow the theme. */
+:root[data-theme='dark'] body {
+  background-color: var(--color-surface-secondary);
+  color: var(--color-ink);
+}
+
+/* ---- Accent --------------------------------------------------------------
+   The swatch a member picks replaces the active primary. `--color-accent` is
+   set inline on <html>; the fallback keeps the brand green when nothing is
+   chosen, so the default look is unchanged. */
+
+:root[style*='--color-accent'] {
+  --color-primary: var(--color-accent, var(--color-green-700));
+  --color-primary-hover: var(--color-accent-hover, #005a2a);
+  --color-focus: var(--color-accent, var(--color-teal-500));
+}
+
+/* ---- Font size -----------------------------------------------------------
+   Everything in the app is sized in rem or Tailwind's rem-based scale, so the
+   root size scales the whole interface rather than one text block. */
+
+:root[data-font-size='Small']  { font-size: 15px; }
+:root[data-font-size='Medium'] { font-size: 16px; }
+:root[data-font-size='Large']  { font-size: 18px; }
+
+/* ---- Density -------------------------------------------------------------
+   Tailwind v4 derives every spacing utility from `--spacing`, so one variable
+   tightens padding, gaps and margins across the product without touching a
+   single component. */
+
+:root[data-density='compact'] { --spacing: 0.2rem; }
+
+/* ---- Navigation rail position --------------------------------------------
+   The rail sits in a two-column grid whose second child is the <aside>.
+   Reversing the writing direction on the grid swaps the columns without
+   rewriting each screen's arbitrary grid template; the children are set back
+   to ltr so their own content is unaffected.
+
+   Only applied when a member opts into 'left' — every built screen puts the
+   rail on the right, so that stays the default. */
+
+:root[data-rail='left'] .grid:has(> aside) { direction: rtl; }
+:root[data-rail='left'] .grid:has(> aside) > * { direction: ltr; }
+
+/* ---- Reduced motion / contrast toggles ----------------------------------- */
+
+:root[data-reduce-motion='true'] *,
+:root[data-reduce-motion='true'] *::before,
+:root[data-reduce-motion='true'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+:root[data-high-contrast='true'] {
+  --color-ink-secondary: var(--color-ink);
+  --color-ink-tertiary: var(--color-ink-secondary);
+  --color-border: var(--color-ink-tertiary);
+}

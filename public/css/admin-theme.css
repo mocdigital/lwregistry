@@ -1,0 +1,887 @@
+/* =============================================================================
+   Admin theme
+   =============================================================================
+
+   The admin was never designed — there are no admin frames in the Figma file,
+   only the 48 member/public screens. So rather than invent a second look, this
+   builds it out of what the platform already has:
+
+     - Structure and neutrals from the Figma design tokens the Vue side uses
+       (resources/js/spa/styles/tokens.css): slate 50→900, #e2e8f0 borders.
+     - Brand colour from the same source: teal #0d9488 at rest, green #007035
+       for the committed/active state.
+     - Typography from the same two families the rest of the site loads:
+       Geist for UI, Afacad for headings.
+
+   The ui-ux-pro-max pass recommended a "Data-Dense Dashboard" system on a
+   #0F172A / #F8FAFC / #E2E8F0 slate palette, which is the same slate family the
+   Figma tokens already define — so the two agree. Where they differ it keeps
+   the brand: the recommendation's generic #0369A1 blue CTA is not this
+   product's colour, and its Fira Code/Fira Sans pairing would be a third type
+   system on a site that already has one.
+
+   WHY A THEME LAYER RATHER THAN A REWRITE
+   The 31 admin pages are ~15,700 lines of Blade using Bootstrap's classes —
+   `card`, `btn btn-primary`, `table`, `form-control`, `badge`. Restyling those
+   classes changes every page at once without touching the Livewire components
+   that make them work. A page-by-page rewrite would risk behaviour for a
+   change that is purely visual.
+
+   Loaded last, so it wins over admin.css and bootstrap without !important
+   except where Bootstrap's own utilities are themselves !important.
+   ========================================================================== */
+
+:root {
+  /* ---- Neutrals: Figma slate ramp -------------------------------------- */
+  --a-slate-50: #f8fafc;
+  --a-slate-100: #f1f5f9;
+  --a-slate-200: #e2e8f0;
+  --a-slate-300: #cbd5e1;
+  --a-slate-400: #94a3b8;
+  --a-slate-500: #64748b;
+  --a-slate-600: #475569;
+  --a-slate-700: #334155;
+  --a-slate-800: #1e293b;
+  --a-slate-900: #0f172a;
+
+  /* ---- Semantic surfaces ----------------------------------------------- */
+  --a-bg: var(--a-slate-50);
+  --a-surface: #ffffff;
+  --a-surface-sunken: var(--a-slate-100);
+  --a-border: var(--a-slate-200);
+  --a-border-strong: var(--a-slate-300);
+
+  --a-ink: var(--a-slate-900);
+  --a-ink-2: var(--a-slate-600);
+  --a-ink-3: var(--a-slate-400);
+
+  /* ---- Brand ------------------------------------------------------------
+     Teal rests, green commits — the rule the member site already follows. */
+  --a-primary: #0d9488;
+  --a-primary-strong: #007035;
+  --a-primary-ink: #0f766e;
+  --a-primary-soft: #ccfbf1;
+
+  /* ---- Status ----------------------------------------------------------- */
+  --a-success: #047857;
+  --a-success-soft: #d1fae5;
+  --a-warning: #b45309;
+  --a-warning-soft: #fef3c7;
+  --a-danger: #b91c1c;
+  --a-danger-soft: #fee2e2;
+  --a-info: #1d4ed8;
+  --a-info-soft: #dbeafe;
+
+  /* ---- The navy the sidebar sits on ------------------------------------ */
+  --a-nav: #0b192c;
+  --a-nav-2: #132840;
+
+  /* ---- Elevation: one scale, three steps ------------------------------- */
+  --a-shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);
+  --a-shadow: 0 1px 3px rgb(15 23 42 / 0.06), 0 1px 2px rgb(15 23 42 / 0.04);
+  --a-shadow-lg: 0 12px 24px rgb(15 23 42 / 0.10);
+
+  --a-radius-sm: 8px;
+  --a-radius: 12px;
+  --a-radius-lg: 16px;
+
+  /* Micro-interactions land in the 150–300ms band. */
+  --a-fast: 150ms;
+  --a-base: 200ms;
+  --a-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+body {
+  font-family: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: var(--a-bg);
+  color: var(--a-ink);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Afacad', 'Geist', ui-sans-serif, system-ui, sans-serif;
+  color: var(--a-ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/*
+ * Tabular figures everywhere a number sits in a column.
+ *
+ * An admin is mostly counts, money and dates in tables. Proportional digits
+ * make each row a slightly different width, so a column of figures never lines
+ * up and the eye cannot scan it.
+ */
+.table td, .table th,
+.stat-value, .metric-value,
+.badge, .pagination, time,
+[class*='-count'], [class*='-total'], [class*='-amount'] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+a {
+  color: var(--a-primary-ink);
+  text-underline-offset: 2px;
+}
+
+a:hover { color: var(--a-primary-strong); }
+
+/* Anything that acts like a control says so. */
+button,
+[role='button'],
+.btn,
+.nav-link,
+summary,
+label[for] {
+  cursor: pointer;
+}
+
+/*
+ * One focus treatment for the whole admin. Bootstrap's default ring is a
+ * washed-out blue that disappears on a white card.
+ */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--a-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--a-primary-soft);
+  color: var(--a-primary-strong);
+}
+
+/* =============================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+  background: var(--a-nav);
+  border-right: 1px solid rgb(255 255 255 / 0.06);
+  color: rgb(255 255 255 / 0.72);
+  padding: 20px 12px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px 20px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.sidebar-brand .fw-semibold {
+  font-family: 'Afacad', 'Geist', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-brand .text-muted-soft {
+  color: rgb(255 255 255 / 0.5) !important;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.sidebar .logo-circle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 0.08);
+  flex-shrink: 0;
+}
+
+.sidebar .logo-circle img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Section captions. Small, spaced, quiet — they label, they do not compete. */
+.sidebar .submenu-title {
+  margin: 18px 0 6px;
+  padding: 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.34);
+}
+
+.sidebar .submenu-title:first-of-type { margin-top: 4px; }
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  /* 42px keeps a comfortable pointer target without wasting vertical space in
+     a nav this long. */
+  min-height: 42px;
+  margin: 1px 0;
+  padding: 0 12px;
+  border-radius: var(--a-radius-sm);
+  color: rgb(255 255 255 / 0.72);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background-color var(--a-fast) var(--a-ease),
+              color var(--a-fast) var(--a-ease);
+}
+
+.sidebar .nav-link i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  color: rgb(255 255 255 / 0.55);
+  transition: color var(--a-fast) var(--a-ease);
+  flex-shrink: 0;
+}
+
+.sidebar .nav-link:hover {
+  background: rgb(255 255 255 / 0.07);
+  color: #fff;
+}
+
+.sidebar .nav-link:hover i { color: #fff; }
+
+/*
+ * Active state. A left marker as well as the fill, so the current page is
+ * legible without relying on colour alone.
+ */
+.sidebar .nav-link.active {
+  position: relative;
+  background: rgb(13 148 136 / 0.16);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar .nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--a-primary);
+}
+
+.sidebar .nav-link.active i { color: #2dd4bf; }
+
+/* =============================================================================
+   Top bar
+   ========================================================================== */
+
+.admin-topbar,
+.top-nav,
+.main-content > nav:first-child {
+  background: rgb(255 255 255 / 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--a-border);
+  box-shadow: none;
+}
+
+.admin-topbar h1,
+.top-nav h1,
+.admin-page-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* =============================================================================
+   Cards
+   ========================================================================== */
+
+.card {
+  background: var(--a-surface);
+  border: 1px solid var(--a-border);
+  border-radius: var(--a-radius);
+  box-shadow: var(--a-shadow-sm);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--a-border);
+  padding: 16px 20px;
+  font-weight: 600;
+  color: var(--a-ink);
+}
+
+.card-body { padding: 20px; }
+.card-footer {
+  background: var(--a-surface-sunken);
+  border-top: 1px solid var(--a-border);
+  padding: 14px 20px;
+}
+
+/* A KPI tile lifts slightly on hover to read as something you can open. */
+.stat-card,
+.metric-card,
+.kpi-card {
+  transition: box-shadow var(--a-base) var(--a-ease),
+              border-color var(--a-base) var(--a-ease);
+}
+
+.stat-card:hover,
+.metric-card:hover,
+.kpi-card:hover {
+  border-color: var(--a-border-strong);
+  box-shadow: var(--a-shadow);
+}
+
+/* =============================================================================
+   Buttons
+   =============================================================================
+
+   Every variant the admin actually uses, themed together.
+
+   The first pass covered six and left the rest on Bootstrap's defaults —
+   including `btn-outline-secondary`, which is the second most-used button here
+   (53 of them) and rendered as thin grey border with grey text. That is the
+   "View all" pill on the dashboard, and it looked unstyled because it was.
+
+   Counts across resources/views/livewire/admin:
+     btn-outline-secondary 53 · btn-primary 50 · btn-outline-primary 37
+     btn-outline-danger 21 · btn-success 17 · btn-outline-success 9
+     btn-link 9 · btn-light 6 · btn-danger 6 · btn-outline-warning 4
+     btn-outline-dark 4 · btn-dark 2 · btn-info 1 · btn-outline-info 1
+
+   Radius is deliberately not forced. Some of these carry `rounded-pill`, whose
+   Bootstrap utility is !important; fighting it would need !important back and
+   would flatten pills that are pill-shaped on purpose. Instead every variant
+   shares the same height, weight, border colour and hover behaviour, so a pill
+   and a rounded rectangle read as the same family at different radii.
+   ========================================================================== */
+
+.btn {
+  --bs-btn-focus-box-shadow: none;
+  border-radius: var(--a-radius-sm);
+  border-width: 1px;
+  font-weight: 600;
+  font-size: 13.5px;
+  line-height: 1.4;
+  padding: 8px 16px;
+  /* Colour and shadow only — nothing that moves the button's box and nudges
+     the row around it. */
+  transition: background-color var(--a-fast) var(--a-ease),
+              border-color var(--a-fast) var(--a-ease),
+              color var(--a-fast) var(--a-ease),
+              box-shadow var(--a-fast) var(--a-ease);
+}
+
+.btn-sm { padding: 5px 12px; font-size: 12.5px; }
+.btn-lg { padding: 11px 22px; font-size: 15px; }
+
+/* An icon sitting in a button lines up with its label rather than riding high. */
+.btn i { vertical-align: -1px; }
+
+/* ---- Solid -------------------------------------------------------------- */
+
+.btn-primary {
+  background-color: var(--a-primary);
+  border-color: var(--a-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--a-primary-strong);
+  border-color: var(--a-primary-strong);
+  color: #fff;
+}
+
+.btn-primary:active { background-color: #005a2a; border-color: #005a2a; }
+
+.btn-success {
+  background-color: var(--a-success);
+  border-color: var(--a-success);
+  color: #fff;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #036349; border-color: #036349; color: #fff;
+}
+
+.btn-danger { background-color: var(--a-danger); border-color: var(--a-danger); color: #fff; }
+.btn-danger:hover, .btn-danger:focus { background-color: #991b1b; border-color: #991b1b; color: #fff; }
+
+.btn-info { background-color: var(--a-info); border-color: var(--a-info); color: #fff; }
+.btn-info:hover, .btn-info:focus { background-color: #1e40af; border-color: #1e40af; color: #fff; }
+
+.btn-warning { background-color: var(--a-warning); border-color: var(--a-warning); color: #fff; }
+.btn-warning:hover, .btn-warning:focus { background-color: #92400e; border-color: #92400e; color: #fff; }
+
+.btn-dark { background-color: var(--a-slate-800); border-color: var(--a-slate-800); color: #fff; }
+.btn-dark:hover, .btn-dark:focus { background-color: var(--a-slate-900); border-color: var(--a-slate-900); color: #fff; }
+
+/* ---- Neutral / secondary ------------------------------------------------
+   The workhorse. White surface, a border you can actually see, ink text —
+   subordinate to the primary action without being illegible. */
+
+.btn-secondary,
+.btn-light,
+.btn-outline-secondary,
+.btn-outline-dark {
+  background-color: var(--a-surface);
+  border-color: var(--a-border-strong);
+  color: var(--a-ink);
+}
+
+.btn-secondary:hover, .btn-secondary:focus,
+.btn-light:hover, .btn-light:focus,
+.btn-outline-secondary:hover, .btn-outline-secondary:focus,
+.btn-outline-dark:hover, .btn-outline-dark:focus {
+  background-color: var(--a-surface-sunken);
+  border-color: var(--a-slate-400);
+  color: var(--a-ink);
+}
+
+.btn-outline-secondary:active,
+.btn-secondary:active {
+  background-color: var(--a-slate-200);
+  border-color: var(--a-slate-400);
+  color: var(--a-ink);
+}
+
+/* ---- Outline, tinted ----------------------------------------------------
+   Same neutral border at rest so a row of mixed outline buttons stays even;
+   the colour arrives on hover, where it means something. */
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info {
+  background-color: var(--a-surface);
+  border-color: var(--a-border-strong);
+}
+
+.btn-outline-primary { color: var(--a-primary-ink); }
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--a-primary-soft); border-color: var(--a-primary); color: var(--a-primary-strong);
+}
+
+.btn-outline-success { color: var(--a-success); }
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background-color: var(--a-success-soft); border-color: var(--a-success); color: var(--a-success);
+}
+
+.btn-outline-danger { color: var(--a-danger); }
+.btn-outline-danger:hover, .btn-outline-danger:focus {
+  background-color: var(--a-danger-soft); border-color: var(--a-danger); color: var(--a-danger);
+}
+
+.btn-outline-warning { color: var(--a-warning); }
+.btn-outline-warning:hover, .btn-outline-warning:focus {
+  background-color: var(--a-warning-soft); border-color: var(--a-warning); color: var(--a-warning);
+}
+
+.btn-outline-info { color: var(--a-info); }
+.btn-outline-info:hover, .btn-outline-info:focus {
+  background-color: var(--a-info-soft); border-color: var(--a-info); color: var(--a-info);
+}
+
+/* ---- Link --------------------------------------------------------------- */
+
+.btn-link {
+  color: var(--a-primary-ink);
+  text-decoration: none;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-color: transparent;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: var(--a-primary-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Groups -------------------------------------------------------------
+   Bootstrap flattens the inner corners itself; this just keeps the seam from
+   doubling up into a 2px line. */
+
+.btn-group > .btn + .btn { margin-left: -1px; }
+.btn-group > .btn:hover,
+.btn-group > .btn:focus { z-index: 2; }
+
+/* Segmented controls built with btn-check read as selected, not just hovered. */
+.btn-check:checked + .btn {
+  background-color: var(--a-primary-strong);
+  border-color: var(--a-primary-strong);
+  color: #fff;
+}
+
+/* ---- States -------------------------------------------------------------- */
+
+/*
+ * Disabled reads as disabled: dimmed, and the cursor says so. Bootstrap only
+ * lowers opacity, which on a pale button is easy to miss.
+ */
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-close { opacity: 0.5; transition: opacity var(--a-fast) var(--a-ease); }
+.btn-close:hover { opacity: 0.9; }
+
+/* =============================================================================
+   Tables — the admin is mostly tables
+   ========================================================================== */
+
+/* A wide table scrolls inside its own box rather than pushing the page sideways. */
+.table-responsive {
+  border-radius: var(--a-radius);
+  border: 1px solid var(--a-border);
+  background: var(--a-surface);
+}
+
+.table-responsive > .table { margin-bottom: 0; }
+
+.table {
+  --bs-table-bg: transparent;
+  color: var(--a-ink);
+  font-size: 13.5px;
+  border-color: var(--a-border);
+}
+
+.table > thead > tr > th {
+  background: var(--a-surface-sunken);
+  border-bottom: 1px solid var(--a-border);
+  color: var(--a-ink-2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 11px 14px;
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--a-border);
+  vertical-align: middle;
+}
+
+.table > tbody > tr:last-child > td { border-bottom: 0; }
+
+/* Row highlight on hover — the thing that makes a long table scannable. */
+.table-hover > tbody > tr,
+.table > tbody > tr {
+  transition: background-color var(--a-fast) var(--a-ease);
+}
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: transparent;
+  background-color: var(--a-slate-50);
+}
+
+.table th a,
+.table [aria-sort] {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+ * A table that was never wrapped in `.table-responsive` still must not push the
+ * page sideways.
+ *
+ * Twelve tables across five admin pages sit as a direct child of `.card-body`
+ * with no wrapper. Rather than edit those Blade files — and risk the Livewire
+ * markup around them — the container itself becomes the scroll region, which
+ * is what a wrapper would have done anyway.
+ *
+ * `:has()` is the only way to say "a card body that directly contains a table"
+ * in CSS; browsers without it fall back to the previous behaviour, which is
+ * what ships today.
+ */
+.card-body:has(> .table) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =============================================================================
+   Badges and status
+   ========================================================================== */
+
+.badge {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.badge.bg-success, .badge.text-bg-success { background-color: var(--a-success-soft) !important; color: var(--a-success) !important; }
+.badge.bg-warning, .badge.text-bg-warning { background-color: var(--a-warning-soft) !important; color: var(--a-warning) !important; }
+.badge.bg-danger,  .badge.text-bg-danger  { background-color: var(--a-danger-soft) !important;  color: var(--a-danger) !important; }
+.badge.bg-info,    .badge.text-bg-info    { background-color: var(--a-info-soft) !important;    color: var(--a-info) !important; }
+.badge.bg-primary, .badge.text-bg-primary { background-color: var(--a-primary-soft) !important; color: var(--a-primary-ink) !important; }
+.badge.bg-secondary, .badge.text-bg-secondary { background-color: var(--a-slate-100) !important; color: var(--a-ink-2) !important; }
+
+/*
+ * The "soft" status badges.
+ *
+ * These are applied WITHOUT Bootstrap's `.badge` — the markup is
+ * `class="badge-success-soft rounded-pill"` — so each class has to carry the
+ * whole treatment itself.
+ *
+ * Only two of the five were defined in admin.css. `success` and `danger` lived
+ * in a <style> block inside users/index.blade.php, which does not load on the
+ * activity log that also uses them, and `secondary` was defined nowhere at all
+ * — so three of the five statuses on /admin/activity rendered as bare
+ * unstyled text. They belong here, once, where every page that uses them
+ * gets them.
+ */
+.badge-primary-soft,
+.badge-success-soft,
+.badge-warning-soft,
+.badge-danger-soft,
+.badge-info-soft,
+.badge-secondary-soft {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-primary-soft   { background: var(--a-primary-soft); color: var(--a-primary-ink); }
+.badge-success-soft   { background: var(--a-success-soft); color: var(--a-success); }
+.badge-warning-soft   { background: var(--a-warning-soft); color: var(--a-warning); }
+.badge-danger-soft    { background: var(--a-danger-soft);  color: var(--a-danger); }
+.badge-info-soft      { background: var(--a-info-soft);    color: var(--a-info); }
+.badge-secondary-soft { background: var(--a-slate-100);    color: var(--a-ink-2); }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+.form-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--a-ink-2);
+  margin-bottom: 5px;
+}
+
+.form-control,
+.form-select {
+  border-radius: var(--a-radius-sm);
+  border-color: var(--a-border);
+  color: var(--a-ink);
+  /* 16px on touch widths: anything smaller makes iOS zoom the page on focus. */
+  font-size: 14px;
+  padding: 9px 12px;
+  min-height: 40px;
+  background-color: var(--a-surface);
+  transition: border-color var(--a-fast) var(--a-ease),
+              box-shadow var(--a-fast) var(--a-ease);
+}
+
+.form-control::placeholder { color: var(--a-ink-3); }
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--a-primary);
+  box-shadow: 0 0 0 3px rgb(13 148 136 / 0.14);
+  outline: none;
+}
+
+.form-control:disabled,
+.form-select:disabled,
+.form-control[readonly] {
+  background-color: var(--a-surface-sunken);
+  color: var(--a-ink-2);
+  cursor: not-allowed;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid { border-color: var(--a-danger); }
+
+.invalid-feedback { color: var(--a-danger); font-size: 12px; }
+.form-text { color: var(--a-ink-3); font-size: 12px; }
+
+.form-check-input:checked {
+  background-color: var(--a-primary);
+  border-color: var(--a-primary);
+}
+
+.form-check-input:focus {
+  border-color: var(--a-primary);
+  box-shadow: 0 0 0 3px rgb(13 148 136 / 0.14);
+}
+
+@media (max-width: 991.98px) {
+  /* iOS zooms any focused field under 16px, which throws the layout. */
+  .form-control, .form-select { font-size: 16px; }
+}
+
+/* =============================================================================
+   Alerts
+   ========================================================================== */
+
+.alert {
+  border-radius: var(--a-radius);
+  border: 1px solid transparent;
+  padding: 13px 16px;
+  font-size: 13.5px;
+}
+
+.alert-success { background: var(--a-success-soft); border-color: rgb(4 120 87 / 0.2); color: var(--a-success); }
+.alert-warning { background: var(--a-warning-soft); border-color: rgb(180 83 9 / 0.2);  color: var(--a-warning); }
+.alert-danger  { background: var(--a-danger-soft);  border-color: rgb(185 28 28 / 0.2); color: var(--a-danger); }
+.alert-info    { background: var(--a-info-soft);    border-color: rgb(29 78 216 / 0.2); color: var(--a-info); }
+.alert-light   { background: var(--a-surface-sunken); border-color: var(--a-border); color: var(--a-ink-2); }
+
+/* =============================================================================
+   Tabs, dropdowns, modals, pagination
+   ========================================================================== */
+
+.nav-tabs {
+  border-bottom: 1px solid var(--a-border);
+  gap: 2px;
+}
+
+.nav-tabs .nav-link {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--a-ink-2);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 9px 14px;
+  transition: color var(--a-fast) var(--a-ease),
+              border-color var(--a-fast) var(--a-ease);
+}
+
+.nav-tabs .nav-link:hover { color: var(--a-ink); border-bottom-color: var(--a-border-strong); }
+
+.nav-tabs .nav-link.active {
+  color: var(--a-primary-strong);
+  background: transparent;
+  border-bottom-color: var(--a-primary);
+}
+
+.dropdown-menu {
+  border: 1px solid var(--a-border);
+  border-radius: var(--a-radius);
+  box-shadow: var(--a-shadow-lg);
+  padding: 6px;
+  font-size: 13.5px;
+}
+
+.dropdown-item {
+  border-radius: 7px;
+  padding: 8px 12px;
+  color: var(--a-ink-2);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus { background: var(--a-surface-sunken); color: var(--a-ink); }
+
+.modal-content {
+  border: 0;
+  border-radius: var(--a-radius-lg);
+  box-shadow: var(--a-shadow-lg);
+}
+
+.modal-header, .modal-footer { border-color: var(--a-border); padding: 16px 20px; }
+.modal-body { padding: 20px; }
+
+/* A scrim strong enough that the page behind stops competing. */
+.modal-backdrop.show { opacity: 0.5; }
+
+.pagination { --bs-pagination-font-size: 13px; gap: 4px; }
+
+.page-link {
+  border-radius: 7px;
+  border-color: var(--a-border);
+  color: var(--a-ink-2);
+  min-width: 36px;
+  text-align: center;
+}
+
+.page-link:hover { background: var(--a-surface-sunken); color: var(--a-ink); }
+
+.page-item.active .page-link {
+  background: var(--a-primary-strong);
+  border-color: var(--a-primary-strong);
+  color: #fff;
+}
+
+/* =============================================================================
+   Empty states
+   =============================================================================
+   A blank panel reads as broken. Any admin list that renders nothing should
+   use this and say what would appear there. */
+
+.admin-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 56px 24px;
+  text-align: center;
+  color: var(--a-ink-2);
+}
+
+.admin-empty i { font-size: 26px; color: var(--a-ink-3); }
+.admin-empty h3 { font-size: 15px; font-weight: 700; margin: 0; }
+.admin-empty p { font-size: 13px; margin: 0; max-width: 42ch; }
+
+/* =============================================================================
+   Loading
+   =============================================================================
+   Livewire sets `wire:loading` on in-flight requests. Dimming the region being
+   replaced is honest about what is happening, where a blank flash is not. */
+
+[wire\:loading] { transition: opacity var(--a-base) var(--a-ease); }
+
+.admin-skeleton {
+  background: linear-gradient(90deg, var(--a-slate-100) 25%, var(--a-slate-200) 37%, var(--a-slate-100) 63%);
+  background-size: 400% 100%;
+  animation: admin-shimmer 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+@keyframes admin-shimmer {
+  from { background-position: 100% 50%; }
+  to   { background-position: 0 50%; }
+}
+
+/* =============================================================================
+   Motion preferences
+   =============================================================================
+   All of the above is decoration over content that is already legible, so it
+   stops rather than slows. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

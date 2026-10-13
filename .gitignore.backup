@@ -1,0 +1,32 @@
+node_modules
+
+# Large global cities dataset (download separately; states file is committed)
+database/data/countries+states+cities.json
+
+# Environment — never commit real secrets; .env.example is the tracked template
+.env
+.env.backup
+.env.production
+.env.*.local
+
+.mcp.json
+database/database.sqlite
+
+# Backups are ignored by default — `deployment/scripts/backup.sh` writes here on
+# a schedule and those are not artefacts to version. A dump committed on purpose
+# is negated below by name so it is a decision each time, not a default.
+# Excluding the CONTENTS, not the directory: git will not re-include a file
+# whose parent directory is excluded, so `database/backups/` with a trailing
+# slash would make the negation below silently do nothing.
+database/backups/*
+!database/backups/registry-*.sql
+!database/backups/README.md
+
+# Compiled assets. DEPLOYMENT.md runs `npm ci && npm run build` on the server
+# and verifies public/build/manifest.json, so the built output is regenerated
+# there — committing 18MB of it per build only creates conflicts.
+public/build
+
+# Spatie MediaLibrary's temporary upload directory. A handful of these were
+# committed by accident; they are half-finished uploads, not fixtures.
+storage/media-library
